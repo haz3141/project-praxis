@@ -5,7 +5,7 @@
   "description": "Project Praxis — constitutional docs + implementation repository",
   "scripts": {
     "lint:md": "markdownlint-cli2 \"**/*.md\"",
-    "validate": "npm run lint:md"
+    "validate": "npm run lint:md && bash scripts/validate_docs.sh"
   },
   "devDependencies": {
     "markdownlint-cli2": "^0.21.0"
