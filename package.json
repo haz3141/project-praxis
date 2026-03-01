@@ -1,0 +1,13 @@
+{
+  "name": "project-praxis",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Project Praxis — constitutional docs + implementation repository",
+  "scripts": {
+    "lint:md": "markdownlint-cli2 \"**/*.md\"",
+    "validate": "npm run lint:md"
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "^0.21.0"
+  }
+}

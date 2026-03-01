@@ -1,0 +1,14 @@
+globs:
+  - "**/*.md"
+ignores:
+  - "node_modules/**"
+  - "_import_from_drive/**"
+config:
+  MD003:
+    style: atx
+  MD004:
+    style: dash
+  MD013: false
+  MD022: false
+  MD035:
+    style: "---"
