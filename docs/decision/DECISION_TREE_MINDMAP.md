@@ -11,6 +11,7 @@ flowchart TD
   P --> P2[Core-loop strictness]
   P --> P3[Object-model strictness]
   P --> P4[Collaboration rollout scope]
+  P --> P5[Competitive Positioning: Nova-like reflective surface]
 ```
 
 ### P1) Surface model for MVP
@@ -64,6 +65,23 @@ flowchart TD
   - C: strongest collaboration signal; high auth/permission/conflict risk.
 - Recommended evaluation method: Permissions spike plus threat model review.
 - Evidence: `docs/constitution/02-product.md`, `docs/constitution/05-backend.md`.
+
+### P5) Competitive Positioning: Nova-like Reflective Surface
+- Decision question: Should Praxis adopt a Nova-style reflection flow?
+- Explicit evaluation questions:
+  - Should Praxis adopt any Nova-like reflective surface?
+  - If yes, where in the loop should it live?
+  - What tradeoffs are acceptable for focus, accountability, and complexity?
+- Options:
+  - A: Integrate reflective prompts into Review only.
+  - B: Add a separate Reflection mode/surface in addition to Review.
+  - C: Do not adopt Nova-like reflection patterns.
+- Tradeoffs:
+  - A: preserves object-first loop and adds emotional support where reflection already exists; requires careful prompt design.
+  - B: may improve engagement and onboarding meaning; risks feed-like drift and surface sprawl.
+  - C: protects execution purity; misses emotional UX improvements that can improve return behavior.
+- Recommended evaluation method: Review-phase prototype A/B test plus 2-week retention/re-entry cohort readout.
+- Evidence: `docs/constitution/01-core.md`, `docs/constitution/02-product.md`, [Nova](https://nova.lightmode.io/).
 
 ## Design trunk
 
