@@ -27,39 +27,55 @@ function readFileSafe(filePath) {
 
 function detectCodexConfigMode() {
   const raw = readFileSafe(codexConfigPath);
-  if (!raw) return { present: false, mode: null };
+  if (!raw) return { present: false, mode: null, valid: false };
 
-  const hasStitchServer = /\[mcp_servers\.stitch\]/.test(raw);
-  if (!hasStitchServer) return { present: false, mode: null };
+  const lines = raw.split(/\r?\n/);
+  let inStitchSection = false;
+  let sawStitchSection = false;
+  const stitchLines = [];
 
-  const hasApiHeader = /X-Goog-Api-Key\s*=/.test(raw);
-  const hasAuthHeader = /Authorization\s*=/.test(raw);
+  for (const line of lines) {
+    const sectionMatch = line.match(/^\s*\[([^\]]+)\]\s*$/);
+    if (sectionMatch) {
+      const sectionName = sectionMatch[1].trim();
+      inStitchSection = sectionName === "mcp_servers.stitch" || sectionName.startsWith("mcp_servers.stitch.");
+      if (inStitchSection) sawStitchSection = true;
+    }
 
-  if (hasApiHeader && hasAuthHeader) return { present: true, mode: "mixed" };
-  if (hasApiHeader) return { present: true, mode: "api_key" };
-  if (hasAuthHeader) return { present: true, mode: "oauth" };
-  return { present: true, mode: "unknown" };
+    if (inStitchSection) stitchLines.push(line);
+  }
+
+  if (!sawStitchSection) return { present: false, mode: null, valid: false };
+
+  const stitchRaw = stitchLines.join("\n");
+  const hasApiHeader = /\bX-Goog-Api-Key\b/.test(stitchRaw);
+  const hasAuthHeader = /\bAuthorization\b/.test(stitchRaw);
+
+  if (hasApiHeader && hasAuthHeader) return { present: true, mode: "mixed", valid: true };
+  if (hasApiHeader) return { present: true, mode: "api_key", valid: true };
+  if (hasAuthHeader) return { present: true, mode: "oauth", valid: true };
+  return { present: true, mode: "unknown", valid: false };
 }
 
 function detectGeminiConfigMode() {
   const raw = readFileSafe(geminiConfigPath);
-  if (!raw) return { present: false, mode: null };
+  if (!raw) return { present: false, mode: null, valid: false };
 
   try {
     const parsed = JSON.parse(raw);
     const stitch = parsed?.mcpServers?.stitch;
-    if (!stitch) return { present: false, mode: null };
+    if (!stitch) return { present: false, mode: null, valid: false };
     const headers = stitch?.headers || {};
 
     const hasApiHeader = Object.prototype.hasOwnProperty.call(headers, "X-Goog-Api-Key");
     const hasAuthHeader = Object.prototype.hasOwnProperty.call(headers, "Authorization");
 
-    if (hasApiHeader && hasAuthHeader) return { present: true, mode: "mixed" };
-    if (hasApiHeader) return { present: true, mode: "api_key" };
-    if (hasAuthHeader) return { present: true, mode: "oauth" };
-    return { present: true, mode: "unknown" };
+    if (hasApiHeader && hasAuthHeader) return { present: true, mode: "mixed", valid: true };
+    if (hasApiHeader) return { present: true, mode: "api_key", valid: true };
+    if (hasAuthHeader) return { present: true, mode: "oauth", valid: true };
+    return { present: true, mode: "unknown", valid: false };
   } catch {
-    return { present: true, mode: "unknown" };
+    return { present: true, mode: "invalid_json", valid: false };
   }
 }
 
@@ -83,7 +99,7 @@ else if (hasApiKeyEnv) authMode = "api_key";
 else if (hasOauthEnv) authMode = "oauth";
 
 const hasEnvAuth = authMode !== "none";
-const hasLocalClientConfig = codexMode.present || geminiMode.present;
+const hasLocalClientConfig = Boolean(codexMode.valid || geminiMode.valid);
 
 console.log("Stitch configuration validation");
 console.log(`- expected_mcp_url: ${stitchUrl}`);
@@ -93,6 +109,14 @@ console.log(`- gemini_config: ${geminiMode.present ? geminiMode.mode : "absent"}
 
 if (hasApiKeyEnv && hasOauthEnv) {
   console.log("[warn] Both STITCH_API_KEY and STITCH_OAUTH_ACCESS_TOKEN are set; prefer one mode per session.");
+}
+if (codexMode.present && !codexMode.valid) {
+  console.log("[warn] Codex Stitch MCP config is present but missing auth headers in the Stitch section.");
+}
+if (geminiMode.mode === "invalid_json") {
+  console.log("[warn] Gemini Stitch MCP config file is malformed JSON.");
+} else if (geminiMode.present && !geminiMode.valid) {
+  console.log("[warn] Gemini Stitch MCP config is present but missing auth headers in the Stitch section.");
 }
 if (!hasEnvAuth && hasLocalClientConfig) {
   console.log("[warn] No Stitch auth env vars are set; relying on local MCP client config.");
