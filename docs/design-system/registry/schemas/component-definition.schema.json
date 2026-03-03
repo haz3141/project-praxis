@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://project-praxis.local/schemas/component-definition.schema.json",
+  "title": "ComponentDefinition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "atomic_tier",
+    "status",
+    "variants",
+    "states",
+    "accessibility",
+    "token_dependencies",
+    "stitch_evidence",
+    "gallery_evidence"
+  ],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "atomic_tier": {
+      "type": "string",
+      "enum": ["foundation", "atom", "molecule", "organism", "template", "page"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["covered", "partial", "missing", "deprecated"]
+    },
+    "variants": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "states": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "accessibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["roles", "keyboard", "focus_rules", "announcements"],
+      "properties": {
+        "roles": { "type": "array", "items": { "type": "string" } },
+        "keyboard": { "type": "array", "items": { "type": "string" } },
+        "focus_rules": { "type": "array", "items": { "type": "string" } },
+        "announcements": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "token_dependencies": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "stitch_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["project_ids", "screen_ids", "slot_codes", "captured_at"],
+      "properties": {
+        "project_ids": { "type": "array", "items": { "type": "string" } },
+        "screen_ids": { "type": "array", "items": { "type": "string" } },
+        "slot_codes": { "type": "array", "items": { "type": "string" } },
+        "captured_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "gallery_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["component_name", "component_slug", "url", "example_count", "fetched_at"],
+      "properties": {
+        "component_name": { "type": "string" },
+        "component_slug": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "example_count": { "type": "integer", "minimum": 0 },
+        "fetched_at": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}

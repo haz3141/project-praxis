@@ -1,0 +1,428 @@
+{
+  "components": [
+    {
+      "component_name": "Accordion",
+      "canonical_id": "cmp-accordion",
+      "atomic_tier": "organism",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/accordion"
+    },
+    {
+      "component_name": "Alert",
+      "canonical_id": "cmp-alert",
+      "atomic_tier": "molecule",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/alert"
+    },
+    {
+      "component_name": "Avatar",
+      "canonical_id": "cmp-avatar",
+      "atomic_tier": "atom",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/avatar"
+    },
+    {
+      "component_name": "Badge",
+      "canonical_id": "cmp-badge",
+      "atomic_tier": "atom",
+      "status": "covered",
+      "gallery_url": "https://component.gallery/components/badge"
+    },
+    {
+      "component_name": "Breadcrumbs",
+      "canonical_id": "cmp-breadcrumbs",
+      "atomic_tier": "molecule",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/breadcrumbs"
+    },
+    {
+      "component_name": "Button",
+      "canonical_id": "cmp-button",
+      "atomic_tier": "atom",
+      "status": "covered",
+      "gallery_url": "https://component.gallery/components/button"
+    },
+    {
+      "component_name": "Button group",
+      "canonical_id": "cmp-button-group",
+      "atomic_tier": "molecule",
+      "status": "partial",
+      "gallery_url": "https://component.gallery/components/button-group"
+    },
+    {
+      "component_name": "Card",
+      "canonical_id": "cmp-card",
+      "atomic_tier": "molecule",
+      "status": "covered",
+      "gallery_url": "https://component.gallery/components/card"
+    },
+    {
+      "component_name": "Carousel",
+      "canonical_id": "cmp-carousel",
+      "atomic_tier": "organism",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/carousel"
+    },
+    {
+      "component_name": "Checkbox",
+      "canonical_id": "cmp-checkbox",
+      "atomic_tier": "atom",
+      "status": "covered",
+      "gallery_url": "https://component.gallery/components/checkbox"
+    },
+    {
+      "component_name": "Color picker",
+      "canonical_id": "cmp-color-picker",
+      "atomic_tier": "molecule",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/color-picker"
+    },
+    {
+      "component_name": "Combobox",
+      "canonical_id": "cmp-combobox",
+      "atomic_tier": "molecule",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/combobox"
+    },
+    {
+      "component_name": "Date input",
+      "canonical_id": "cmp-date-input",
+      "atomic_tier": "molecule",
+      "status": "partial",
+      "gallery_url": "https://component.gallery/components/date-input"
+    },
+    {
+      "component_name": "Datepicker",
+      "canonical_id": "cmp-datepicker",
+      "atomic_tier": "organism",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/datepicker"
+    },
+    {
+      "component_name": "Drawer",
+      "canonical_id": "cmp-drawer",
+      "atomic_tier": "organism",
+      "status": "covered",
+      "gallery_url": "https://component.gallery/components/drawer"
+    },
+    {
+      "component_name": "Dropdown menu",
+      "canonical_id": "cmp-dropdown-menu",
+      "atomic_tier": "molecule",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/dropdown-menu"
+    },
+    {
+      "component_name": "Empty state",
+      "canonical_id": "cmp-empty-state",
+      "atomic_tier": "molecule",
+      "status": "covered",
+      "gallery_url": "https://component.gallery/components/empty-state"
+    },
+    {
+      "component_name": "Fieldset",
+      "canonical_id": "cmp-fieldset",
+      "atomic_tier": "molecule",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/fieldset"
+    },
+    {
+      "component_name": "File",
+      "canonical_id": "cmp-file",
+      "atomic_tier": "atom",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/file"
+    },
+    {
+      "component_name": "File upload",
+      "canonical_id": "cmp-file-upload",
+      "atomic_tier": "molecule",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/file-upload"
+    },
+    {
+      "component_name": "Footer",
+      "canonical_id": "cmp-footer",
+      "atomic_tier": "organism",
+      "status": "partial",
+      "gallery_url": "https://component.gallery/components/footer"
+    },
+    {
+      "component_name": "Form",
+      "canonical_id": "cmp-form",
+      "atomic_tier": "organism",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/form"
+    },
+    {
+      "component_name": "Header",
+      "canonical_id": "cmp-header",
+      "atomic_tier": "organism",
+      "status": "covered",
+      "gallery_url": "https://component.gallery/components/header"
+    },
+    {
+      "component_name": "Heading",
+      "canonical_id": "cmp-heading",
+      "atomic_tier": "atom",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/heading"
+    },
+    {
+      "component_name": "Hero",
+      "canonical_id": "cmp-hero",
+      "atomic_tier": "organism",
+      "status": "partial",
+      "gallery_url": "https://component.gallery/components/hero"
+    },
+    {
+      "component_name": "Icon",
+      "canonical_id": "cmp-icon",
+      "atomic_tier": "atom",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/icon"
+    },
+    {
+      "component_name": "Image",
+      "canonical_id": "cmp-image",
+      "atomic_tier": "atom",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/image"
+    },
+    {
+      "component_name": "Label",
+      "canonical_id": "cmp-label",
+      "atomic_tier": "atom",
+      "status": "partial",
+      "gallery_url": "https://component.gallery/components/label"
+    },
+    {
+      "component_name": "Link",
+      "canonical_id": "cmp-link",
+      "atomic_tier": "atom",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/link"
+    },
+    {
+      "component_name": "List",
+      "canonical_id": "cmp-list",
+      "atomic_tier": "molecule",
+      "status": "covered",
+      "gallery_url": "https://component.gallery/components/list"
+    },
+    {
+      "component_name": "Modal",
+      "canonical_id": "cmp-modal",
+      "atomic_tier": "organism",
+      "status": "covered",
+      "gallery_url": "https://component.gallery/components/modal"
+    },
+    {
+      "component_name": "Navigation",
+      "canonical_id": "cmp-navigation",
+      "atomic_tier": "organism",
+      "status": "covered",
+      "gallery_url": "https://component.gallery/components/navigation"
+    },
+    {
+      "component_name": "Pagination",
+      "canonical_id": "cmp-pagination",
+      "atomic_tier": "molecule",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/pagination"
+    },
+    {
+      "component_name": "Popover",
+      "canonical_id": "cmp-popover",
+      "atomic_tier": "molecule",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/popover"
+    },
+    {
+      "component_name": "Progress bar",
+      "canonical_id": "cmp-progress-bar",
+      "atomic_tier": "atom",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/progress-bar"
+    },
+    {
+      "component_name": "Progress indicator",
+      "canonical_id": "cmp-progress-indicator",
+      "atomic_tier": "atom",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/progress-indicator"
+    },
+    {
+      "component_name": "Quote",
+      "canonical_id": "cmp-quote",
+      "atomic_tier": "atom",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/quote"
+    },
+    {
+      "component_name": "Radio button",
+      "canonical_id": "cmp-radio-button",
+      "atomic_tier": "atom",
+      "status": "partial",
+      "gallery_url": "https://component.gallery/components/radio-button"
+    },
+    {
+      "component_name": "Rating",
+      "canonical_id": "cmp-rating",
+      "atomic_tier": "molecule",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/rating"
+    },
+    {
+      "component_name": "Rich text editor",
+      "canonical_id": "cmp-rich-text-editor",
+      "atomic_tier": "organism",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/rich-text-editor"
+    },
+    {
+      "component_name": "Search input",
+      "canonical_id": "cmp-search-input",
+      "atomic_tier": "molecule",
+      "status": "covered",
+      "gallery_url": "https://component.gallery/components/search-input"
+    },
+    {
+      "component_name": "Segmented control",
+      "canonical_id": "cmp-segmented-control",
+      "atomic_tier": "molecule",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/segmented-control"
+    },
+    {
+      "component_name": "Select",
+      "canonical_id": "cmp-select",
+      "atomic_tier": "atom",
+      "status": "covered",
+      "gallery_url": "https://component.gallery/components/select"
+    },
+    {
+      "component_name": "Separator",
+      "canonical_id": "cmp-separator",
+      "atomic_tier": "atom",
+      "status": "covered",
+      "gallery_url": "https://component.gallery/components/separator"
+    },
+    {
+      "component_name": "Skeleton",
+      "canonical_id": "cmp-skeleton",
+      "atomic_tier": "atom",
+      "status": "partial",
+      "gallery_url": "https://component.gallery/components/skeleton"
+    },
+    {
+      "component_name": "Skip link",
+      "canonical_id": "cmp-skip-link",
+      "atomic_tier": "atom",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/skip-link"
+    },
+    {
+      "component_name": "Slider",
+      "canonical_id": "cmp-slider",
+      "atomic_tier": "atom",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/slider"
+    },
+    {
+      "component_name": "Spinner",
+      "canonical_id": "cmp-spinner",
+      "atomic_tier": "atom",
+      "status": "partial",
+      "gallery_url": "https://component.gallery/components/spinner"
+    },
+    {
+      "component_name": "Stack",
+      "canonical_id": "cmp-stack",
+      "atomic_tier": "molecule",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/stack"
+    },
+    {
+      "component_name": "Stepper",
+      "canonical_id": "cmp-stepper",
+      "atomic_tier": "molecule",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/stepper"
+    },
+    {
+      "component_name": "Table",
+      "canonical_id": "cmp-table",
+      "atomic_tier": "organism",
+      "status": "covered",
+      "gallery_url": "https://component.gallery/components/table"
+    },
+    {
+      "component_name": "Tabs",
+      "canonical_id": "cmp-tabs",
+      "atomic_tier": "molecule",
+      "status": "covered",
+      "gallery_url": "https://component.gallery/components/tabs"
+    },
+    {
+      "component_name": "Text input",
+      "canonical_id": "cmp-text-input",
+      "atomic_tier": "atom",
+      "status": "covered",
+      "gallery_url": "https://component.gallery/components/text-input"
+    },
+    {
+      "component_name": "Textarea",
+      "canonical_id": "cmp-textarea",
+      "atomic_tier": "atom",
+      "status": "covered",
+      "gallery_url": "https://component.gallery/components/textarea"
+    },
+    {
+      "component_name": "Toast",
+      "canonical_id": "cmp-toast",
+      "atomic_tier": "organism",
+      "status": "covered",
+      "gallery_url": "https://component.gallery/components/toast"
+    },
+    {
+      "component_name": "Toggle",
+      "canonical_id": "cmp-toggle",
+      "atomic_tier": "atom",
+      "status": "covered",
+      "gallery_url": "https://component.gallery/components/toggle"
+    },
+    {
+      "component_name": "Tooltip",
+      "canonical_id": "cmp-tooltip",
+      "atomic_tier": "molecule",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/tooltip"
+    },
+    {
+      "component_name": "Tree view",
+      "canonical_id": "cmp-tree-view",
+      "atomic_tier": "organism",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/tree-view"
+    },
+    {
+      "component_name": "Video",
+      "canonical_id": "cmp-video",
+      "atomic_tier": "atom",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/video"
+    },
+    {
+      "component_name": "Visually hidden",
+      "canonical_id": "cmp-visually-hidden",
+      "atomic_tier": "foundation",
+      "status": "missing",
+      "gallery_url": "https://component.gallery/components/visually-hidden"
+    }
+  ],
+  "metadata": {
+    "generated_at": "2026-03-03T20:47:29.955Z",
+    "component_count": 60
+  }
+}

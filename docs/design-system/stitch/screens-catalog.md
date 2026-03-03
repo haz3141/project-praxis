@@ -1,6 +1,6 @@
 # Praxis Stitch Full Screen Catalog
 
-Generated: 2026-03-03T17:26:00.874Z
+Generated: 2026-03-03T20:47:29.246Z
 Source command: `pnpm run stitch:catalog`
 Total screens cataloged: **47**
 
@@ -148,7 +148,7 @@ Total screens cataloged: **47**
 
 ## Drift Notes
 
-- Snapshot `exports.md` lists only 6 Calm screen rows, 0 Executive rows, and 0 Minimal rows; live catalog currently has 23, 7, and 7 respectively.
-- Snapshot `exports.md` does not include Desktop project ID `5252820721296843802`; live catalog includes 10 Desktop screens.
+- Snapshot `exports.md` lists only 0 Calm screen rows, 0 Executive rows, and 0 Minimal rows; live catalog currently has 23, 7, and 7 respectively.
+- Snapshot `exports.md` includes Desktop project ID `5252820721296843802`; live catalog includes 10 Desktop screens.
 - Pattern registry remains a canonical-6 baseline, while this catalog captures the full live screen set (including duplicates and unmapped screens).
 

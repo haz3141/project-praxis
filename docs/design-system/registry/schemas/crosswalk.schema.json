@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://project-praxis.local/schemas/crosswalk.schema.json",
+  "title": "ComponentCrosswalk",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["components", "metadata"],
+  "properties": {
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["component_name", "atomic_tier", "status", "gallery_url"],
+        "properties": {
+          "component_name": { "type": "string" },
+          "atomic_tier": {
+            "type": "string",
+            "enum": ["foundation", "atom", "molecule", "organism", "template", "page"]
+          },
+          "status": {
+            "type": "string",
+            "enum": ["covered", "partial", "missing", "deprecated"]
+          },
+          "gallery_url": { "type": "string", "format": "uri" },
+          "canonical_id": { "type": "string" }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["generated_at", "component_count"],
+      "properties": {
+        "generated_at": { "type": "string", "format": "date-time" },
+        "component_count": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

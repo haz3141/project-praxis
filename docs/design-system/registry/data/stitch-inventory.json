@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-03-03T20:47:29.278Z",
+  "source_command": "pnpm run stitch:catalog",
+  "projects": [
+    {
+      "project_id": "13394915692903823935",
+      "project_title": "Praxis UI Kit — Calm",
+      "total_screens": 23,
+      "canonical_coverage": "6/6",
+      "duplicate_count": 21,
+      "unmapped_count": 1,
+      "slot_coverage": {
+        "00": 7,
+        "01": 6,
+        "02": 3,
+        "03": 3,
+        "04": 2,
+        "05": 1
+      }
+    },
+    {
+      "project_id": "5252820721296843802",
+      "project_title": "Praxis UI Kit — Desktop",
+      "total_screens": 10,
+      "canonical_coverage": "6/6",
+      "duplicate_count": 7,
+      "unmapped_count": 0,
+      "slot_coverage": {
+        "00": 3,
+        "01": 2,
+        "02": 1,
+        "03": 2,
+        "04": 1,
+        "05": 1
+      }
+    },
+    {
+      "project_id": "5764765102702214376",
+      "project_title": "Praxis UI Kit — Executive",
+      "total_screens": 7,
+      "canonical_coverage": "6/6",
+      "duplicate_count": 2,
+      "unmapped_count": 0,
+      "slot_coverage": {
+        "00": 1,
+        "01": 1,
+        "02": 2,
+        "03": 1,
+        "04": 1,
+        "05": 1
+      }
+    },
+    {
+      "project_id": "7285948406539466076",
+      "project_title": "Praxis UI Kit — Minimal",
+      "total_screens": 7,
+      "canonical_coverage": "6/6",
+      "duplicate_count": 2,
+      "unmapped_count": 0,
+      "slot_coverage": {
+        "00": 1,
+        "01": 2,
+        "02": 1,
+        "03": 1,
+        "04": 1,
+        "05": 1
+      }
+    }
+  ],
+  "totals": {
+    "project_count": 4,
+    "screen_count": 47
+  }
+}
