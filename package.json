@@ -31,7 +31,8 @@
     "test:e2e:smoke": "pnpm test:e2e",
     "test:unit": "pnpm -r --if-present test:unit",
     "typecheck": "pnpm -r --if-present typecheck",
-    "validate": "pnpm lint:md && bash scripts/validate_docs.sh"
+    "validate": "pnpm lint:md && bash scripts/validate_docs.sh",
+    "stitch:validate": "node scripts/stitch/validate-config.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.2",
