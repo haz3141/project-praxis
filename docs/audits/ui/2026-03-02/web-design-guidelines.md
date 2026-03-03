@@ -2,6 +2,7 @@
 
 ## Scope
 - `apps/planner/app/**/*.{ts,tsx,css}`
+- `apps/planner/components/**/*.{ts,tsx,css}`
 - `apps/planner/src/**/*.{ts,tsx,css}`
 - `packages/**/src/**/*.{ts,tsx,css}`
 - Rules source: `https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md`
@@ -9,7 +10,7 @@
 ## Severity Summary
 - P0: 0
 - P1: 9
-- P2: 8
+- P2: 12
 
 ## Findings
 
