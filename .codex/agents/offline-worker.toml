@@ -1,3 +1,4 @@
+[role]
 name = "offline-worker"
 mode = "implementation"
 description = "Own PWA shell caching, offline capture queue, and replay sync mechanics."

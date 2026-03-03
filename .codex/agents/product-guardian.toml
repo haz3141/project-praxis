@@ -1,3 +1,4 @@
+[role]
 name = "product-guardian"
 mode = "read-only"
 description = "Enforce MVP scope boundaries, core loop integrity, and anti-feature guardrails."
