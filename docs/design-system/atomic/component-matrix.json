@@ -945,6 +945,8 @@
           "hover",
           "focus-visible",
           "active",
+          "disabled",
+          "loading",
           "selected",
           "syncing",
           "conflict"

@@ -26,3 +26,9 @@ Praxis design system is planner-first and token-first.
 - Components must consume semantic/component tokens only.
 - Hardcoded color literals in components are disallowed.
 - Density mode (`comfortable` / `compact`) is token-driven and required for planner components.
+- Component paddings must be token-backed CSS variables (`var(--ds-*)`) to prevent spacing drift.
+
+## Hardening baseline
+- Story coverage for planner-critical controls includes `hover`, `focus-visible`, `disabled`, and `loading` states.
+- `Button` and `TaskRow` are the minimum state-coverage baseline for each DS hardening pass.
+- DS guard scripts run via `pnpm run lint:ds` and include color, spacing scale, and component-padding checks.

@@ -11,7 +11,8 @@
 - Density mappings for `comfortable` and `compact`
 - Keyboard and focus behavior documented
 - Token mapping complete (no hardcoded color literals)
-- Storybook stories for state coverage
+- Storybook stories for state coverage (`hover`, `focus-visible`, `disabled`, `loading` minimum for planner-critical controls)
+- DS lint guards enforced (`lint:ds:colors`, `lint:ds:spacing`, `lint:ds:paddings`)
 
 ## Quality baseline
 - WCAG 2.2 AA intent for planner surfaces
