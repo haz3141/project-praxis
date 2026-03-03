@@ -5,13 +5,17 @@
       "surface": { "$type": "color", "$value": "{primitives.color.neutral.50}" },
       "elevated": { "$type": "color", "$value": "{primitives.color.neutral.0}" },
       "interactive": { "$type": "color", "$value": "{primitives.color.accent.500}" },
-      "interactiveHover": { "$type": "color", "$value": "{primitives.color.accent.600}" }
+      "interactiveHover": { "$type": "color", "$value": "{primitives.color.accent.600}" },
+      "success": { "$type": "color", "$value": "{primitives.color.success.500}" },
+      "warning": { "$type": "color", "$value": "{primitives.color.warning.500}" }
     },
     "fg": {
       "default": { "$type": "color", "$value": "{primitives.color.neutral.900}" },
       "muted": { "$type": "color", "$value": "{primitives.color.neutral.500}" },
       "onInteractive": { "$type": "color", "$value": "{primitives.color.neutral.0}" },
-      "danger": { "$type": "color", "$value": "{primitives.color.danger.500}" }
+      "danger": { "$type": "color", "$value": "{primitives.color.danger.500}" },
+      "success": { "$type": "color", "$value": "{primitives.color.success.600}" },
+      "warning": { "$type": "color", "$value": "{primitives.color.warning.600}" }
     },
     "border": {
       "default": { "$type": "color", "$value": "{primitives.color.neutral.200}" },
@@ -25,6 +29,7 @@
     "md": { "$type": "dimension", "$value": "{primitives.space.12}" },
     "lg": { "$type": "dimension", "$value": "{primitives.space.16}" },
     "xl": { "$type": "dimension", "$value": "{primitives.space.24}" },
+    "2xl": { "$type": "dimension", "$value": "{primitives.space.32}" },
     "controlX": { "$type": "dimension", "$value": "{primitives.space.12}" },
     "controlY": { "$type": "dimension", "$value": "{primitives.space.8}" }
   },
@@ -36,25 +41,34 @@
   "radius": {
     "sm": { "$type": "dimension", "$value": "{primitives.radius.sm}" },
     "md": { "$type": "dimension", "$value": "{primitives.radius.md}" },
-    "lg": { "$type": "dimension", "$value": "{primitives.radius.lg}" }
+    "lg": { "$type": "dimension", "$value": "{primitives.radius.lg}" },
+    "xl": { "$type": "dimension", "$value": "{primitives.radius.xl}" }
   },
   "font": {
     "size": {
-      "body": { "$type": "dimension", "$value": "{primitives.font.size.md}" },
+      "caption": { "$type": "dimension", "$value": "{primitives.font.size.xs}" },
       "label": { "$type": "dimension", "$value": "{primitives.font.size.sm}" },
-      "title": { "$type": "dimension", "$value": "{primitives.font.size.lg}" }
+      "body": { "$type": "dimension", "$value": "{primitives.font.size.md}" },
+      "title": { "$type": "dimension", "$value": "{primitives.font.size.lg}" },
+      "heading2": { "$type": "dimension", "$value": "{primitives.font.size.xl}" },
+      "heading1": { "$type": "dimension", "$value": "{primitives.font.size.2xl}" }
     },
     "weight": {
+      "body": { "$type": "number", "$value": "{primitives.font.weight.regular}" },
       "label": { "$type": "number", "$value": "{primitives.font.weight.medium}" },
-      "title": { "$type": "number", "$value": "{primitives.font.weight.semibold}" }
+      "title": { "$type": "number", "$value": "{primitives.font.weight.semibold}" },
+      "heading": { "$type": "number", "$value": "{primitives.font.weight.bold}" }
     }
   },
   "shadow": {
     "card": { "$type": "shadow", "$value": "{primitives.shadow.sm}" },
-    "overlay": { "$type": "shadow", "$value": "{primitives.shadow.md}" }
+    "elevated": { "$type": "shadow", "$value": "{primitives.shadow.md}" },
+    "overlay": { "$type": "shadow", "$value": "{primitives.shadow.lg}" }
   },
   "motion": {
-    "durationFast": { "$type": "duration", "$value": "120ms" },
-    "durationNormal": { "$type": "duration", "$value": "200ms" }
+    "durationFast": { "$type": "duration", "$value": "{primitives.motion.short}" },
+    "durationNormal": { "$type": "duration", "$value": "{primitives.motion.medium}" },
+    "durationSlow": { "$type": "duration", "$value": "{primitives.motion.long}" },
+    "easing": { "$type": "string", "$value": "ease-in-out" }
   }
 }

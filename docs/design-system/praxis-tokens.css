@@ -1,0 +1,122 @@
+/* praxis-tokens.css — Tailwind v4 theme layer */
+/* Praxis Calm Professional — Desktop-first planner tokens */
+
+@theme {
+  /* ── Colors: Surfaces ── */
+  --color-surface-background: #FAFAFA;
+  --color-surface-elevated: #FFFFFF;
+  --color-surface-sidebar: #F5F6F8;
+  --color-surface-disabled: #F3F4F6;
+
+  /* ── Colors: Accent ── */
+  --color-accent-primary: #4F46E5;
+  --color-accent-primary-hover: #4338CA;
+  --color-accent-secondary: #6366F1;
+
+  /* ── Colors: Text ── */
+  --color-text-primary: #111827;
+  --color-text-secondary: #6B7280;
+  --color-text-tertiary: #9CA3AF;
+  --color-text-disabled: #D1D5DB;
+
+  /* ── Colors: Semantic ── */
+  --color-semantic-success: #059669;
+  --color-semantic-warning: #D97706;
+  --color-semantic-destructive: #DC2626;
+
+  /* ── Colors: Border ── */
+  --color-border-default: #E5E7EB;
+  --color-border-focus: rgba(79, 70, 229, 0.4);
+
+  /* ── Spacing Scale (8px base) ── */
+  --spacing-micro: 4px;
+  --spacing-tight: 8px;
+  --spacing-snug: 12px;
+  --spacing-base: 16px;
+  --spacing-relaxed: 24px;
+  --spacing-loose: 32px;
+  --spacing-spacious: 40px;
+  --spacing-wide: 56px;
+  --spacing-expansive: 72px;
+
+  /* ── Typography ── */
+  --font-family-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --font-size-h1: 36px;
+  --font-size-h2: 28px;
+  --font-size-h3: 22px;
+  --font-size-h4: 18px;
+  --font-size-h5: 16px;
+  --font-size-h6: 14px;
+  --font-size-body: 16px;
+  --font-size-small: 14px;
+  --font-size-caption: 12px;
+
+  --line-height-h1: 44px;
+  --line-height-h2: 36px;
+  --line-height-h3: 30px;
+  --line-height-h4: 26px;
+  --line-height-h5: 24px;
+  --line-height-h6: 20px;
+  --line-height-body: 24px;
+  --line-height-small: 20px;
+  --line-height-caption: 16px;
+
+  --tracking-tight: -0.02em;
+  --tracking-snug: -0.01em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.01em;
+  --tracking-wider: 0.02em;
+
+  /* ── Elevation ── */
+  --shadow-level-0: none;
+  --shadow-level-1: 0 0 0 1px #E5E7EB;
+  --shadow-level-2: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-level-3: 0 6px 18px rgba(0, 0, 0, 0.08);
+  --shadow-level-4: 0 12px 32px rgba(0, 0, 0, 0.12);
+
+  /* ── Border Radius ── */
+  --radius-none: 0px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+
+  /* ── Motion ── */
+  --duration-fast: 100ms;
+  --duration-normal: 200ms;
+  --duration-slow: 350ms;
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-enter: cubic-bezier(0, 0, 0.2, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+
+  /* ── Grid ── */
+  --grid-columns: 12;
+  --grid-max-width: 1280px;
+  --grid-gutter: 24px;
+  --grid-outer-margin: 80px;
+  --content-max-width: 72ch;
+}
+
+/* ── Density Modes ── */
+:root,
+[data-density="comfortable"] {
+  --density-topnav-height: 56px;
+  --density-priority-card-height: 88px;
+  --density-task-row-height: 48px;
+  --density-habit-row-height: 44px;
+  --density-button-height: 40px;
+  --density-input-height: 40px;
+  --density-card-padding: 24px;
+}
+
+[data-density="compact"] {
+  --density-topnav-height: 48px;
+  --density-priority-card-height: 72px;
+  --density-task-row-height: 40px;
+  --density-habit-row-height: 36px;
+  --density-button-height: 36px;
+  --density-input-height: 36px;
+  --density-card-padding: 16px;
+}
