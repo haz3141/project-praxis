@@ -11,12 +11,19 @@ Project Praxis constitutional documentation and implementation repository.
 - `supabase/migrations`: solo-first schema and RLS policies.
 - `tests`: cross-app smoke, accessibility, and keyboard checks.
 
+## Quickstart
+
+- `pnpm install`
+- `pnpm dev`
+- `pnpm test:e2e`
+- `pnpm lint`
+
 ## Validation
 
-- `npm run lint:md`
-- `npm run validate`
-- `npm run lint`
-- `npm run typecheck`
-- `npm run test:unit`
-- `npm run test:e2e`
-- `npm run test:a11y`
+- `pnpm lint:md`
+- `pnpm validate`
+- `pnpm lint`
+- `pnpm typecheck`
+- `pnpm test:unit`
+- `pnpm test:e2e`
+- `pnpm test:a11y`

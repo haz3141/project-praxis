@@ -10,7 +10,7 @@ The repository started as constitutional and decision documentation only. Locked
 
 ## Decision
 
-Bootstrap an npm workspace monorepo in-place:
+Bootstrap a pnpm workspace monorepo in-place:
 
 - `apps/planner` for the Next.js planner runtime
 - `apps/site` for Astro marketing/docs shell
