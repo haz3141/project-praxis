@@ -9,6 +9,12 @@
 - Preserve source immutability under `_import_from_drive`.
 - Do not introduce product redesign through documentation-only changes.
 - Keep constitutional tone declarative and non-conversational.
+- Use `pnpm` only for installs and scripts.
+- Local quickstart commands:
+  - `pnpm install`
+  - `pnpm dev`
+  - `pnpm test:e2e`
+  - `pnpm lint`
 
 ## Constitution Rules
 

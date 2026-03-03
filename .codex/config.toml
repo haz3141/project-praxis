@@ -1,0 +1,46 @@
+[project]
+name = "project-praxis"
+default_branch = "dev"
+multi_agent = true
+
+[agents]
+# Optional safety rails; tweak if you want
+max_threads = 6
+max_depth = 2
+
+# Role definitions (AgentRoleToml structs)
+[agents.explorer]
+description = "Map codebase structure, constraints, and integration points without edits."
+config_file = "./agents/explorer.toml"
+
+[agents.frontend-worker]
+description = "Implement frontend UI changes (minimal diff, token-driven)."
+config_file = "./agents/frontend-worker.toml"
+
+[agents.design-system]
+description = "Maintain design tokens, UI primitives, and consistent patterns."
+config_file = "./agents/design-system.toml"
+
+[agents.qa-ci-worker]
+description = "Run tests, improve CI gates, and produce verification notes."
+config_file = "./agents/qa-ci-worker.toml"
+
+[agents.product-guardian]
+description = "Enforce MVP scope, decision matrix constraints, and product consistency."
+config_file = "./agents/product-guardian.toml"
+
+[agents.backend-worker]
+description = "Backend & integration work (Supabase, APIs), minimal changes."
+config_file = "./agents/backend-worker.toml"
+
+[agents.offline-worker]
+description = "Offline-first planner loop + local persistence; minimal diff."
+config_file = "./agents/offline-worker.toml"
+
+[agents.studio-worker]
+description = "Studio/pointer mode improvements where explicitly requested."
+config_file = "./agents/studio-worker.toml"
+
+[execution]
+require_conventional_commits = true
+prefer_atomic_commits = true

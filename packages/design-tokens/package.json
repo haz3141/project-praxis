@@ -1,0 +1,9 @@
+{
+  "name": "@praxis/design-tokens",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Praxis semantic design tokens and CSS variable build output",
+  "scripts": {
+    "build": "node scripts/build-css.js"
+  }
+}

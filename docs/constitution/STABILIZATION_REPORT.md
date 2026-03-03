@@ -52,7 +52,7 @@ No source files under `_import_from_drive` were modified.
 
 ## Validation Evidence
 
-- `npm run lint:md` returns zero errors.
+- `pnpm lint:md` returns zero errors.
 - `bash scripts/validate_docs.sh` exits 0.
 - Required files `docs/constitution/00-05.md` exist and pass section-order checks.
 - Forbidden link/citation artifact checks pass for constitutional files.

@@ -1,0 +1,20 @@
+{
+  "searchRoots": [
+    "dist",
+    "build",
+    ".next",
+    ".next/static/chunks",
+    "apps/planner/.next",
+    "apps/planner/.next/static/chunks"
+  ],
+  "plannerEntryPatterns": [
+    "(^|/)(planner|inbox|today|review)(/|$)"
+  ],
+  "plannerChunkPatterns": [
+    "(^|[-_/])(planner|inbox|today|review)([-_.]|$)"
+  ],
+  "forbiddenTokens": [
+    "@excalidraw/excalidraw",
+    "excalidraw"
+  ]
+}

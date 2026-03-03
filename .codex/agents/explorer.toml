@@ -1,0 +1,4 @@
+[role]
+name = "explorer"
+mode = "read-only"
+description = "Map codebase structure, constraints, and integration points without edits."

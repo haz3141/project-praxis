@@ -17,8 +17,8 @@
 
 ## Required Checks
 
-- `npm run lint:md`
-- `npm run validate`
+- `pnpm lint:md`
+- `pnpm validate`
 
 ## Release Policy
 

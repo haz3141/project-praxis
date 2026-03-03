@@ -1,0 +1,10 @@
+{
+  "space": {
+    "controlX": { "$value": "{primitives.space.12}" },
+    "controlY": { "$value": "{primitives.space.8}" }
+  },
+  "size": {
+    "controlHeight": { "$value": "2.5rem" },
+    "targetMin": { "$value": "2.75rem" }
+  }
+}
