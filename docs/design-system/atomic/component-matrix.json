@@ -1271,7 +1271,7 @@
           "offline",
           "syncing",
           "conflict",
-          "success"
+          "synced"
         ],
         "density": {
           "comfortable": [
