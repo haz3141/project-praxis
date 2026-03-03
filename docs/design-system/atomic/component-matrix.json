@@ -98,7 +98,11 @@
           "theme-high-contrast"
         ],
         "states": [
-          "default"
+          "default",
+          "success",
+          "warning",
+          "error",
+          "syncing"
         ],
         "density": {
           "comfortable": [
@@ -1264,9 +1268,10 @@
         ],
         "states": [
           "default",
-          "warning",
-          "error",
-          "success"
+          "offline",
+          "syncing",
+          "conflict",
+          "synced"
         ],
         "density": {
           "comfortable": [
