@@ -1,0 +1,2121 @@
+{
+  "metadata": {
+    "generated_at": "2026-03-03T20:56:34.419Z",
+    "source_url": "https://component.gallery/design-systems/",
+    "extractor_version": "v1",
+    "checksum": "80e3be1599c54e5f51cb985a82152a39dfc95a27f2f7f56a8d0663063238dca6"
+  },
+  "systems": [
+    {
+      "id": "ds-98-css",
+      "name": "98.css",
+      "homepage": "https://jdan.github.io/98.css/",
+      "component_count": 8,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "CSS"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-a11y-style-guide",
+      "name": "A11Y Style Guide",
+      "homepage": "https://a11y-style-guide.com/style-guide/",
+      "component_count": 21,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "jQuery"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Accessibility",
+        "Unmaintained",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-ant-design",
+      "name": "Ant Design",
+      "homepage": "https://ant.design/",
+      "component_count": 67,
+      "platform_tags": [
+        "Figma",
+        "GitHub"
+      ],
+      "tech_tags": [
+        "React"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Accessibility issues",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-ariakit",
+      "name": "Ariakit",
+      "homepage": "https://ariakit.org/",
+      "component_count": 18,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "React"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Open source",
+        "Accessibility"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-atlassian-design-system",
+      "name": "Atlassian Design System",
+      "homepage": "https://atlassian.design",
+      "component_count": 49,
+      "platform_tags": [
+        "Figma"
+      ],
+      "tech_tags": [
+        "React"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Tone of voice",
+        "Accessibility"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-auro",
+      "name": "Auro",
+      "homepage": "https://auro.alaskaair.com/",
+      "component_count": 24,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "Web Components",
+        "Sass"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-aurora",
+      "name": "Aurora",
+      "homepage": "https://design.gccollab.ca/",
+      "component_count": 19,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "CSS"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Tone of voice",
+        "Open source",
+        "Unmaintained"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-backpack",
+      "name": "Backpack",
+      "homepage": "https://www.skyscanner.design",
+      "component_count": 80,
+      "platform_tags": [
+        "GitHub",
+        "Storybook"
+      ],
+      "tech_tags": [
+        "Mobile",
+        "React"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Open source",
+        "Tone of voice"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-base-web",
+      "name": "Base Web",
+      "homepage": "https://baseweb.design/",
+      "component_count": 64,
+      "platform_tags": [
+        "Figma",
+        "GitHub"
+      ],
+      "tech_tags": [
+        "React",
+        "CSS-in-JS"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-bbc-global-experience-language",
+      "name": "BBC Global Experience Language",
+      "homepage": "https://www.bbc.co.uk/gel/guidelines/category/design-patterns",
+      "component_count": 22,
+      "platform_tags": [],
+      "tech_tags": [],
+      "feature_tags": [
+        "Accessibility",
+        "Usage guidelines",
+        "Unmaintained"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-blueprint",
+      "name": "Blueprint",
+      "homepage": "https://blueprintjs.com/",
+      "component_count": 50,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "React",
+        "Sass"
+      ],
+      "feature_tags": [
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-bolt-design-system",
+      "name": "Bolt Design System",
+      "homepage": "https://boltdesignsystem.com/",
+      "component_count": 51,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "Sass",
+        "Twig",
+        "Web Components"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Tone of voice",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-bootstrap",
+      "name": "Bootstrap",
+      "homepage": "https://getbootstrap.com/",
+      "component_count": 24,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "Sass"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Accessibility",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-brighton-and-38-hove-city-council-website-pattern-library",
+      "name": "Brighton &#38; Hove City Council Website pattern library",
+      "homepage": "http://design.brighton-hove.gov.uk/website-pattern-library.php?p=service-icons",
+      "component_count": 20,
+      "platform_tags": [],
+      "tech_tags": [],
+      "feature_tags": [
+        "Unmaintained"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-bulma",
+      "name": "Bulma",
+      "homepage": "https://bulma.io/",
+      "component_count": 19,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "Sass"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Accessibility issues",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-carbon-design-system",
+      "name": "Carbon Design System",
+      "homepage": "https://www.carbondesignsystem.com/",
+      "component_count": 37,
+      "platform_tags": [
+        "Figma",
+        "GitHub",
+        "Storybook"
+      ],
+      "tech_tags": [
+        "React",
+        "Vanilla JS",
+        "Angular",
+        "Vue",
+        "Svelte",
+        "Web Components"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-cauldron",
+      "name": "Cauldron",
+      "homepage": "https://cauldron.dequelabs.com/",
+      "component_count": 53,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "React",
+        "CSS"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Accessibility",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-cedar",
+      "name": "Cedar",
+      "homepage": "https://cedar.rei.com/",
+      "component_count": 36,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "Vue",
+        "Sass",
+        "CSS Modules"
+      ],
+      "feature_tags": [
+        "Usage guidelines",
+        "Code examples",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-chakra-ui",
+      "name": "Chakra UI",
+      "homepage": "https://chakra-ui.com/",
+      "component_count": 73,
+      "platform_tags": [
+        "Figma",
+        "GitHub",
+        "Storybook"
+      ],
+      "tech_tags": [
+        "React",
+        "CSS-in-JS"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-clarity-design-system",
+      "name": "Clarity Design System",
+      "homepage": "https://clarity.design/",
+      "component_count": 37,
+      "platform_tags": [
+        "Figma",
+        "GitHub"
+      ],
+      "tech_tags": [
+        "CSS",
+        "Angular",
+        "Web Components"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-coral",
+      "name": "Coral",
+      "homepage": "https://design.talend.com",
+      "component_count": 56,
+      "platform_tags": [
+        "GitHub",
+        "Storybook"
+      ],
+      "tech_tags": [
+        "React"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Tone of voice",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-crayons",
+      "name": "Crayons",
+      "homepage": "https://crayons.freshworks.com/",
+      "component_count": 43,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "Web Components"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-decathlon-design-system",
+      "name": "Decathlon Design System",
+      "homepage": "https://www.decathlon.design/",
+      "component_count": 32,
+      "platform_tags": [
+        "Figma",
+        "GitHub"
+      ],
+      "tech_tags": [
+        "CSS",
+        "React",
+        "Svelte",
+        "Vue",
+        "Web Components"
+      ],
+      "feature_tags": [
+        "Usage guidelines",
+        "Code examples",
+        "Accessibility",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-dell-design-system",
+      "name": "Dell Design System",
+      "homepage": "https://www.delldesignsystem.com/",
+      "component_count": 35,
+      "platform_tags": [],
+      "tech_tags": [
+        "Vanilla JS"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-duet-design-system",
+      "name": "Duet Design System",
+      "homepage": "https://www.duetds.com/",
+      "component_count": 26,
+      "platform_tags": [],
+      "tech_tags": [
+        "Angular",
+        "Vue",
+        "React"
+      ],
+      "feature_tags": [
+        "Code examples"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-ebay-mind-patterns",
+      "name": "eBay MIND Patterns",
+      "homepage": "https://ebay.gitbook.io/mindpatterns/",
+      "component_count": 42,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [],
+      "feature_tags": [
+        "Accessibility",
+        "Usage guidelines",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-ebay-playbook",
+      "name": "eBay Playbook",
+      "homepage": "https://playbook.ebay.com/",
+      "component_count": 47,
+      "platform_tags": [],
+      "tech_tags": [
+        "HTML",
+        "React"
+      ],
+      "feature_tags": [
+        "Code examples"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-elastic-ui-framework",
+      "name": "Elastic UI framework",
+      "homepage": "https://eui.elastic.co/",
+      "component_count": 77,
+      "platform_tags": [
+        "Figma",
+        "GitHub"
+      ],
+      "tech_tags": [
+        "React",
+        "CSS-in-JS"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-elisa-design-system",
+      "name": "Elisa Design System",
+      "homepage": "https://designsystem.elisa.fi/9b207b2c3/p/155e65-elisa-design-system",
+      "component_count": 54,
+      "platform_tags": [
+        "Storybook"
+      ],
+      "tech_tags": [
+        "React"
+      ],
+      "feature_tags": [
+        "Usage guidelines",
+        "Code examples",
+        "Accessibility"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-evergreen",
+      "name": "Evergreen",
+      "homepage": "https://evergreen.segment.com/",
+      "component_count": 31,
+      "platform_tags": [
+        "Figma",
+        "GitHub"
+      ],
+      "tech_tags": [
+        "React"
+      ],
+      "feature_tags": [
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-flowbite",
+      "name": "Flowbite",
+      "homepage": "https://flowbite.com/",
+      "component_count": 65,
+      "platform_tags": [
+        "Figma",
+        "GitHub"
+      ],
+      "tech_tags": [
+        "Tailwind CSS"
+      ],
+      "feature_tags": [
+        "Open source",
+        "Code examples"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-fluent-ui",
+      "name": "Fluent UI",
+      "homepage": "https://developer.microsoft.com/en-us/fluentui#/",
+      "component_count": 50,
+      "platform_tags": [
+        "Figma",
+        "GitHub",
+        "Storybook"
+      ],
+      "tech_tags": [
+        "React",
+        "Web Components",
+        "Mobile"
+      ],
+      "feature_tags": [
+        "Usage guidelines",
+        "Code examples",
+        "Accessibility",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-forma-36",
+      "name": "Forma 36",
+      "homepage": "https://f36.contentful.com/",
+      "component_count": 58,
+      "platform_tags": [
+        "Figma",
+        "GitHub"
+      ],
+      "tech_tags": [
+        "React",
+        "CSS-in-JS"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-futurelearn-design-system",
+      "name": "FutureLearn design system",
+      "homepage": "https://design-system.futurelearn.com/",
+      "component_count": 0,
+      "platform_tags": [],
+      "tech_tags": [
+        "React"
+      ],
+      "feature_tags": [
+        "Usage guidelines",
+        "Tone of voice"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-geist-design-system",
+      "name": "Geist Design System",
+      "homepage": "https://vercel.com/geist",
+      "component_count": 44,
+      "platform_tags": [],
+      "tech_tags": [
+        "React"
+      ],
+      "feature_tags": [
+        "Code examples"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-gestalt",
+      "name": "Gestalt",
+      "homepage": "https://gestalt.pinterest.systems",
+      "component_count": 75,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "React",
+        "CSS"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Open source",
+        "Usage guidelines"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-giffgaff-design-system",
+      "name": "giffgaff design system",
+      "homepage": "https://www.giffgaff.design/",
+      "component_count": 42,
+      "platform_tags": [],
+      "tech_tags": [],
+      "feature_tags": [
+        "Usage guidelines",
+        "Code examples"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-gold-design-system",
+      "name": "GOLD Design System",
+      "homepage": "https://gold.designsystemau.org/",
+      "component_count": 31,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "React",
+        "Sass"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Accessibility",
+        "Open source",
+        "Unmaintained"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-gov-uk-design-system",
+      "name": "GOV.UK Design System",
+      "homepage": "https://design-system.service.gov.uk/",
+      "component_count": 19,
+      "platform_tags": [
+        "Figma",
+        "GitHub",
+        "Storybook"
+      ],
+      "tech_tags": [
+        "Nunjucks"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Research",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-grommet",
+      "name": "Grommet",
+      "homepage": "https://v2.grommet.io/",
+      "component_count": 19,
+      "platform_tags": [
+        "GitHub",
+        "Storybook"
+      ],
+      "tech_tags": [
+        "React"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-headless-ui",
+      "name": "Headless UI",
+      "homepage": "https://headlessui.com/",
+      "component_count": 16,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "React",
+        "Vue"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Accessibility",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-helios",
+      "name": "Helios",
+      "homepage": "https://helios.hashicorp.design/",
+      "component_count": 24,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "Ember",
+        "Sass"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Accessibility",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-helsinki-design-system",
+      "name": "Helsinki Design System",
+      "homepage": "https://hds.hel.fi/",
+      "component_count": 21,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "React",
+        "CSS"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Accessibility",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-heroui",
+      "name": "HeroUI",
+      "homepage": "https://www.heroui.com/",
+      "component_count": 51,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "React",
+        "Tailwind CSS"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-inclusive-components",
+      "name": "Inclusive Components",
+      "homepage": "https://inclusive-components.design",
+      "component_count": 9,
+      "platform_tags": [],
+      "tech_tags": [],
+      "feature_tags": [
+        "Code examples",
+        "Accessibility",
+        "Unmaintained"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-instructure-ui",
+      "name": "Instructure-UI",
+      "homepage": "https://instructure.design/",
+      "component_count": 72,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "React",
+        "CSS-in-JS"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Accessibility",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-j-kul-designsystem",
+      "name": "Jøkul Designsystem",
+      "homepage": "https://jokul.fremtind.no/",
+      "component_count": 32,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "React",
+        "Sass"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-lightning-design-system",
+      "name": "Lightning Design System",
+      "homepage": "https://www.lightningdesignsystem.com/",
+      "component_count": 54,
+      "platform_tags": [
+        "Figma",
+        "GitHub",
+        "Storybook"
+      ],
+      "tech_tags": [
+        "React"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Tone of voice",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-material-design",
+      "name": "Material Design",
+      "homepage": "https://m3.material.io/",
+      "component_count": 28,
+      "platform_tags": [
+        "Figma",
+        "GitHub"
+      ],
+      "tech_tags": [
+        "Mobile",
+        "Web Components",
+        "Sass"
+      ],
+      "feature_tags": [
+        "Usage guidelines",
+        "Open source",
+        "Accessibility"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-momentum-design",
+      "name": "Momentum Design",
+      "homepage": "https://momentum.design/",
+      "component_count": 12,
+      "platform_tags": [
+        "GitHub",
+        "Storybook"
+      ],
+      "tech_tags": [
+        "React",
+        "Web Components"
+      ],
+      "feature_tags": [
+        "Usage guidelines",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-morningstar-product-system",
+      "name": "Morningstar Product System",
+      "homepage": "https://design.morningstar.com/systems/product",
+      "component_count": 41,
+      "platform_tags": [],
+      "tech_tags": [
+        "Vue"
+      ],
+      "feature_tags": [
+        "Usage guidelines"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-mozilla-protocol",
+      "name": "Mozilla Protocol",
+      "homepage": "https://protocol.mozilla.org/",
+      "component_count": 61,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "Handlebars",
+        "Sass"
+      ],
+      "feature_tags": [
+        "Usage guidelines",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-nessie",
+      "name": "Nessie",
+      "homepage": "https://design.ns.nl/4a05a30ad/p/04b3ac-nessie--ns-design-system",
+      "component_count": 70,
+      "platform_tags": [
+        "Storybook"
+      ],
+      "tech_tags": [
+        "Web Components",
+        "Tailwind CSS"
+      ],
+      "feature_tags": [
+        "Usage guidelines",
+        "Code examples"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-newskit",
+      "name": "NewsKit",
+      "homepage": "https://www.newskit.co.uk/",
+      "component_count": 51,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "React",
+        "CSS-in-JS"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-nhs-digital-service-manual",
+      "name": "NHS Digital service manual",
+      "homepage": "https://service-manual.nhs.uk/",
+      "component_count": 29,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "Nunjucks"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Research",
+        "Tone of voice",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-no-style-design-system",
+      "name": "No Style Design System",
+      "homepage": "https://nostyle.onrender.com/",
+      "component_count": 15,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "Sass",
+        "jQuery"
+      ],
+      "feature_tags": [
+        "Open source",
+        "Unmaintained"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-nord-design-system",
+      "name": "Nord Design System",
+      "homepage": "https://nordhealth.design/",
+      "component_count": 49,
+      "platform_tags": [],
+      "tech_tags": [
+        "Web Components"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-nucleus-design-system",
+      "name": "Nucleus Design System",
+      "homepage": "https://britishgas.design/",
+      "component_count": 46,
+      "platform_tags": [
+        "Storybook"
+      ],
+      "tech_tags": [
+        "Web Components"
+      ],
+      "feature_tags": [
+        "Usage guidelines"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-ons-design-system",
+      "name": "ONS Design System",
+      "homepage": "https://ons-design-system.netlify.app/",
+      "component_count": 40,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "HTML",
+        "Nunjucks",
+        "Sass"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Accessibility",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-ontario-design-system",
+      "name": "Ontario Design System",
+      "homepage": "https://designsystem.ontario.ca/",
+      "component_count": 15,
+      "platform_tags": [],
+      "tech_tags": [
+        "HTML",
+        "Sass"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Accessibility"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-orbit",
+      "name": "Orbit",
+      "homepage": "https://orbit.kiwi/",
+      "component_count": 57,
+      "platform_tags": [
+        "Figma",
+        "GitHub",
+        "Storybook"
+      ],
+      "tech_tags": [
+        "React",
+        "CSS-in-JS"
+      ],
+      "feature_tags": [
+        "Usage guidelines",
+        "Open source",
+        "Code examples",
+        "Tone of voice"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-pajamas",
+      "name": "Pajamas",
+      "homepage": "https://design.gitlab.com/",
+      "component_count": 42,
+      "platform_tags": [
+        "Figma",
+        "GitHub",
+        "Storybook"
+      ],
+      "tech_tags": [
+        "Vue"
+      ],
+      "feature_tags": [
+        "Usage guidelines",
+        "Code examples",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-paste",
+      "name": "Paste",
+      "homepage": "https://paste.twilio.design/",
+      "component_count": 18,
+      "platform_tags": [
+        "Figma",
+        "GitHub",
+        "Storybook"
+      ],
+      "tech_tags": [
+        "React",
+        "CSS-in-JS"
+      ],
+      "feature_tags": [
+        "Usage guidelines",
+        "Code examples",
+        "Tone of voice",
+        "Accessibility",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-patternfly",
+      "name": "PatternFly",
+      "homepage": "https://www.patternfly.org/",
+      "component_count": 81,
+      "platform_tags": [
+        "Figma",
+        "GitHub"
+      ],
+      "tech_tags": [
+        "React",
+        "Sass"
+      ],
+      "feature_tags": [
+        "Tone of voice",
+        "Open source",
+        "Usage guidelines"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-pharos",
+      "name": "Pharos",
+      "homepage": "https://pharos.jstor.org/",
+      "component_count": 28,
+      "platform_tags": [
+        "GitHub",
+        "Storybook"
+      ],
+      "tech_tags": [
+        "Web Components",
+        "Sass"
+      ],
+      "feature_tags": [
+        "Usage guidelines",
+        "Open source",
+        "Code examples",
+        "Accessibility",
+        "Tone of voice"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-polaris",
+      "name": "Polaris",
+      "homepage": "https://polaris.shopify.com/",
+      "component_count": 48,
+      "platform_tags": [
+        "Figma",
+        "GitHub",
+        "Storybook"
+      ],
+      "tech_tags": [
+        "React"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Accessibility",
+        "Tone of voice",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-porsche-design-system",
+      "name": "Porsche Design System",
+      "homepage": "https://designsystem.porsche.com/v3/",
+      "component_count": 43,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "Web Components",
+        "Angular",
+        "React",
+        "Vue"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-primer",
+      "name": "Primer",
+      "homepage": "https://primer.style/design/",
+      "component_count": 63,
+      "platform_tags": [
+        "Figma",
+        "GitHub",
+        "Storybook"
+      ],
+      "tech_tags": [
+        "React"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-purple3",
+      "name": "Purple3",
+      "homepage": "https://design.herokai.com/purple3",
+      "component_count": 13,
+      "platform_tags": [],
+      "tech_tags": [
+        "CSS"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Unmaintained"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-quasar-framework",
+      "name": "Quasar Framework",
+      "homepage": "https://quasar.dev/",
+      "component_count": 72,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "Vue"
+      ],
+      "feature_tags": [
+        "Accessibility issues",
+        "Code examples",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-radix-primitives",
+      "name": "Radix Primitives",
+      "homepage": "https://radix-ui.com/",
+      "component_count": 20,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "React"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-reach-ui",
+      "name": "Reach UI",
+      "homepage": "https://reach.tech/",
+      "component_count": 15,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "React"
+      ],
+      "feature_tags": [
+        "Accessibility",
+        "Code examples",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-red-hat-design-system",
+      "name": "Red Hat design system",
+      "homepage": "https://ux.redhat.com/",
+      "component_count": 41,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "Web Components"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-ruter-components",
+      "name": "Ruter Components",
+      "homepage": "https://components.ruter.as/",
+      "component_count": 72,
+      "platform_tags": [],
+      "tech_tags": [
+        "React"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Unmaintained"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-sainsbury-s-design-system",
+      "name": "Sainsbury's Design System",
+      "homepage": "https://design-systems.sainsburys.co.uk/",
+      "component_count": 38,
+      "platform_tags": [
+        "Storybook"
+      ],
+      "tech_tags": [
+        "React",
+        "Sass"
+      ],
+      "feature_tags": [
+        "Usage guidelines",
+        "Code examples",
+        "Tone of voice"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-seb-design-library",
+      "name": "SEB Design Library",
+      "homepage": "https://designlibrary.sebgroup.com/",
+      "component_count": 32,
+      "platform_tags": [],
+      "tech_tags": [
+        "Sass",
+        "React",
+        "Angular"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-seeds",
+      "name": "Seeds",
+      "homepage": "https://sproutsocial.com/seeds/",
+      "component_count": 34,
+      "platform_tags": [],
+      "tech_tags": [
+        "React"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Tone of voice"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-seek-style-guide",
+      "name": "Seek style guide",
+      "homepage": "https://seek-oss.github.io/seek-style-guide/",
+      "component_count": 23,
+      "platform_tags": [],
+      "tech_tags": [
+        "React"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Unmaintained"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-shadcn-ui",
+      "name": "shadcn/ui",
+      "homepage": "https://ui.shadcn.com/",
+      "component_count": 46,
+      "platform_tags": [
+        "Figma",
+        "GitHub"
+      ],
+      "tech_tags": [
+        "React",
+        "Tailwind CSS"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-shoelace",
+      "name": "Shoelace",
+      "homepage": "https://shoelace.style/",
+      "component_count": 36,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "Web Components"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-source",
+      "name": "Source",
+      "homepage": "https://theguardian.design/2a1e5182b/p/300696-",
+      "component_count": 8,
+      "platform_tags": [
+        "GitHub",
+        "Storybook"
+      ],
+      "tech_tags": [
+        "React"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-spectrum",
+      "name": "Spectrum",
+      "homepage": "https://spectrum.adobe.com/",
+      "component_count": 59,
+      "platform_tags": [
+        "GitHub",
+        "Storybook"
+      ],
+      "tech_tags": [
+        "CSS",
+        "Web Components",
+        "React"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Tone of voice",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-stacks",
+      "name": "Stacks",
+      "homepage": "https://stackoverflow.design/",
+      "component_count": 24,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "Stimulus"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Tone of voice",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-subzero",
+      "name": "SubZero",
+      "homepage": "https://www.subzero.axis.bank.in/",
+      "component_count": 34,
+      "platform_tags": [
+        "Figma",
+        "Storybook"
+      ],
+      "tech_tags": [],
+      "feature_tags": [
+        "Accessibility issues"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-thumbprint",
+      "name": "Thumbprint ",
+      "homepage": "https://thumbprint.design/",
+      "component_count": 19,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "React",
+        "Sass"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-united-states-web-design-system",
+      "name": "United States Web Design System",
+      "homepage": "https://designsystem.digital.gov/",
+      "component_count": 13,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "Nunjucks"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-ustyle",
+      "name": "uStyle",
+      "homepage": "https://ustyle.guide/",
+      "component_count": 37,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "Sass"
+      ],
+      "feature_tags": [
+        "Tone of voice",
+        "Code examples",
+        "Usage guidelines",
+        "Open source",
+        "Unmaintained"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-visa-product-design-system",
+      "name": "Visa Product Design System",
+      "homepage": "https://design.visa.com/welcome/",
+      "component_count": 41,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "Angular",
+        "React",
+        "CSS",
+        "Mobile"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Accessibility",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-w3c-design-system",
+      "name": "W3C design system",
+      "homepage": "https://design-system.w3.org/",
+      "component_count": 40,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "Sass",
+        "Vanilla JS"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Open source",
+        "Accessibility"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-wanda",
+      "name": "Wanda",
+      "homepage": "https://design.wonderflow.ai/",
+      "component_count": 45,
+      "platform_tags": [
+        "GitHub",
+        "Storybook"
+      ],
+      "tech_tags": [
+        "React",
+        "CSS Modules"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-web-awesome",
+      "name": "Web Awesome",
+      "homepage": "https://webawesome.com/",
+      "component_count": 48,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "Web Components"
+      ],
+      "feature_tags": [
+        "Open source",
+        "Code examples"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-west-midlands-network-design-system",
+      "name": "West Midlands Network Design System",
+      "homepage": "https://designsystem.tfwm.org.uk/",
+      "component_count": 28,
+      "platform_tags": [
+        "GitHub"
+      ],
+      "tech_tags": [
+        "HTML",
+        "Nunjucks",
+        "Sass"
+      ],
+      "feature_tags": [
+        "Code examples",
+        "Usage guidelines",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-wise-design",
+      "name": "Wise Design",
+      "homepage": "https://wise.design",
+      "component_count": 29,
+      "platform_tags": [],
+      "tech_tags": [
+        "Mobile"
+      ],
+      "feature_tags": [
+        "Usage guidelines",
+        "Tone of voice"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    },
+    {
+      "id": "ds-workday-canvas-design-system",
+      "name": "Workday Canvas Design System",
+      "homepage": "https://design.workday.com/",
+      "component_count": 26,
+      "platform_tags": [
+        "GitHub",
+        "Storybook"
+      ],
+      "tech_tags": [
+        "React"
+      ],
+      "feature_tags": [
+        "Usage guidelines",
+        "Accessibility",
+        "Tone of voice",
+        "Open source"
+      ],
+      "provenance": {
+        "source_url": "https://component.gallery/design-systems/",
+        "fetched_at": "2026-03-03T20:56:34.419Z",
+        "extractor_version": "v1"
+      }
+    }
+  ]
+}

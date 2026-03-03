@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://project-praxis.local/schemas/provenance.schema.json",
+  "title": "Provenance",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["source_url", "fetched_at", "extractor_version"],
+  "properties": {
+    "id": { "type": "string" },
+    "source_url": { "type": "string", "format": "uri" },
+    "fetched_at": { "type": "string", "format": "date-time" },
+    "extractor_version": { "type": "string" },
+    "checksum": { "type": "string" }
+  }
+}

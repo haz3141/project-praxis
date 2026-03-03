@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-03-03T20:56:40.566Z",
+  "sources": [
+    {
+      "id": "component-gallery-components",
+      "source_url": "https://component.gallery/components/",
+      "fetched_at": "2026-03-03T20:56:34.419Z",
+      "extractor_version": "v1"
+    },
+    {
+      "id": "component-gallery-design-systems",
+      "source_url": "https://component.gallery/design-systems/",
+      "fetched_at": "2026-03-03T20:56:34.419Z",
+      "extractor_version": "v1"
+    },
+    {
+      "id": "stitch-catalog",
+      "source_url": "https://project-praxis.local/docs/design-system/stitch/screens-catalog.csv",
+      "fetched_at": "2026-03-03T20:56:39.803Z",
+      "extractor_version": "pnpm-run-stitch-catalog"
+    }
+  ]
+}

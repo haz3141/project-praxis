@@ -1,0 +1,392 @@
+{
+  "metadata": {
+    "generated_at": "2026-03-03T20:56:40.569Z",
+    "pattern_count": 6
+  },
+  "patterns": [
+    {
+      "id": "pattern-00",
+      "name": "Foundations",
+      "purpose": "Canonical Stitch slot 00 mapped into Praxis pattern library.",
+      "composition_graph": {
+        "nodes": [
+          {
+            "id": "atom-00",
+            "tier": "atom"
+          },
+          {
+            "id": "molecule-00",
+            "tier": "molecule"
+          },
+          {
+            "id": "organism-00",
+            "tier": "organism"
+          },
+          {
+            "id": "template-00",
+            "tier": "template"
+          },
+          {
+            "id": "page-00",
+            "tier": "page"
+          }
+        ],
+        "edges": [
+          {
+            "from": "atom-00",
+            "to": "molecule-00"
+          },
+          {
+            "from": "molecule-00",
+            "to": "organism-00"
+          },
+          {
+            "from": "organism-00",
+            "to": "template-00"
+          },
+          {
+            "from": "template-00",
+            "to": "page-00"
+          }
+        ]
+      },
+      "route_mapping": [
+        "docs/pattern-library/foundations/00-foundations"
+      ],
+      "acceptance_checks": [
+        "slot-mapped-in-stitch-catalog",
+        "schema-valid",
+        "token-backed-spacing"
+      ],
+      "source_components": [
+        "button",
+        "input",
+        "card",
+        "navigation"
+      ],
+      "stitch_slots": [
+        "00"
+      ]
+    },
+    {
+      "id": "pattern-01",
+      "name": "Buttons & Inputs",
+      "purpose": "Canonical Stitch slot 01 mapped into Praxis pattern library.",
+      "composition_graph": {
+        "nodes": [
+          {
+            "id": "atom-01",
+            "tier": "atom"
+          },
+          {
+            "id": "molecule-01",
+            "tier": "molecule"
+          },
+          {
+            "id": "organism-01",
+            "tier": "organism"
+          },
+          {
+            "id": "template-01",
+            "tier": "template"
+          },
+          {
+            "id": "page-01",
+            "tier": "page"
+          }
+        ],
+        "edges": [
+          {
+            "from": "atom-01",
+            "to": "molecule-01"
+          },
+          {
+            "from": "molecule-01",
+            "to": "organism-01"
+          },
+          {
+            "from": "organism-01",
+            "to": "template-01"
+          },
+          {
+            "from": "template-01",
+            "to": "page-01"
+          }
+        ]
+      },
+      "route_mapping": [
+        "docs/pattern-library/inputs/01-buttons-inputs"
+      ],
+      "acceptance_checks": [
+        "slot-mapped-in-stitch-catalog",
+        "schema-valid",
+        "token-backed-spacing"
+      ],
+      "source_components": [
+        "button",
+        "input",
+        "card",
+        "navigation"
+      ],
+      "stitch_slots": [
+        "01"
+      ]
+    },
+    {
+      "id": "pattern-02",
+      "name": "Navigation & Shell",
+      "purpose": "Canonical Stitch slot 02 mapped into Praxis pattern library.",
+      "composition_graph": {
+        "nodes": [
+          {
+            "id": "atom-02",
+            "tier": "atom"
+          },
+          {
+            "id": "molecule-02",
+            "tier": "molecule"
+          },
+          {
+            "id": "organism-02",
+            "tier": "organism"
+          },
+          {
+            "id": "template-02",
+            "tier": "template"
+          },
+          {
+            "id": "page-02",
+            "tier": "page"
+          }
+        ],
+        "edges": [
+          {
+            "from": "atom-02",
+            "to": "molecule-02"
+          },
+          {
+            "from": "molecule-02",
+            "to": "organism-02"
+          },
+          {
+            "from": "organism-02",
+            "to": "template-02"
+          },
+          {
+            "from": "template-02",
+            "to": "page-02"
+          }
+        ]
+      },
+      "route_mapping": [
+        "docs/pattern-library/navigation/02-navigation-shell"
+      ],
+      "acceptance_checks": [
+        "slot-mapped-in-stitch-catalog",
+        "schema-valid",
+        "token-backed-spacing"
+      ],
+      "source_components": [
+        "button",
+        "input",
+        "card",
+        "navigation"
+      ],
+      "stitch_slots": [
+        "02"
+      ]
+    },
+    {
+      "id": "pattern-03",
+      "name": "Data Display",
+      "purpose": "Canonical Stitch slot 03 mapped into Praxis pattern library.",
+      "composition_graph": {
+        "nodes": [
+          {
+            "id": "atom-03",
+            "tier": "atom"
+          },
+          {
+            "id": "molecule-03",
+            "tier": "molecule"
+          },
+          {
+            "id": "organism-03",
+            "tier": "organism"
+          },
+          {
+            "id": "template-03",
+            "tier": "template"
+          },
+          {
+            "id": "page-03",
+            "tier": "page"
+          }
+        ],
+        "edges": [
+          {
+            "from": "atom-03",
+            "to": "molecule-03"
+          },
+          {
+            "from": "molecule-03",
+            "to": "organism-03"
+          },
+          {
+            "from": "organism-03",
+            "to": "template-03"
+          },
+          {
+            "from": "template-03",
+            "to": "page-03"
+          }
+        ]
+      },
+      "route_mapping": [
+        "docs/pattern-library/data-display/03-data-display"
+      ],
+      "acceptance_checks": [
+        "slot-mapped-in-stitch-catalog",
+        "schema-valid",
+        "token-backed-spacing"
+      ],
+      "source_components": [
+        "button",
+        "input",
+        "card",
+        "navigation"
+      ],
+      "stitch_slots": [
+        "03"
+      ]
+    },
+    {
+      "id": "pattern-04",
+      "name": "Feedback & Overlays",
+      "purpose": "Canonical Stitch slot 04 mapped into Praxis pattern library.",
+      "composition_graph": {
+        "nodes": [
+          {
+            "id": "atom-04",
+            "tier": "atom"
+          },
+          {
+            "id": "molecule-04",
+            "tier": "molecule"
+          },
+          {
+            "id": "organism-04",
+            "tier": "organism"
+          },
+          {
+            "id": "template-04",
+            "tier": "template"
+          },
+          {
+            "id": "page-04",
+            "tier": "page"
+          }
+        ],
+        "edges": [
+          {
+            "from": "atom-04",
+            "to": "molecule-04"
+          },
+          {
+            "from": "molecule-04",
+            "to": "organism-04"
+          },
+          {
+            "from": "organism-04",
+            "to": "template-04"
+          },
+          {
+            "from": "template-04",
+            "to": "page-04"
+          }
+        ]
+      },
+      "route_mapping": [
+        "docs/pattern-library/feedback/04-feedback-overlays"
+      ],
+      "acceptance_checks": [
+        "slot-mapped-in-stitch-catalog",
+        "schema-valid",
+        "token-backed-spacing"
+      ],
+      "source_components": [
+        "button",
+        "input",
+        "card",
+        "navigation"
+      ],
+      "stitch_slots": [
+        "04"
+      ]
+    },
+    {
+      "id": "pattern-05",
+      "name": "Planner Patterns",
+      "purpose": "Canonical Stitch slot 05 mapped into Praxis pattern library.",
+      "composition_graph": {
+        "nodes": [
+          {
+            "id": "atom-05",
+            "tier": "atom"
+          },
+          {
+            "id": "molecule-05",
+            "tier": "molecule"
+          },
+          {
+            "id": "organism-05",
+            "tier": "organism"
+          },
+          {
+            "id": "template-05",
+            "tier": "template"
+          },
+          {
+            "id": "page-05",
+            "tier": "page"
+          }
+        ],
+        "edges": [
+          {
+            "from": "atom-05",
+            "to": "molecule-05"
+          },
+          {
+            "from": "molecule-05",
+            "to": "organism-05"
+          },
+          {
+            "from": "organism-05",
+            "to": "template-05"
+          },
+          {
+            "from": "template-05",
+            "to": "page-05"
+          }
+        ]
+      },
+      "route_mapping": [
+        "docs/pattern-library/planner-patterns/05-planner-patterns"
+      ],
+      "acceptance_checks": [
+        "slot-mapped-in-stitch-catalog",
+        "schema-valid",
+        "token-backed-spacing"
+      ],
+      "source_components": [
+        "button",
+        "input",
+        "card",
+        "navigation"
+      ],
+      "stitch_slots": [
+        "05"
+      ]
+    }
+  ]
+}
