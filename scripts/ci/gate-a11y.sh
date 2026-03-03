@@ -3,8 +3,8 @@ set -euo pipefail
 
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib.sh"
 
-if run_first_npm_script test:a11y a11y; then
-  ci_log "A11y gate passed via npm script."
+if run_first_pnpm_script test:a11y a11y; then
+  ci_log "A11y gate passed via pnpm script."
   exit 0
 fi
 
@@ -15,13 +15,13 @@ if [[ -z "${CI_WEB_SERVER_COMMAND:-}" ]]; then
   fi
 fi
 
-if ! npx playwright --version >/dev/null 2>&1; then
-  ci_skip "Playwright is unavailable and no a11y npm script is defined."
+if ! pnpm exec playwright --version >/dev/null 2>&1; then
+  ci_skip "Playwright is unavailable and no a11y pnpm script is defined."
 fi
 
 if [[ -z "${CI_WEB_SERVER_COMMAND:-}" ]]; then
   ci_skip "No web server command available for Playwright."
 fi
 
-npx playwright test tests/a11y/inbox-today.a11y.spec.ts --project=chromium
+pnpm exec playwright test tests/a11y/inbox-today.a11y.spec.ts --project=chromium
 ci_log "A11y gate passed via Playwright axe/focus checks."

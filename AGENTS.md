@@ -7,6 +7,15 @@
 - Use atomic Conventional Commits.
 - Run relevant checks before each commit (`lint`, `typecheck`, tests, and build for affected scope).
 
+## Package Manager
+
+- Use `pnpm` only. Do not use npm or yarn in this repository.
+- Quickstart:
+  - `pnpm install`
+  - `pnpm dev`
+  - `pnpm test:e2e`
+  - `pnpm lint`
+
 ## Implementation Posture
 
 - Decision artifacts in `docs/decision` are source of truth for implementation choices.

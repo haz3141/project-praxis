@@ -5,7 +5,7 @@ DTCG-aligned semantic tokens (`$type`/`$value`) and a small build step that emit
 ## Build
 
 ```bash
-npm run build
+pnpm build
 ```
 
 Output is generated in `dist/tokens.css` and `dist/tokens.resolved.json`.

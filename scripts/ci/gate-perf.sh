@@ -3,9 +3,9 @@ set -euo pipefail
 
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib.sh"
 
-if npm_script_exists build; then
+if package_script_exists build; then
   ci_log "Running build before perf guard."
-  npm run build
+  pnpm run build
 else
   ci_log "No build script found. Checking existing build outputs only."
 fi

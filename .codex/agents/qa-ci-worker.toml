@@ -1,3 +1,4 @@
+[role]
 name = "qa-ci-worker"
 mode = "implementation"
 description = "Own CI gates, smoke e2e, accessibility checks, and performance guardrails."
