@@ -9,3 +9,4 @@ pnpm build
 ```
 
 Output is generated in `dist/tokens.css` and `dist/tokens.resolved.json`.
+Also emits `dist/tokens.json` (source-oriented token bundle for docs/tooling).
