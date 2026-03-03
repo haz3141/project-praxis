@@ -23,6 +23,10 @@ export { AtomicSelect } from './components/atoms/Select';
 export type { AtomicSelectProps, AtomicSelectOption } from './components/atoms/Select';
 export { Badge } from './components/atoms/Badge';
 export type { BadgeProps, BadgeTone } from './components/atoms/Badge';
+export { AtomicDivider } from './components/atoms/Divider';
+export type { AtomicDividerOrientation, AtomicDividerProps } from './components/atoms/Divider';
+export { AtomicStatusDot } from './components/atoms/StatusDot';
+export type { AtomicStatusDotProps, AtomicStatusDotSize, AtomicStatusDotTone } from './components/atoms/StatusDot';
 export { Surface } from './components/atoms/Surface';
 export type { SurfaceProps } from './components/atoms/Surface';
 

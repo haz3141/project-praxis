@@ -688,6 +688,66 @@
 }
 
 /* ------------------------------------------------------------------ */
+/* Status primitives                                                   */
+/* ------------------------------------------------------------------ */
+.ds-status-dot {
+  display: inline-block;
+  inline-size: var(--ds-size-icon);
+  block-size: var(--ds-size-icon);
+  border-radius: var(--ds-radius-xl);
+  background: var(--ds-color-bg-muted);
+  border: 1px solid var(--ds-color-border-default);
+}
+
+.ds-status-dot--sm {
+  inline-size: var(--ds-space-sm);
+  block-size: var(--ds-space-sm);
+}
+
+.ds-status-dot--md {
+  inline-size: var(--ds-size-icon);
+  block-size: var(--ds-size-icon);
+}
+
+.ds-status-dot--success {
+  background: var(--ds-color-bg-success);
+  border-color: var(--ds-color-bg-success);
+}
+
+.ds-status-dot--warning {
+  background: var(--ds-color-bg-warning);
+  border-color: var(--ds-color-bg-warning);
+}
+
+.ds-status-dot--error {
+  background: var(--ds-color-bg-danger);
+  border-color: var(--ds-color-bg-danger);
+}
+
+.ds-status-dot--sync {
+  background: var(--ds-color-bg-interactive);
+  border-color: var(--ds-color-bg-interactive);
+}
+
+.ds-divider {
+  display: block;
+  border: 0;
+  background: var(--ds-color-border-muted);
+  flex-shrink: 0;
+}
+
+.ds-divider--horizontal {
+  inline-size: 100%;
+  block-size: 1px;
+}
+
+.ds-divider--vertical {
+  inline-size: 1px;
+  block-size: 100%;
+  min-block-size: var(--ds-size-target-min);
+}
+
+/* ------------------------------------------------------------------ */
 /* Reduced motion                                                     */
 /* ------------------------------------------------------------------ */
 @media (prefers-reduced-motion: reduce) {
