@@ -1,0 +1,2555 @@
+{
+  "meta": {
+    "name": "praxis-atomic-component-matrix",
+    "version": "1.0.0",
+    "generated_on": "2026-03-03",
+    "owner": "Agent C",
+    "scope": "planner-first"
+  },
+  "invariants": [
+    "planner-first-primary-surface",
+    "capture-clarify-commit-complete-review-loop",
+    "fast-reentry-required",
+    "single-object-universe-task-habit-goal-project-note",
+    "overlays-secondary-and-off-by-default",
+    "wcag-2.2-aa-baseline"
+  ],
+  "token_policy": {
+    "allowed_layers": [
+      "primitives.*",
+      "semantic.*",
+      "component.*",
+      "modes.theme.*",
+      "modes.density.*"
+    ],
+    "forbidden_in_components": [
+      "hex-literals",
+      "rgb-rgba-literals",
+      "hsl-hsla-literals",
+      "raw-one-off-style-values"
+    ],
+    "required_families": [
+      "semantic.color.surface.*",
+      "semantic.color.text.*",
+      "semantic.color.border.*",
+      "semantic.color.interactive.*",
+      "semantic.color.feedback.*",
+      "semantic.typography.*",
+      "semantic.space.*",
+      "semantic.size.*",
+      "semantic.radius.*",
+      "semantic.elevation.*",
+      "semantic.motion.duration.*",
+      "semantic.motion.easing.*",
+      "semantic.focus.*",
+      "semantic.state.*"
+    ]
+  },
+  "density_modes": {
+    "comfortable": {
+      "aliases": [
+        "modes.density.comfortable.size.nav.height",
+        "modes.density.comfortable.size.priority-card.height",
+        "modes.density.comfortable.size.task-row.height",
+        "modes.density.comfortable.size.habit-row.height",
+        "modes.density.comfortable.size.control.height",
+        "modes.density.comfortable.space.card.padding"
+      ]
+    },
+    "compact": {
+      "aliases": [
+        "modes.density.compact.size.nav.height",
+        "modes.density.compact.size.priority-card.height",
+        "modes.density.compact.size.task-row.height",
+        "modes.density.compact.size.habit-row.height",
+        "modes.density.compact.size.control.height",
+        "modes.density.compact.space.card.padding"
+      ]
+    }
+  },
+  "state_model": {
+    "interaction": [
+      "default",
+      "hover",
+      "focus-visible",
+      "active",
+      "disabled",
+      "loading",
+      "error",
+      "selected"
+    ],
+    "workflow": [
+      "empty",
+      "offline",
+      "syncing",
+      "conflict",
+      "success",
+      "warning"
+    ]
+  },
+  "matrix": {
+    "foundations": [
+      {
+        "id": "f-token-system",
+        "name": "Token System",
+        "variants": [
+          "theme-light",
+          "theme-dark",
+          "theme-high-contrast"
+        ],
+        "states": [
+          "default"
+        ],
+        "density": {
+          "comfortable": [
+            "inherits"
+          ],
+          "compact": [
+            "inherits"
+          ]
+        },
+        "a11y": [
+          "contrast-safe-semantic-mapping",
+          "focus-token-availability"
+        ],
+        "tokens": [
+          "primitives.*",
+          "semantic.*",
+          "component.*",
+          "modes.*"
+        ]
+      },
+      {
+        "id": "f-layout-grid",
+        "name": "Layout Grid",
+        "variants": [
+          "desktop-shell",
+          "mobile-shell"
+        ],
+        "states": [
+          "default"
+        ],
+        "density": {
+          "comfortable": [
+            "component.layout.grid.desktop"
+          ],
+          "compact": [
+            "component.layout.grid.mobile"
+          ]
+        },
+        "a11y": [
+          "landmark-order",
+          "logical-reading-flow"
+        ],
+        "tokens": [
+          "semantic.space.layout.*",
+          "semantic.size.layout.*"
+        ]
+      },
+      {
+        "id": "f-density-modes",
+        "name": "Density Modes",
+        "variants": [
+          "comfortable",
+          "compact"
+        ],
+        "states": [
+          "default"
+        ],
+        "density": {
+          "comfortable": [
+            "modes.density.comfortable.*"
+          ],
+          "compact": [
+            "modes.density.compact.*"
+          ]
+        },
+        "a11y": [
+          "target-size-preserved",
+          "focus-ring-not-reduced"
+        ],
+        "tokens": [
+          "modes.density.*",
+          "component.size.*",
+          "component.space.*"
+        ]
+      },
+      {
+        "id": "f-interaction-states",
+        "name": "Interaction States",
+        "variants": [
+          "interaction",
+          "workflow"
+        ],
+        "states": [
+          "default",
+          "hover",
+          "focus-visible",
+          "active",
+          "disabled",
+          "loading",
+          "error",
+          "selected",
+          "offline",
+          "syncing",
+          "conflict"
+        ],
+        "density": {
+          "comfortable": [
+            "inherits"
+          ],
+          "compact": [
+            "inherits"
+          ]
+        },
+        "a11y": [
+          "state-not-color-only",
+          "error-announcement"
+        ],
+        "tokens": [
+          "semantic.state.*",
+          "semantic.color.feedback.*",
+          "semantic.focus.*",
+          "semantic.motion.*"
+        ]
+      },
+      {
+        "id": "f-accessibility-baseline",
+        "name": "Accessibility Baseline",
+        "variants": [
+          "keyboard",
+          "screen-reader",
+          "touch"
+        ],
+        "states": [
+          "default"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.target.min"
+          ],
+          "compact": [
+            "component.size.target.min"
+          ]
+        },
+        "a11y": [
+          "wcag-2.2-aa",
+          "focus-not-obscured",
+          "drag-alternative-required"
+        ],
+        "tokens": [
+          "semantic.focus.*",
+          "semantic.size.target.*",
+          "semantic.motion.reduced.*"
+        ]
+      },
+      {
+        "id": "f-fast-reentry-contract",
+        "name": "Fast Re-entry Contract",
+        "variants": [
+          "resume",
+          "minimal-day",
+          "offline-recover"
+        ],
+        "states": [
+          "visible",
+          "dismissed"
+        ],
+        "density": {
+          "comfortable": [
+            "component.space.banner.padding"
+          ],
+          "compact": [
+            "component.space.banner.padding"
+          ]
+        },
+        "a11y": [
+          "first-focusable-recovery-action",
+          "context-summary-readable"
+        ],
+        "tokens": [
+          "semantic.color.feedback.*",
+          "semantic.typography.*",
+          "semantic.space.*"
+        ]
+      },
+      {
+        "id": "f-overlay-secondary-contract",
+        "name": "Overlay Secondary Contract",
+        "variants": [
+          "insights",
+          "companion",
+          "studio"
+        ],
+        "states": [
+          "hidden",
+          "visible",
+          "dismissed"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.overlay.rail"
+          ],
+          "compact": [
+            "component.size.overlay.rail"
+          ]
+        },
+        "a11y": [
+          "escape-close",
+          "focus-return",
+          "non-blocking-main-flow"
+        ],
+        "tokens": [
+          "semantic.color.overlay.*",
+          "semantic.elevation.overlay.*",
+          "semantic.motion.overlay.*"
+        ]
+      }
+    ],
+    "atoms": [
+      {
+        "id": "a-button",
+        "name": "Button",
+        "variants": [
+          "primary",
+          "secondary",
+          "ghost",
+          "destructive"
+        ],
+        "states": [
+          "default",
+          "hover",
+          "focus-visible",
+          "active",
+          "disabled",
+          "loading"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.control.height",
+            "component.space.control.padding-x"
+          ],
+          "compact": [
+            "component.size.control.height",
+            "component.space.control.padding-x"
+          ]
+        },
+        "a11y": [
+          "native-button-semantics",
+          "visible-focus",
+          "name-computation"
+        ],
+        "tokens": [
+          "semantic.color.interactive.*",
+          "semantic.color.text.*",
+          "semantic.radius.control.*",
+          "semantic.motion.*",
+          "semantic.focus.*"
+        ]
+      },
+      {
+        "id": "a-icon-button",
+        "name": "Icon Button",
+        "variants": [
+          "neutral",
+          "primary",
+          "danger"
+        ],
+        "states": [
+          "default",
+          "hover",
+          "focus-visible",
+          "active",
+          "disabled"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.control.square"
+          ],
+          "compact": [
+            "component.size.control.square"
+          ]
+        },
+        "a11y": [
+          "aria-label-required",
+          "hit-target-minimum"
+        ],
+        "tokens": [
+          "semantic.color.interactive.*",
+          "semantic.radius.control.*",
+          "semantic.focus.*"
+        ]
+      },
+      {
+        "id": "a-input-text",
+        "name": "Text Input",
+        "variants": [
+          "default",
+          "quiet",
+          "search"
+        ],
+        "states": [
+          "default",
+          "hover",
+          "focus-visible",
+          "disabled",
+          "error"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.control.height",
+            "component.space.field.padding-x"
+          ],
+          "compact": [
+            "component.size.control.height",
+            "component.space.field.padding-x"
+          ]
+        },
+        "a11y": [
+          "programmatic-label",
+          "describedby-helper-error",
+          "aria-invalid-when-error"
+        ],
+        "tokens": [
+          "semantic.color.surface.input.*",
+          "semantic.color.border.*",
+          "semantic.color.text.*",
+          "semantic.focus.*"
+        ]
+      },
+      {
+        "id": "a-textarea",
+        "name": "Textarea",
+        "variants": [
+          "default",
+          "review",
+          "notes"
+        ],
+        "states": [
+          "default",
+          "focus-visible",
+          "disabled",
+          "error"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.field.multiline.min",
+            "component.space.field.padding"
+          ],
+          "compact": [
+            "component.size.field.multiline.min",
+            "component.space.field.padding"
+          ]
+        },
+        "a11y": [
+          "label-required",
+          "error-announcement"
+        ],
+        "tokens": [
+          "semantic.color.surface.input.*",
+          "semantic.color.border.*",
+          "semantic.color.text.*",
+          "semantic.focus.*"
+        ]
+      },
+      {
+        "id": "a-select-trigger",
+        "name": "Select Trigger",
+        "variants": [
+          "default",
+          "compact"
+        ],
+        "states": [
+          "default",
+          "hover",
+          "focus-visible",
+          "disabled",
+          "error"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.control.height"
+          ],
+          "compact": [
+            "component.size.control.height"
+          ]
+        },
+        "a11y": [
+          "combobox-button-pattern",
+          "expanded-state-announcement"
+        ],
+        "tokens": [
+          "semantic.color.surface.input.*",
+          "semantic.color.border.*",
+          "semantic.focus.*",
+          "semantic.icon.*"
+        ]
+      },
+      {
+        "id": "a-checkbox",
+        "name": "Checkbox",
+        "variants": [
+          "default",
+          "indeterminate"
+        ],
+        "states": [
+          "default",
+          "hover",
+          "focus-visible",
+          "active",
+          "disabled"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.choice.sm"
+          ],
+          "compact": [
+            "component.size.choice.sm"
+          ]
+        },
+        "a11y": [
+          "label-click-target",
+          "state-announcement"
+        ],
+        "tokens": [
+          "semantic.color.interactive.*",
+          "semantic.color.border.*",
+          "semantic.focus.*"
+        ]
+      },
+      {
+        "id": "a-switch",
+        "name": "Switch",
+        "variants": [
+          "default"
+        ],
+        "states": [
+          "default",
+          "hover",
+          "focus-visible",
+          "active",
+          "disabled"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.choice.switch"
+          ],
+          "compact": [
+            "component.size.choice.switch"
+          ]
+        },
+        "a11y": [
+          "role-switch",
+          "checked-state-announcement"
+        ],
+        "tokens": [
+          "semantic.color.interactive.*",
+          "semantic.focus.*",
+          "semantic.radius.full"
+        ]
+      },
+      {
+        "id": "a-chip",
+        "name": "Chip",
+        "variants": [
+          "filter",
+          "context",
+          "status"
+        ],
+        "states": [
+          "default",
+          "hover",
+          "focus-visible",
+          "selected",
+          "disabled"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.chip.height",
+            "component.space.chip.padding"
+          ],
+          "compact": [
+            "component.size.chip.height",
+            "component.space.chip.padding"
+          ]
+        },
+        "a11y": [
+          "button-or-option-semantics",
+          "remove-action-labeled"
+        ],
+        "tokens": [
+          "semantic.color.surface.chip.*",
+          "semantic.color.text.*",
+          "semantic.color.border.*",
+          "semantic.radius.full"
+        ]
+      },
+      {
+        "id": "a-badge",
+        "name": "Badge",
+        "variants": [
+          "neutral",
+          "success",
+          "warning",
+          "danger",
+          "info"
+        ],
+        "states": [
+          "default",
+          "disabled"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.badge.height",
+            "component.space.badge.padding"
+          ],
+          "compact": [
+            "component.size.badge.height",
+            "component.space.badge.padding"
+          ]
+        },
+        "a11y": [
+          "status-text-required"
+        ],
+        "tokens": [
+          "semantic.color.feedback.*",
+          "semantic.color.text.*",
+          "semantic.radius.full"
+        ]
+      },
+      {
+        "id": "a-divider",
+        "name": "Divider",
+        "variants": [
+          "horizontal",
+          "vertical"
+        ],
+        "states": [
+          "default"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.divider.thickness"
+          ],
+          "compact": [
+            "component.size.divider.thickness"
+          ]
+        },
+        "a11y": [
+          "decorative-when-unlabeled"
+        ],
+        "tokens": [
+          "semantic.color.border.muted"
+        ]
+      },
+      {
+        "id": "a-progress-bar",
+        "name": "Progress Bar",
+        "variants": [
+          "task",
+          "goal",
+          "sync"
+        ],
+        "states": [
+          "default",
+          "success",
+          "warning",
+          "error"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.progress.bar.height"
+          ],
+          "compact": [
+            "component.size.progress.bar.height"
+          ]
+        },
+        "a11y": [
+          "progressbar-value-text"
+        ],
+        "tokens": [
+          "semantic.color.feedback.*",
+          "semantic.color.surface.track"
+        ]
+      },
+      {
+        "id": "a-progress-ring",
+        "name": "Progress Ring",
+        "variants": [
+          "compact",
+          "standard"
+        ],
+        "states": [
+          "default",
+          "success",
+          "warning"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.progress.ring"
+          ],
+          "compact": [
+            "component.size.progress.ring"
+          ]
+        },
+        "a11y": [
+          "progress-value-label"
+        ],
+        "tokens": [
+          "semantic.color.feedback.*",
+          "semantic.color.surface.track"
+        ]
+      },
+      {
+        "id": "a-status-dot",
+        "name": "Status Dot",
+        "variants": [
+          "neutral",
+          "success",
+          "warning",
+          "error",
+          "sync"
+        ],
+        "states": [
+          "default"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.dot"
+          ],
+          "compact": [
+            "component.size.dot"
+          ]
+        },
+        "a11y": [
+          "must-pair-with-text-or-icon"
+        ],
+        "tokens": [
+          "semantic.color.feedback.*"
+        ]
+      },
+      {
+        "id": "a-avatar",
+        "name": "Avatar",
+        "variants": [
+          "image",
+          "initials",
+          "placeholder"
+        ],
+        "states": [
+          "default",
+          "loading"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.avatar.md"
+          ],
+          "compact": [
+            "component.size.avatar.sm"
+          ]
+        },
+        "a11y": [
+          "alt-text-or-initials"
+        ],
+        "tokens": [
+          "semantic.color.surface.avatar.*",
+          "semantic.color.text.*",
+          "semantic.radius.full"
+        ]
+      },
+      {
+        "id": "a-heading",
+        "name": "Heading",
+        "variants": [
+          "h1",
+          "h2",
+          "h3",
+          "h4",
+          "h5",
+          "h6"
+        ],
+        "states": [
+          "default"
+        ],
+        "density": {
+          "comfortable": [
+            "semantic.typography.heading.*"
+          ],
+          "compact": [
+            "semantic.typography.heading.*"
+          ]
+        },
+        "a11y": [
+          "semantic-heading-order"
+        ],
+        "tokens": [
+          "semantic.typography.heading.*",
+          "semantic.color.text.primary"
+        ]
+      },
+      {
+        "id": "a-body-text",
+        "name": "Body Text",
+        "variants": [
+          "body",
+          "small",
+          "caption",
+          "meta"
+        ],
+        "states": [
+          "default",
+          "muted",
+          "disabled"
+        ],
+        "density": {
+          "comfortable": [
+            "semantic.typography.body.*"
+          ],
+          "compact": [
+            "semantic.typography.body.*"
+          ]
+        },
+        "a11y": [
+          "readable-line-height"
+        ],
+        "tokens": [
+          "semantic.typography.body.*",
+          "semantic.color.text.*"
+        ]
+      },
+      {
+        "id": "a-skeleton",
+        "name": "Skeleton",
+        "variants": [
+          "line",
+          "block",
+          "circle"
+        ],
+        "states": [
+          "loading"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.skeleton.*"
+          ],
+          "compact": [
+            "component.size.skeleton.*"
+          ]
+        },
+        "a11y": [
+          "aria-hidden-when-decorative"
+        ],
+        "tokens": [
+          "semantic.color.surface.loading.*",
+          "semantic.motion.duration.*"
+        ]
+      }
+    ],
+    "molecules": [
+      {
+        "id": "m-capture-inline",
+        "name": "Capture Inline",
+        "loop_stage": [
+          "capture"
+        ],
+        "objects": [
+          "task",
+          "note"
+        ],
+        "variants": [
+          "task",
+          "note"
+        ],
+        "states": [
+          "default",
+          "focus-visible",
+          "error",
+          "offline",
+          "syncing"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.control.height",
+            "component.space.cluster.capture"
+          ],
+          "compact": [
+            "component.size.control.height",
+            "component.space.cluster.capture"
+          ]
+        },
+        "a11y": [
+          "submit-keyboard-path",
+          "queue-state-live-region"
+        ],
+        "tokens": [
+          "semantic.color.surface.input.*",
+          "semantic.color.feedback.sync.*",
+          "semantic.space.*"
+        ]
+      },
+      {
+        "id": "m-inbox-item-row",
+        "name": "Inbox Item Row",
+        "loop_stage": [
+          "clarify"
+        ],
+        "objects": [
+          "task",
+          "note"
+        ],
+        "variants": [
+          "task-like",
+          "note-like"
+        ],
+        "states": [
+          "default",
+          "hover",
+          "selected",
+          "drag",
+          "drop-target"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.task-row.height"
+          ],
+          "compact": [
+            "component.size.task-row.height"
+          ]
+        },
+        "a11y": [
+          "non-drag-reorder-actions",
+          "row-action-labels"
+        ],
+        "tokens": [
+          "semantic.color.surface.row.*",
+          "semantic.color.border.*",
+          "semantic.focus.*"
+        ]
+      },
+      {
+        "id": "m-task-row",
+        "name": "Task Row",
+        "loop_stage": [
+          "commit",
+          "complete"
+        ],
+        "objects": [
+          "task"
+        ],
+        "variants": [
+          "standard",
+          "with-subtask-count"
+        ],
+        "states": [
+          "default",
+          "hover",
+          "focus-visible",
+          "active",
+          "selected",
+          "syncing",
+          "conflict"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.task-row.height",
+            "component.space.row.padding"
+          ],
+          "compact": [
+            "component.size.task-row.height",
+            "component.space.row.padding"
+          ]
+        },
+        "a11y": [
+          "checkbox-and-actions-tab-order",
+          "conflict-state-readable"
+        ],
+        "tokens": [
+          "semantic.color.surface.row.*",
+          "semantic.color.feedback.*",
+          "semantic.color.text.*"
+        ]
+      },
+      {
+        "id": "m-priority-task-card",
+        "name": "Priority Task Card",
+        "loop_stage": [
+          "commit"
+        ],
+        "objects": [
+          "task"
+        ],
+        "variants": [
+          "priority-1",
+          "priority-2",
+          "priority-3"
+        ],
+        "states": [
+          "default",
+          "hover",
+          "focus-visible",
+          "active",
+          "warning"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.priority-card.height",
+            "component.space.card.padding"
+          ],
+          "compact": [
+            "component.size.priority-card.height",
+            "component.space.card.padding"
+          ]
+        },
+        "a11y": [
+          "priority-announced-by-text",
+          "not-color-only"
+        ],
+        "tokens": [
+          "semantic.color.surface.card.*",
+          "semantic.color.feedback.priority.*",
+          "semantic.elevation.card.*"
+        ]
+      },
+      {
+        "id": "m-habit-row",
+        "name": "Habit Row",
+        "loop_stage": [
+          "complete"
+        ],
+        "objects": [
+          "habit"
+        ],
+        "variants": [
+          "daily",
+          "weekly",
+          "custom"
+        ],
+        "states": [
+          "default",
+          "hover",
+          "focus-visible",
+          "success",
+          "warning"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.habit-row.height"
+          ],
+          "compact": [
+            "component.size.habit-row.height"
+          ]
+        },
+        "a11y": [
+          "minimum-viable-action-exposed",
+          "streak-summary-text"
+        ],
+        "tokens": [
+          "semantic.color.feedback.habit.*",
+          "semantic.color.text.*",
+          "semantic.space.row.*"
+        ]
+      },
+      {
+        "id": "m-goal-progress-card",
+        "name": "Goal Progress Card",
+        "loop_stage": [
+          "review"
+        ],
+        "objects": [
+          "goal"
+        ],
+        "variants": [
+          "metric",
+          "milestone"
+        ],
+        "states": [
+          "default",
+          "hover",
+          "focus-visible",
+          "success",
+          "warning"
+        ],
+        "density": {
+          "comfortable": [
+            "component.space.card.padding"
+          ],
+          "compact": [
+            "component.space.card.padding"
+          ]
+        },
+        "a11y": [
+          "progress-value-readable",
+          "heading-association"
+        ],
+        "tokens": [
+          "semantic.color.surface.card.*",
+          "semantic.color.feedback.goal.*",
+          "semantic.typography.*"
+        ]
+      },
+      {
+        "id": "m-project-row",
+        "name": "Project Row",
+        "loop_stage": [
+          "clarify",
+          "commit"
+        ],
+        "objects": [
+          "project"
+        ],
+        "variants": [
+          "solo",
+          "shared"
+        ],
+        "states": [
+          "default",
+          "hover",
+          "focus-visible",
+          "offline"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.task-row.height"
+          ],
+          "compact": [
+            "component.size.task-row.height"
+          ]
+        },
+        "a11y": [
+          "shared-state-textual",
+          "row-action-labels"
+        ],
+        "tokens": [
+          "semantic.color.surface.row.*",
+          "semantic.color.text.*",
+          "semantic.color.border.*"
+        ]
+      },
+      {
+        "id": "m-date-priority-cluster",
+        "name": "Date Priority Cluster",
+        "loop_stage": [
+          "clarify",
+          "commit"
+        ],
+        "objects": [
+          "task"
+        ],
+        "variants": [
+          "minimal",
+          "full"
+        ],
+        "states": [
+          "default",
+          "focus-visible",
+          "error"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.chip.height",
+            "component.space.cluster.inline"
+          ],
+          "compact": [
+            "component.size.chip.height",
+            "component.space.cluster.inline"
+          ]
+        },
+        "a11y": [
+          "field-labels-required",
+          "predictable-tab-order"
+        ],
+        "tokens": [
+          "semantic.color.surface.field.*",
+          "semantic.color.border.*",
+          "semantic.color.feedback.*"
+        ]
+      },
+      {
+        "id": "m-review-prompt-card",
+        "name": "Review Prompt Card",
+        "loop_stage": [
+          "review"
+        ],
+        "objects": [
+          "review_entry"
+        ],
+        "variants": [
+          "daily",
+          "weekly",
+          "re-entry"
+        ],
+        "states": [
+          "default",
+          "focus-visible",
+          "loading",
+          "success"
+        ],
+        "density": {
+          "comfortable": [
+            "component.space.card.padding",
+            "component.space.cluster.stack"
+          ],
+          "compact": [
+            "component.space.card.padding",
+            "component.space.cluster.stack"
+          ]
+        },
+        "a11y": [
+          "textarea-label-required",
+          "prompt-heading-semantic"
+        ],
+        "tokens": [
+          "semantic.color.surface.card.*",
+          "semantic.color.text.*",
+          "semantic.color.feedback.success"
+        ]
+      },
+      {
+        "id": "m-insight-capsule",
+        "name": "Insight Capsule",
+        "loop_stage": [
+          "review"
+        ],
+        "objects": [
+          "insight_entry"
+        ],
+        "overlay_secondary": true,
+        "variants": [
+          "energy",
+          "focus-window",
+          "friction-warning",
+          "growth-prompt"
+        ],
+        "states": [
+          "default",
+          "dismissed",
+          "snoozed"
+        ],
+        "density": {
+          "comfortable": [
+            "component.space.card.padding"
+          ],
+          "compact": [
+            "component.space.card.padding"
+          ]
+        },
+        "a11y": [
+          "dismiss-action-keyboard",
+          "non-blocking-content-order"
+        ],
+        "tokens": [
+          "semantic.color.overlay.insight.*",
+          "semantic.color.text.*",
+          "semantic.motion.overlay.*"
+        ]
+      },
+      {
+        "id": "m-sync-status-pill",
+        "name": "Sync Status Pill",
+        "loop_stage": [
+          "capture",
+          "commit",
+          "complete"
+        ],
+        "objects": [
+          "sync_event"
+        ],
+        "variants": [
+          "offline",
+          "syncing",
+          "synced",
+          "conflict"
+        ],
+        "states": [
+          "default",
+          "warning",
+          "error",
+          "success"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.chip.height"
+          ],
+          "compact": [
+            "component.size.chip.height"
+          ]
+        },
+        "a11y": [
+          "live-region-on-change",
+          "textual-status"
+        ],
+        "tokens": [
+          "semantic.color.feedback.sync.*",
+          "semantic.color.text.*",
+          "semantic.radius.full"
+        ]
+      },
+      {
+        "id": "m-command-result-item",
+        "name": "Command Result Item",
+        "loop_stage": [
+          "capture",
+          "clarify"
+        ],
+        "objects": [
+          "task",
+          "habit",
+          "goal",
+          "project",
+          "note"
+        ],
+        "variants": [
+          "object",
+          "action"
+        ],
+        "states": [
+          "default",
+          "hover",
+          "focus-visible",
+          "selected"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.task-row.height"
+          ],
+          "compact": [
+            "component.size.task-row.height"
+          ]
+        },
+        "a11y": [
+          "listbox-navigation",
+          "active-descendant-pattern"
+        ],
+        "tokens": [
+          "semantic.color.surface.row.*",
+          "semantic.color.text.*",
+          "semantic.focus.*"
+        ]
+      },
+      {
+        "id": "m-toast",
+        "name": "Toast",
+        "loop_stage": [
+          "capture",
+          "clarify",
+          "commit",
+          "complete",
+          "review"
+        ],
+        "objects": [
+          "none"
+        ],
+        "variants": [
+          "info",
+          "success",
+          "warning",
+          "error"
+        ],
+        "states": [
+          "entering",
+          "visible",
+          "exiting"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.toast.width",
+            "component.space.toast.padding"
+          ],
+          "compact": [
+            "component.size.toast.width",
+            "component.space.toast.padding"
+          ]
+        },
+        "a11y": [
+          "severity-live-region",
+          "dismiss-button-labeled"
+        ],
+        "tokens": [
+          "semantic.color.feedback.*",
+          "semantic.color.surface.toast.*",
+          "semantic.motion.duration.*"
+        ]
+      },
+      {
+        "id": "m-empty-state",
+        "name": "Empty State",
+        "loop_stage": [
+          "capture",
+          "clarify",
+          "commit",
+          "complete",
+          "review"
+        ],
+        "objects": [
+          "task",
+          "habit",
+          "goal",
+          "project",
+          "note"
+        ],
+        "variants": [
+          "inbox-empty",
+          "today-empty",
+          "review-empty"
+        ],
+        "states": [
+          "default"
+        ],
+        "density": {
+          "comfortable": [
+            "component.space.empty.padding"
+          ],
+          "compact": [
+            "component.space.empty.padding"
+          ]
+        },
+        "a11y": [
+          "next-action-cta",
+          "clear-heading"
+        ],
+        "tokens": [
+          "semantic.color.surface.card.*",
+          "semantic.color.text.*",
+          "semantic.space.*"
+        ]
+      }
+    ],
+    "organisms": [
+      {
+        "id": "o-planner-top-nav",
+        "name": "Planner Top Nav",
+        "loop_stage": [
+          "capture",
+          "clarify",
+          "commit",
+          "complete",
+          "review"
+        ],
+        "variants": [
+          "desktop",
+          "mobile"
+        ],
+        "states": [
+          "default",
+          "scrolled",
+          "focus-visible"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.nav.height"
+          ],
+          "compact": [
+            "component.size.nav.height"
+          ]
+        },
+        "a11y": [
+          "landmark-navigation",
+          "skip-link-targets"
+        ],
+        "tokens": [
+          "semantic.color.surface.nav.*",
+          "semantic.color.border.*",
+          "semantic.typography.*"
+        ]
+      },
+      {
+        "id": "o-planner-sidebar",
+        "name": "Planner Sidebar",
+        "loop_stage": [
+          "capture",
+          "clarify",
+          "commit",
+          "complete",
+          "review"
+        ],
+        "variants": [
+          "expanded",
+          "collapsed"
+        ],
+        "states": [
+          "default",
+          "focus-visible"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.sidebar.width.expanded",
+            "component.size.sidebar.width.collapsed"
+          ],
+          "compact": [
+            "component.size.sidebar.width.expanded",
+            "component.size.sidebar.width.collapsed"
+          ]
+        },
+        "a11y": [
+          "current-route-announcement",
+          "icon-label-pairing"
+        ],
+        "tokens": [
+          "semantic.color.surface.sidebar.*",
+          "semantic.color.text.*",
+          "semantic.space.*"
+        ]
+      },
+      {
+        "id": "o-week-strip",
+        "name": "Week Strip",
+        "loop_stage": [
+          "commit"
+        ],
+        "variants": [
+          "compact",
+          "detailed"
+        ],
+        "states": [
+          "default",
+          "selected-day",
+          "warning-day"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.week-cell.height"
+          ],
+          "compact": [
+            "component.size.week-cell.height"
+          ]
+        },
+        "a11y": [
+          "day-buttons-labeled",
+          "count-announced"
+        ],
+        "tokens": [
+          "semantic.color.interactive.day.*",
+          "semantic.color.feedback.warning",
+          "semantic.typography.*"
+        ]
+      },
+      {
+        "id": "o-inbox-queue",
+        "name": "Inbox Queue",
+        "loop_stage": [
+          "capture",
+          "clarify"
+        ],
+        "variants": [
+          "list",
+          "grouped-by-type"
+        ],
+        "states": [
+          "default",
+          "empty",
+          "loading",
+          "offline"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.task-row.height",
+            "component.space.list.gap"
+          ],
+          "compact": [
+            "component.size.task-row.height",
+            "component.space.list.gap"
+          ]
+        },
+        "a11y": [
+          "list-semantics",
+          "batch-actions-keyboard"
+        ],
+        "tokens": [
+          "semantic.color.surface.list.*",
+          "semantic.color.border.*",
+          "semantic.color.feedback.sync.*"
+        ]
+      },
+      {
+        "id": "o-clarify-panel",
+        "name": "Clarify Panel",
+        "loop_stage": [
+          "clarify"
+        ],
+        "variants": [
+          "inline",
+          "drawer"
+        ],
+        "states": [
+          "default",
+          "loading",
+          "error"
+        ],
+        "density": {
+          "comfortable": [
+            "component.space.panel.padding"
+          ],
+          "compact": [
+            "component.space.panel.padding"
+          ]
+        },
+        "a11y": [
+          "form-structure",
+          "error-summary-linking"
+        ],
+        "tokens": [
+          "semantic.color.surface.panel.*",
+          "semantic.color.border.*",
+          "semantic.color.feedback.error"
+        ]
+      },
+      {
+        "id": "o-today-commitments",
+        "name": "Today Commitments",
+        "loop_stage": [
+          "commit",
+          "complete"
+        ],
+        "variants": [
+          "minimal-day",
+          "full-day"
+        ],
+        "states": [
+          "default",
+          "warning-overload",
+          "offline",
+          "syncing"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.priority-card.height",
+            "component.size.task-row.height"
+          ],
+          "compact": [
+            "component.size.priority-card.height",
+            "component.size.task-row.height"
+          ]
+        },
+        "a11y": [
+          "priority-limit-message",
+          "reorder-non-drag-controls"
+        ],
+        "tokens": [
+          "semantic.color.surface.card.*",
+          "semantic.color.feedback.priority.*",
+          "semantic.space.section.*"
+        ]
+      },
+      {
+        "id": "o-complete-feed",
+        "name": "Complete Feed",
+        "loop_stage": [
+          "complete"
+        ],
+        "variants": [
+          "timeline",
+          "grouped"
+        ],
+        "states": [
+          "default",
+          "empty",
+          "success"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.task-row.height"
+          ],
+          "compact": [
+            "component.size.task-row.height"
+          ]
+        },
+        "a11y": [
+          "completion-announcements",
+          "undo-action-visible"
+        ],
+        "tokens": [
+          "semantic.color.feedback.success",
+          "semantic.color.text.*",
+          "semantic.space.list.*"
+        ]
+      },
+      {
+        "id": "o-habits-panel",
+        "name": "Habits Panel",
+        "loop_stage": [
+          "complete"
+        ],
+        "variants": [
+          "list",
+          "streak-emphasis"
+        ],
+        "states": [
+          "default",
+          "empty",
+          "warning"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.habit-row.height"
+          ],
+          "compact": [
+            "component.size.habit-row.height"
+          ]
+        },
+        "a11y": [
+          "minimum-viable-control-exposed",
+          "streak-not-color-only"
+        ],
+        "tokens": [
+          "semantic.color.feedback.habit.*",
+          "semantic.color.surface.panel.*",
+          "semantic.typography.*"
+        ]
+      },
+      {
+        "id": "o-goals-grid",
+        "name": "Goals Grid",
+        "loop_stage": [
+          "review"
+        ],
+        "variants": [
+          "cards",
+          "table-lite"
+        ],
+        "states": [
+          "default",
+          "empty",
+          "loading"
+        ],
+        "density": {
+          "comfortable": [
+            "component.space.grid.gap",
+            "component.space.card.padding"
+          ],
+          "compact": [
+            "component.space.grid.gap",
+            "component.space.card.padding"
+          ]
+        },
+        "a11y": [
+          "grid-heading-structure",
+          "progress-textual"
+        ],
+        "tokens": [
+          "semantic.color.surface.card.*",
+          "semantic.color.border.*",
+          "semantic.color.feedback.goal.*"
+        ]
+      },
+      {
+        "id": "o-project-board",
+        "name": "Project Board",
+        "loop_stage": [
+          "clarify",
+          "commit"
+        ],
+        "variants": [
+          "list",
+          "kanban-lite"
+        ],
+        "states": [
+          "default",
+          "empty",
+          "offline"
+        ],
+        "density": {
+          "comfortable": [
+            "component.space.board.column-gap",
+            "component.size.task-row.height"
+          ],
+          "compact": [
+            "component.space.board.column-gap",
+            "component.size.task-row.height"
+          ]
+        },
+        "a11y": [
+          "drag-alternative-actions",
+          "lane-labels-semantic"
+        ],
+        "tokens": [
+          "semantic.color.surface.board.*",
+          "semantic.color.border.*",
+          "semantic.color.text.*"
+        ]
+      },
+      {
+        "id": "o-review-panel",
+        "name": "Review Panel",
+        "loop_stage": [
+          "review"
+        ],
+        "variants": [
+          "daily",
+          "weekly",
+          "re-entry"
+        ],
+        "states": [
+          "default",
+          "loading",
+          "success"
+        ],
+        "density": {
+          "comfortable": [
+            "component.space.panel.padding",
+            "component.space.cluster.stack"
+          ],
+          "compact": [
+            "component.space.panel.padding",
+            "component.space.cluster.stack"
+          ]
+        },
+        "a11y": [
+          "form-labeling",
+          "review-summary-structure"
+        ],
+        "tokens": [
+          "semantic.color.surface.panel.*",
+          "semantic.color.text.*",
+          "semantic.color.feedback.success"
+        ]
+      },
+      {
+        "id": "o-right-detail-drawer",
+        "name": "Right Detail Drawer",
+        "loop_stage": [
+          "capture",
+          "clarify",
+          "commit",
+          "complete",
+          "review"
+        ],
+        "variants": [
+          "task",
+          "habit",
+          "goal",
+          "project",
+          "note"
+        ],
+        "states": [
+          "closed",
+          "open",
+          "loading",
+          "error"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.drawer.width",
+            "component.space.panel.padding"
+          ],
+          "compact": [
+            "component.size.drawer.width",
+            "component.space.panel.padding"
+          ]
+        },
+        "a11y": [
+          "dialog-focus-management",
+          "escape-close"
+        ],
+        "tokens": [
+          "semantic.color.surface.overlay.*",
+          "semantic.elevation.overlay.*",
+          "semantic.focus.*"
+        ]
+      },
+      {
+        "id": "o-command-palette",
+        "name": "Command Palette",
+        "loop_stage": [
+          "capture",
+          "clarify"
+        ],
+        "variants": [
+          "global",
+          "contextual"
+        ],
+        "states": [
+          "closed",
+          "open",
+          "loading",
+          "empty"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.palette.width",
+            "component.space.panel.padding"
+          ],
+          "compact": [
+            "component.size.palette.width",
+            "component.space.panel.padding"
+          ]
+        },
+        "a11y": [
+          "combobox-listbox-pattern",
+          "arrow-navigation",
+          "escape-close"
+        ],
+        "tokens": [
+          "semantic.color.surface.overlay.*",
+          "semantic.color.text.*",
+          "semantic.motion.overlay.*"
+        ]
+      },
+      {
+        "id": "o-fast-reentry-banner",
+        "name": "Fast Re-entry Banner",
+        "loop_stage": [
+          "commit",
+          "complete",
+          "review"
+        ],
+        "variants": [
+          "resume",
+          "minimal-day",
+          "offline-recover"
+        ],
+        "states": [
+          "visible",
+          "dismissed"
+        ],
+        "density": {
+          "comfortable": [
+            "component.space.banner.padding"
+          ],
+          "compact": [
+            "component.space.banner.padding"
+          ]
+        },
+        "a11y": [
+          "first-action-focus",
+          "summary-readable"
+        ],
+        "tokens": [
+          "semantic.color.feedback.reentry.*",
+          "semantic.color.text.*",
+          "semantic.space.*"
+        ]
+      },
+      {
+        "id": "o-overlay-rail",
+        "name": "Overlay Rail",
+        "loop_stage": [
+          "review"
+        ],
+        "overlay_secondary": true,
+        "variants": [
+          "insights",
+          "companion",
+          "both"
+        ],
+        "states": [
+          "hidden",
+          "visible",
+          "dismissed"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.overlay.rail",
+            "component.space.panel.padding"
+          ],
+          "compact": [
+            "component.size.overlay.rail",
+            "component.space.panel.padding"
+          ]
+        },
+        "a11y": [
+          "dismissible",
+          "no-focus-trap-on-main-content"
+        ],
+        "tokens": [
+          "semantic.color.overlay.*",
+          "semantic.elevation.overlay.*",
+          "semantic.motion.overlay.*"
+        ]
+      },
+      {
+        "id": "o-studio-pointer-panel",
+        "name": "Studio Pointer Panel",
+        "loop_stage": [
+          "secondary"
+        ],
+        "overlay_secondary": true,
+        "variants": [
+          "board",
+          "mindmap"
+        ],
+        "states": [
+          "default",
+          "loading",
+          "offline"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.panel.width"
+          ],
+          "compact": [
+            "component.size.panel.width"
+          ]
+        },
+        "a11y": [
+          "object-reference-labels",
+          "keyboard-selection-support"
+        ],
+        "tokens": [
+          "semantic.color.surface.panel.*",
+          "semantic.color.text.*",
+          "semantic.color.border.*"
+        ]
+      }
+    ],
+    "templates": [
+      {
+        "id": "t-planner-shell-desktop",
+        "name": "Planner Shell Desktop",
+        "loop_stage": [
+          "capture",
+          "clarify",
+          "commit",
+          "complete",
+          "review"
+        ],
+        "variants": [
+          "default"
+        ],
+        "states": [
+          "default"
+        ],
+        "density": {
+          "comfortable": [
+            "modes.density.comfortable.*"
+          ],
+          "compact": [
+            "modes.density.compact.*"
+          ]
+        },
+        "a11y": [
+          "landmarks-and-skip-links"
+        ],
+        "tokens": [
+          "semantic.layout.shell.*",
+          "semantic.color.surface.*"
+        ],
+        "organisms": [
+          "o-planner-top-nav",
+          "o-planner-sidebar",
+          "o-right-detail-drawer",
+          "o-fast-reentry-banner"
+        ]
+      },
+      {
+        "id": "t-planner-shell-mobile",
+        "name": "Planner Shell Mobile",
+        "loop_stage": [
+          "capture",
+          "clarify",
+          "commit",
+          "complete",
+          "review"
+        ],
+        "variants": [
+          "default"
+        ],
+        "states": [
+          "default"
+        ],
+        "density": {
+          "comfortable": [
+            "modes.density.comfortable.*"
+          ],
+          "compact": [
+            "modes.density.compact.*"
+          ]
+        },
+        "a11y": [
+          "bottom-nav-labels",
+          "sheet-focus-management"
+        ],
+        "tokens": [
+          "semantic.layout.mobile.*",
+          "semantic.color.surface.*"
+        ],
+        "organisms": [
+          "o-planner-top-nav",
+          "o-week-strip",
+          "o-right-detail-drawer"
+        ]
+      },
+      {
+        "id": "t-inbox",
+        "name": "Inbox Template",
+        "loop_stage": [
+          "capture",
+          "clarify"
+        ],
+        "variants": [
+          "default"
+        ],
+        "states": [
+          "default",
+          "offline"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.task-row.height"
+          ],
+          "compact": [
+            "component.size.task-row.height"
+          ]
+        },
+        "a11y": [
+          "list-and-form-semantics"
+        ],
+        "tokens": [
+          "semantic.space.section.*",
+          "semantic.color.surface.*"
+        ],
+        "organisms": [
+          "o-inbox-queue",
+          "o-clarify-panel",
+          "o-fast-reentry-banner"
+        ]
+      },
+      {
+        "id": "t-today",
+        "name": "Today Template",
+        "loop_stage": [
+          "commit",
+          "complete"
+        ],
+        "variants": [
+          "minimal-day",
+          "full-day"
+        ],
+        "states": [
+          "default",
+          "syncing"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.priority-card.height",
+            "component.size.task-row.height"
+          ],
+          "compact": [
+            "component.size.priority-card.height",
+            "component.size.task-row.height"
+          ]
+        },
+        "a11y": [
+          "priority-first-focus-order"
+        ],
+        "tokens": [
+          "semantic.color.surface.*",
+          "semantic.color.feedback.*"
+        ],
+        "organisms": [
+          "o-week-strip",
+          "o-today-commitments",
+          "o-habits-panel",
+          "o-fast-reentry-banner"
+        ]
+      },
+      {
+        "id": "t-week",
+        "name": "Week Template",
+        "loop_stage": [
+          "commit"
+        ],
+        "variants": [
+          "default"
+        ],
+        "states": [
+          "default"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.week-cell.height"
+          ],
+          "compact": [
+            "component.size.week-cell.height"
+          ]
+        },
+        "a11y": [
+          "day-navigation-buttons"
+        ],
+        "tokens": [
+          "semantic.layout.week.*",
+          "semantic.color.surface.*"
+        ],
+        "organisms": [
+          "o-week-strip",
+          "o-today-commitments",
+          "o-project-board"
+        ]
+      },
+      {
+        "id": "t-habits",
+        "name": "Habits Template",
+        "loop_stage": [
+          "complete"
+        ],
+        "variants": [
+          "default"
+        ],
+        "states": [
+          "default",
+          "warning"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.habit-row.height"
+          ],
+          "compact": [
+            "component.size.habit-row.height"
+          ]
+        },
+        "a11y": [
+          "minimum-viable-action-visible"
+        ],
+        "tokens": [
+          "semantic.color.feedback.habit.*",
+          "semantic.color.surface.*"
+        ],
+        "organisms": [
+          "o-habits-panel",
+          "o-review-panel"
+        ]
+      },
+      {
+        "id": "t-goals",
+        "name": "Goals Template",
+        "loop_stage": [
+          "clarify",
+          "review"
+        ],
+        "variants": [
+          "default"
+        ],
+        "states": [
+          "default"
+        ],
+        "density": {
+          "comfortable": [
+            "component.space.grid.gap"
+          ],
+          "compact": [
+            "component.space.grid.gap"
+          ]
+        },
+        "a11y": [
+          "progress-readable"
+        ],
+        "tokens": [
+          "semantic.color.surface.*",
+          "semantic.color.feedback.goal.*"
+        ],
+        "organisms": [
+          "o-goals-grid",
+          "o-project-board"
+        ]
+      },
+      {
+        "id": "t-project",
+        "name": "Project Template",
+        "loop_stage": [
+          "clarify",
+          "commit",
+          "complete"
+        ],
+        "variants": [
+          "solo",
+          "shared"
+        ],
+        "states": [
+          "default",
+          "offline"
+        ],
+        "density": {
+          "comfortable": [
+            "component.space.board.column-gap"
+          ],
+          "compact": [
+            "component.space.board.column-gap"
+          ]
+        },
+        "a11y": [
+          "assignment-textual-status"
+        ],
+        "tokens": [
+          "semantic.color.surface.*",
+          "semantic.color.text.*",
+          "semantic.color.border.*"
+        ],
+        "organisms": [
+          "o-project-board",
+          "o-right-detail-drawer",
+          "o-command-palette"
+        ]
+      },
+      {
+        "id": "t-review",
+        "name": "Review Template",
+        "loop_stage": [
+          "review"
+        ],
+        "variants": [
+          "daily",
+          "weekly"
+        ],
+        "states": [
+          "default",
+          "success"
+        ],
+        "density": {
+          "comfortable": [
+            "component.space.panel.padding"
+          ],
+          "compact": [
+            "component.space.panel.padding"
+          ]
+        },
+        "a11y": [
+          "review-form-labeling",
+          "summary-structure"
+        ],
+        "tokens": [
+          "semantic.color.surface.*",
+          "semantic.color.feedback.*"
+        ],
+        "organisms": [
+          "o-review-panel",
+          "o-complete-feed",
+          "o-overlay-rail"
+        ]
+      },
+      {
+        "id": "t-studio-secondary",
+        "name": "Studio Secondary Template",
+        "loop_stage": [
+          "secondary"
+        ],
+        "overlay_secondary": true,
+        "variants": [
+          "board",
+          "mindmap"
+        ],
+        "states": [
+          "default"
+        ],
+        "density": {
+          "comfortable": [
+            "component.size.panel.width"
+          ],
+          "compact": [
+            "component.size.panel.width"
+          ]
+        },
+        "a11y": [
+          "keyboard-node-selection",
+          "non-drag-position-controls"
+        ],
+        "tokens": [
+          "semantic.color.surface.*",
+          "semantic.color.border.*",
+          "semantic.motion.*"
+        ],
+        "organisms": [
+          "o-studio-pointer-panel"
+        ]
+      }
+    ],
+    "pages": [
+      {
+        "id": "p-inbox",
+        "name": "Inbox",
+        "template": "t-inbox",
+        "loop_stage": [
+          "capture",
+          "clarify"
+        ],
+        "objects": [
+          "task",
+          "note"
+        ],
+        "overlay_secondary": false,
+        "a11y": [
+          "fast-capture-keyboard",
+          "queue-status-live-region"
+        ]
+      },
+      {
+        "id": "p-today",
+        "name": "Today",
+        "template": "t-today",
+        "loop_stage": [
+          "commit",
+          "complete"
+        ],
+        "objects": [
+          "task",
+          "habit",
+          "goal"
+        ],
+        "overlay_secondary": true,
+        "a11y": [
+          "priority-focus-order",
+          "completion-undo"
+        ]
+      },
+      {
+        "id": "p-week",
+        "name": "Week",
+        "template": "t-week",
+        "loop_stage": [
+          "commit"
+        ],
+        "objects": [
+          "task",
+          "goal",
+          "project"
+        ],
+        "overlay_secondary": true,
+        "a11y": [
+          "day-button-labeling"
+        ]
+      },
+      {
+        "id": "p-habits",
+        "name": "Habits",
+        "template": "t-habits",
+        "loop_stage": [
+          "complete"
+        ],
+        "objects": [
+          "habit",
+          "goal"
+        ],
+        "overlay_secondary": true,
+        "a11y": [
+          "minimum-viable-habit-access"
+        ]
+      },
+      {
+        "id": "p-goals",
+        "name": "Goals",
+        "template": "t-goals",
+        "loop_stage": [
+          "clarify",
+          "review"
+        ],
+        "objects": [
+          "goal",
+          "task",
+          "habit"
+        ],
+        "overlay_secondary": true,
+        "a11y": [
+          "progress-readable-text"
+        ]
+      },
+      {
+        "id": "p-project-detail",
+        "name": "Project Detail",
+        "template": "t-project",
+        "loop_stage": [
+          "clarify",
+          "commit",
+          "complete"
+        ],
+        "objects": [
+          "project",
+          "task",
+          "note"
+        ],
+        "overlay_secondary": true,
+        "a11y": [
+          "assignment-status-not-color-only",
+          "board-drag-alternative"
+        ]
+      },
+      {
+        "id": "p-review-daily",
+        "name": "Daily Review",
+        "template": "t-review",
+        "loop_stage": [
+          "review"
+        ],
+        "objects": [
+          "review_entry",
+          "task",
+          "habit"
+        ],
+        "overlay_secondary": true,
+        "a11y": [
+          "review-form-semantics"
+        ]
+      },
+      {
+        "id": "p-review-weekly",
+        "name": "Weekly Review",
+        "template": "t-review",
+        "loop_stage": [
+          "review"
+        ],
+        "objects": [
+          "review_entry",
+          "goal",
+          "project"
+        ],
+        "overlay_secondary": true,
+        "a11y": [
+          "summary-region-structure"
+        ]
+      },
+      {
+        "id": "p-command",
+        "name": "Command",
+        "template": "t-planner-shell-desktop",
+        "loop_stage": [
+          "capture",
+          "clarify"
+        ],
+        "objects": [
+          "task",
+          "habit",
+          "goal",
+          "project",
+          "note"
+        ],
+        "overlay_secondary": false,
+        "a11y": [
+          "combobox-pattern",
+          "escape-close"
+        ]
+      },
+      {
+        "id": "p-studio",
+        "name": "Studio",
+        "template": "t-studio-secondary",
+        "loop_stage": [
+          "secondary"
+        ],
+        "objects": [
+          "task",
+          "goal",
+          "project",
+          "note"
+        ],
+        "overlay_secondary": true,
+        "a11y": [
+          "pointer-only-no-data-duplication",
+          "keyboard-node-navigation"
+        ]
+      },
+      {
+        "id": "p-settings-overlays",
+        "name": "Overlay Settings",
+        "template": "t-planner-shell-desktop",
+        "loop_stage": [
+          "review"
+        ],
+        "objects": [
+          "insight_entry"
+        ],
+        "overlay_secondary": true,
+        "a11y": [
+          "toggle-label-clarity",
+          "state-persistence-feedback"
+        ]
+      }
+    ]
+  }
+}
