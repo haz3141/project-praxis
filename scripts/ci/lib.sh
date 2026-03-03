@@ -15,7 +15,7 @@ ci_skip() {
   exit 0
 }
 
-npm_script_exists() {
+package_script_exists() {
   local script_name="$1"
 
   node -e '
@@ -30,13 +30,13 @@ process.exit(pkg.scripts && Object.prototype.hasOwnProperty.call(pkg.scripts, sc
 ' "$script_name"
 }
 
-run_first_npm_script() {
+run_first_pnpm_script() {
   local script_name
 
   for script_name in "$@"; do
-    if npm_script_exists "$script_name"; then
-      ci_log "Running npm script: $script_name"
-      npm run "$script_name"
+    if package_script_exists "$script_name"; then
+      ci_log "Running pnpm script: $script_name"
+      pnpm run "$script_name"
       return 0
     fi
   done
@@ -45,18 +45,18 @@ run_first_npm_script() {
 }
 
 pick_default_web_server_command() {
-  if npm_script_exists preview; then
-    echo "npm run preview -- --host 127.0.0.1 --port 4173"
+  if package_script_exists preview; then
+    echo "pnpm run preview -- --host 127.0.0.1 --port 4173"
     return 0
   fi
 
-  if npm_script_exists dev; then
-    echo "npm run dev -- --host 127.0.0.1 --port 4173"
+  if package_script_exists dev; then
+    echo "pnpm run dev -- --host 127.0.0.1 --port 4173"
     return 0
   fi
 
-  if npm_script_exists start; then
-    echo "npm run start -- --host 127.0.0.1 --port 4173"
+  if package_script_exists start; then
+    echo "pnpm run start -- --host 127.0.0.1 --port 4173"
     return 0
   fi
 

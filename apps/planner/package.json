@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npm run -w @praxis/design-tokens build && next dev",
-    "build": "npm run -w @praxis/design-tokens build && next build",
+    "dev": "pnpm --filter @praxis/design-tokens build && next dev",
+    "build": "pnpm --filter @praxis/design-tokens build && next build",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
@@ -17,8 +17,8 @@
     "test:e2e:keyboard": "playwright test tests/a11y/inbox-today.a11y.spec.ts --grep \"keyboard focus\""
   },
   "dependencies": {
-    "@praxis/design-tokens": "0.1.0",
-    "@praxis/ui": "0.1.0",
+    "@praxis/design-tokens": "workspace:*",
+    "@praxis/ui": "workspace:*",
     "@supabase/supabase-js": "^2.57.4",
     "next": "^15.0.0",
     "react": "^19.0.0",

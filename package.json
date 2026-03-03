@@ -2,24 +2,23 @@
   "name": "project-praxis",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@10.30.3",
   "description": "Project Praxis — constitutional docs + implementation repository",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
-    "build": "npm run -ws --if-present build",
-    "lint": "npm run lint:md && npm run -ws --if-present lint",
+    "build": "pnpm -r --if-present build",
+    "dev": "pnpm --filter @praxis/planner dev",
+    "lint": "pnpm lint:md && pnpm -r --if-present lint",
     "lint:md": "markdownlint-cli2 \"**/*.md\" \"!**/node_modules/**\"",
+    "preinstall": "node -e \"const userAgent = process.env.npm_config_user_agent || ''; const execPath = process.env.npm_execpath || ''; if (!userAgent.startsWith('pnpm/') && !execPath.includes('pnpm')) { console.error('ERROR: This repository uses pnpm only. Run: pnpm install'); process.exit(1); }\"",
     "perf:split-guard": "node scripts/ci/check-bundle-split.mjs",
-    "test:a11y": "CI_WEB_SERVER_COMMAND='npm run -w @praxis/planner dev -- --hostname 127.0.0.1 --port 4173' playwright test tests/a11y/inbox-today.a11y.spec.ts",
-    "test:e2e": "CI_WEB_SERVER_COMMAND='npm run -w @praxis/planner dev -- --hostname 127.0.0.1 --port 4173' playwright test tests/e2e/smoke.capture-today-complete-review.spec.ts",
-    "test:e2e:axe": "CI_WEB_SERVER_COMMAND='npm run -w @praxis/planner dev -- --hostname 127.0.0.1 --port 4173' playwright test tests/a11y/inbox-today.a11y.spec.ts --grep 'axe scan'",
-    "test:e2e:keyboard": "CI_WEB_SERVER_COMMAND='npm run -w @praxis/planner dev -- --hostname 127.0.0.1 --port 4173' playwright test tests/a11y/inbox-today.a11y.spec.ts --grep 'keyboard focus'",
-    "test:e2e:smoke": "npm run test:e2e",
-    "test:unit": "npm run -ws --if-present test:unit",
-    "typecheck": "npm run -ws --if-present typecheck",
-    "validate": "npm run lint:md && bash scripts/validate_docs.sh"
+    "test:a11y": "CI_WEB_SERVER_COMMAND='pnpm --filter @praxis/planner dev -- --hostname 127.0.0.1 --port 4173' playwright test tests/a11y/inbox-today.a11y.spec.ts",
+    "test:e2e": "CI_WEB_SERVER_COMMAND='pnpm --filter @praxis/planner dev -- --hostname 127.0.0.1 --port 4173' playwright test tests/e2e/smoke.capture-today-complete-review.spec.ts",
+    "test:e2e:axe": "CI_WEB_SERVER_COMMAND='pnpm --filter @praxis/planner dev -- --hostname 127.0.0.1 --port 4173' playwright test tests/a11y/inbox-today.a11y.spec.ts --grep 'axe scan'",
+    "test:e2e:keyboard": "CI_WEB_SERVER_COMMAND='pnpm --filter @praxis/planner dev -- --hostname 127.0.0.1 --port 4173' playwright test tests/a11y/inbox-today.a11y.spec.ts --grep 'keyboard focus'",
+    "test:e2e:smoke": "pnpm test:e2e",
+    "test:unit": "pnpm -r --if-present test:unit",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "validate": "pnpm lint:md && bash scripts/validate_docs.sh"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.2",

@@ -19,8 +19,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-      - run: npm ci
+          cache: pnpm
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
       - run: bash scripts/ci/gate-lint.sh
 
   typecheck:
@@ -32,8 +33,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-      - run: npm ci
+          cache: pnpm
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
       - run: bash scripts/ci/gate-typecheck.sh
 
   unit:
@@ -45,8 +47,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-      - run: npm ci
+          cache: pnpm
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
       - run: bash scripts/ci/gate-unit.sh
 
   e2e:
@@ -65,10 +68,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-      - run: npm ci
-      - run: npm install --no-save @playwright/test playwright
-      - run: npx playwright install --with-deps chromium
+          cache: pnpm
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec playwright install --with-deps chromium
       - run: bash scripts/ci/gate-e2e.sh
 
   a11y:
@@ -87,10 +90,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-      - run: npm ci
-      - run: npm install --no-save @playwright/test playwright
-      - run: npx playwright install --with-deps chromium
+          cache: pnpm
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec playwright install --with-deps chromium
       - run: bash scripts/ci/gate-a11y.sh
 
   perf:
@@ -106,6 +109,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-      - run: npm ci
+          cache: pnpm
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
       - run: bash scripts/ci/gate-perf.sh

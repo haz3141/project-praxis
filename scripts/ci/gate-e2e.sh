@@ -3,8 +3,8 @@ set -euo pipefail
 
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib.sh"
 
-if run_first_npm_script test:e2e e2e; then
-  ci_log "E2E gate passed via npm script."
+if run_first_pnpm_script test:e2e e2e; then
+  ci_log "E2E gate passed via pnpm script."
   exit 0
 fi
 
@@ -15,13 +15,13 @@ if [[ -z "${CI_WEB_SERVER_COMMAND:-}" ]]; then
   fi
 fi
 
-if ! npx playwright --version >/dev/null 2>&1; then
-  ci_skip "Playwright is unavailable and no e2e npm script is defined."
+if ! pnpm exec playwright --version >/dev/null 2>&1; then
+  ci_skip "Playwright is unavailable and no e2e pnpm script is defined."
 fi
 
 if [[ -z "${CI_WEB_SERVER_COMMAND:-}" ]]; then
   ci_skip "No web server command available for Playwright."
 fi
 
-npx playwright test tests/e2e/smoke.capture-today-complete-review.spec.ts --project=chromium
+pnpm exec playwright test tests/e2e/smoke.capture-today-complete-review.spec.ts --project=chromium
 ci_log "E2E gate passed via Playwright smoke test."
