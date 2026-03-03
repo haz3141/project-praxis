@@ -16,6 +16,13 @@ pnpm install
 supabase login
 ```
 
+Set these two vars and restart `pnpm dev`:
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL="https://<project>.supabase.co"
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY="<publishable_key>"
+```
+
 If `supabase/config.toml` is missing, initialize only once with:
 
 ```bash
