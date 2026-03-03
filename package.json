@@ -32,7 +32,8 @@
     "test:unit": "pnpm -r --if-present test:unit",
     "typecheck": "pnpm -r --if-present typecheck",
     "validate": "pnpm lint:md && bash scripts/validate_docs.sh",
-    "stitch:validate": "node scripts/stitch/validate-config.mjs"
+    "stitch:validate": "node scripts/stitch/validate-config.mjs",
+    "stitch:catalog": "node scripts/stitch/export-screen-catalog.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.2",
