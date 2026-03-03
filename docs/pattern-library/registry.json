@@ -1,0 +1,44 @@
+{
+  "baselineProject": {
+    "title": "Praxis UI Kit — Executive",
+    "id": "5764765102702214376"
+  },
+  "patterns": [
+    {
+      "slot": "00",
+      "title": "Foundations",
+      "screenId": "f03a6af95eba45ffaf671f51d77a9ad7",
+      "path": "docs/pattern-library/foundations/00-foundations"
+    },
+    {
+      "slot": "01",
+      "title": "Buttons & Inputs",
+      "screenId": "855a7a33095843068f53652fb6bdd46e",
+      "path": "docs/pattern-library/inputs/01-buttons-inputs"
+    },
+    {
+      "slot": "02",
+      "title": "Navigation & Shell",
+      "screenId": "a59a4c5ba9b94d929ec9b051fc60ff7f",
+      "path": "docs/pattern-library/navigation/02-navigation-shell"
+    },
+    {
+      "slot": "03",
+      "title": "Data Display",
+      "screenId": "288d3db61b19477dbc3d497a1a1a0e8b",
+      "path": "docs/pattern-library/data-display/03-data-display"
+    },
+    {
+      "slot": "04",
+      "title": "Feedback & Overlays",
+      "screenId": "946f33c6c90646f7b900bbcd124409ef",
+      "path": "docs/pattern-library/feedback/04-feedback-overlays"
+    },
+    {
+      "slot": "05",
+      "title": "Planner Patterns",
+      "screenId": "69d9263d31944d7093b9be93638077df",
+      "path": "docs/pattern-library/planner-patterns/05-planner-patterns"
+    }
+  ]
+}

@@ -4,23 +4,31 @@
       "canvas": { "$value": "{primitives.color.neutral.0}" },
       "surface": { "$value": "{primitives.color.neutral.50}" },
       "elevated": { "$value": "{primitives.color.neutral.0}" },
+      "overlay": { "$value": "{primitives.color.neutral.900}" },
       "interactive": { "$value": "{primitives.color.accent.500}" },
       "interactiveHover": { "$value": "{primitives.color.accent.600}" },
+      "interactiveActive": { "$value": "{primitives.color.accent.600}" },
       "success": { "$value": "{primitives.color.success.500}" },
-      "warning": { "$value": "{primitives.color.warning.500}" }
+      "warning": { "$value": "{primitives.color.warning.500}" },
+      "danger": { "$value": "{primitives.color.danger.500}" },
+      "muted": { "$value": "{primitives.color.neutral.100}" }
     },
     "fg": {
       "default": { "$value": "{primitives.color.neutral.900}" },
       "muted": { "$value": "{primitives.color.neutral.500}" },
+      "subtle": { "$value": "{primitives.color.neutral.400}" },
       "onInteractive": { "$value": "{primitives.color.neutral.0}" },
       "danger": { "$value": "{primitives.color.danger.500}" },
       "success": { "$value": "{primitives.color.success.600}" },
-      "warning": { "$value": "{primitives.color.warning.600}" }
+      "warning": { "$value": "{primitives.color.warning.600}" },
+      "disabled": { "$value": "{primitives.color.neutral.400}" }
     },
     "border": {
       "default": { "$value": "{primitives.color.neutral.200}" },
       "muted": { "$value": "{primitives.color.neutral.100}" },
-      "focus": { "$value": "{primitives.color.accent.500}" }
+      "strong": { "$value": "{primitives.color.neutral.300}" },
+      "focus": { "$value": "{primitives.color.accent.500}" },
+      "danger": { "$value": "{primitives.color.danger.500}" }
     }
   }
 }
