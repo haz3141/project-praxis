@@ -1,0 +1,22 @@
+{
+  "color": {
+    "bg": {
+      "canvas": { "$value": "{primitives.color.neutral.0}" },
+      "surface": { "$value": "{primitives.color.neutral.50}" },
+      "elevated": { "$value": "{primitives.color.neutral.0}" },
+      "interactive": { "$value": "{primitives.color.accent.500}" },
+      "interactiveHover": { "$value": "{primitives.color.accent.600}" }
+    },
+    "fg": {
+      "default": { "$value": "{primitives.color.neutral.900}" },
+      "muted": { "$value": "{primitives.color.neutral.500}" },
+      "onInteractive": { "$value": "{primitives.color.neutral.0}" },
+      "danger": { "$value": "{primitives.color.danger.500}" }
+    },
+    "border": {
+      "default": { "$value": "{primitives.color.neutral.200}" },
+      "muted": { "$value": "{primitives.color.neutral.100}" },
+      "focus": { "$value": "{primitives.color.accent.500}" }
+    }
+  }
+}
