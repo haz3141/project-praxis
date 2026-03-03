@@ -1,0 +1,3 @@
+name = "design-system"
+mode = "implementation"
+description = "Own design tokens, UI primitives, and design system docs scaffolding."

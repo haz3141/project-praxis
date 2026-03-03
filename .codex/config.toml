@@ -1,0 +1,12 @@
+[project]
+name = "project-praxis"
+default_branch = "docs/decision"
+multi_agent = true
+
+[agents]
+directory = ".codex/agents"
+default_role = "explorer"
+
+[execution]
+require_conventional_commits = true
+prefer_atomic_commits = true

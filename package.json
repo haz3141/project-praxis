@@ -3,11 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "description": "Project Praxis — constitutional docs + implementation repository",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "lint:md": "markdownlint-cli2 \"**/*.md\"",
+    "build": "npm run -ws --if-present build",
+    "lint": "npm run lint:md && npm run -ws --if-present lint",
+    "lint:md": "markdownlint-cli2 \"**/*.md\" \"!**/node_modules/**\"",
+    "perf:split-guard": "node scripts/ci/check-bundle-split.mjs",
+    "test:a11y": "CI_WEB_SERVER_COMMAND='npm run -w @praxis/planner dev -- --hostname 127.0.0.1 --port 4173' playwright test tests/a11y/inbox-today.a11y.spec.ts",
+    "test:e2e": "CI_WEB_SERVER_COMMAND='npm run -w @praxis/planner dev -- --hostname 127.0.0.1 --port 4173' playwright test tests/e2e/smoke.capture-today-complete-review.spec.ts",
+    "test:e2e:axe": "CI_WEB_SERVER_COMMAND='npm run -w @praxis/planner dev -- --hostname 127.0.0.1 --port 4173' playwright test tests/a11y/inbox-today.a11y.spec.ts --grep 'axe scan'",
+    "test:e2e:keyboard": "CI_WEB_SERVER_COMMAND='npm run -w @praxis/planner dev -- --hostname 127.0.0.1 --port 4173' playwright test tests/a11y/inbox-today.a11y.spec.ts --grep 'keyboard focus'",
+    "test:e2e:smoke": "npm run test:e2e",
+    "test:unit": "npm run -ws --if-present test:unit",
+    "typecheck": "npm run -ws --if-present typecheck",
     "validate": "npm run lint:md && bash scripts/validate_docs.sh"
   },
   "devDependencies": {
-    "markdownlint-cli2": "^0.21.0"
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.56.1",
+    "markdownlint-cli2": "^0.21.0",
+    "typescript": "^5.9.2"
   }
 }

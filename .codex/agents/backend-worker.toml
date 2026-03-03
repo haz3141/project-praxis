@@ -1,0 +1,3 @@
+name = "backend-worker"
+mode = "implementation"
+description = "Own Supabase schema, RLS posture, and modular API contracts."
