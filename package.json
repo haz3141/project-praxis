@@ -11,6 +11,8 @@
     "lint:md": "markdownlint-cli2 \"**/*.md\" \"!**/node_modules/**\"",
     "preinstall": "node -e \"const userAgent = process.env.npm_config_user_agent || ''; const execPath = process.env.npm_execpath || ''; if (!userAgent.startsWith('pnpm/') && !execPath.includes('pnpm')) { console.error('ERROR: This repository uses pnpm only. Run: pnpm install'); process.exit(1); }\"",
     "perf:split-guard": "node scripts/ci/check-bundle-split.mjs",
+    "storybook:ui": "pnpm --filter @praxis/ui storybook",
+    "storybook:ui:build": "pnpm --filter @praxis/ui storybook:build",
     "supabase:db:push": "supabase --workdir supabase db push --linked",
     "supabase:migration:new": "supabase --workdir supabase migration new",
     "supabase:start": "supabase --workdir supabase start",
