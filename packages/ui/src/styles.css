@@ -231,7 +231,7 @@
   width: min(32rem, 92vw);
   max-height: 85vh;
   overflow: auto;
-  padding: var(--ds-space-lg);
+  padding: var(--ds-component-overlay-modal-padding, var(--ds-space-lg));
 }
 
 .ds-dialog-header,
@@ -300,7 +300,7 @@
   top: 0;
   bottom: 0;
   width: min(24rem, 92vw);
-  padding: var(--ds-space-lg);
+  padding: var(--ds-component-overlay-drawer-padding, var(--ds-space-lg));
   pointer-events: auto;
 }
 
@@ -425,7 +425,7 @@
   display: inline-flex;
   align-items: center;
   gap: var(--ds-space-xs);
-  padding: 0.125rem var(--ds-space-sm);
+  padding: var(--ds-space-2) var(--ds-space-sm);
   border-radius: var(--ds-radius-xl);
   font-size: var(--ds-font-size-caption);
   font-weight: var(--ds-font-weight-label);
