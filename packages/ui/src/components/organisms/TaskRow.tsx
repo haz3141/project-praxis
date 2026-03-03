@@ -11,6 +11,9 @@ export interface TaskRowProps {
   due?: ReactNode;
   trailing?: ReactNode;
   density?: 'comfortable' | 'compact';
+  className?: string;
+  disabled?: boolean;
+  loading?: boolean;
 }
 
 export function TaskRow({
@@ -22,16 +25,34 @@ export function TaskRow({
   due,
   trailing,
   density = 'comfortable',
+  className,
+  disabled,
+  loading,
 }: TaskRowProps) {
+  const classNames = [
+    'ds-task-row',
+    disabled ? 'ds-task-row--disabled' : null,
+    loading ? 'ds-task-row--loading' : null,
+    className,
+  ]
+    .filter(Boolean)
+    .join(' ');
+
   return (
-    <div className="ds-task-row" data-density={density}>
+    <div
+      className={classNames}
+      data-density={density}
+      aria-disabled={disabled || undefined}
+      aria-busy={loading || undefined}
+    >
       <AtomicCheckbox
         label={title}
         description={description}
         checked={checked}
+        disabled={disabled || loading}
         onChange={(event) => onCheckedChange?.(event.currentTarget.checked)}
       />
-      <TaskMeta due={due} priority={priority} />
+      <TaskMeta due={due} priority={priority} status={loading ? 'Syncing…' : undefined} />
       {trailing ? <div>{trailing}</div> : null}
     </div>
   );
