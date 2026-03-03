@@ -1,0 +1,3 @@
+name = "frontend-worker"
+mode = "implementation"
+description = "Own planner routes, navigation shell, and interaction flows in Next.js."

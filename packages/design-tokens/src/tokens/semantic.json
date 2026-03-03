@@ -1,0 +1,60 @@
+{
+  "color": {
+    "bg": {
+      "canvas": { "$type": "color", "$value": "{primitives.color.neutral.0}" },
+      "surface": { "$type": "color", "$value": "{primitives.color.neutral.50}" },
+      "elevated": { "$type": "color", "$value": "{primitives.color.neutral.0}" },
+      "interactive": { "$type": "color", "$value": "{primitives.color.accent.500}" },
+      "interactiveHover": { "$type": "color", "$value": "{primitives.color.accent.600}" }
+    },
+    "fg": {
+      "default": { "$type": "color", "$value": "{primitives.color.neutral.900}" },
+      "muted": { "$type": "color", "$value": "{primitives.color.neutral.500}" },
+      "onInteractive": { "$type": "color", "$value": "{primitives.color.neutral.0}" },
+      "danger": { "$type": "color", "$value": "{primitives.color.danger.500}" }
+    },
+    "border": {
+      "default": { "$type": "color", "$value": "{primitives.color.neutral.200}" },
+      "muted": { "$type": "color", "$value": "{primitives.color.neutral.100}" },
+      "focus": { "$type": "color", "$value": "{primitives.color.accent.500}" }
+    }
+  },
+  "space": {
+    "xs": { "$type": "dimension", "$value": "{primitives.space.6}" },
+    "sm": { "$type": "dimension", "$value": "{primitives.space.8}" },
+    "md": { "$type": "dimension", "$value": "{primitives.space.12}" },
+    "lg": { "$type": "dimension", "$value": "{primitives.space.16}" },
+    "xl": { "$type": "dimension", "$value": "{primitives.space.24}" },
+    "controlX": { "$type": "dimension", "$value": "{primitives.space.12}" },
+    "controlY": { "$type": "dimension", "$value": "{primitives.space.8}" }
+  },
+  "size": {
+    "controlHeight": { "$type": "dimension", "$value": "2.5rem" },
+    "targetMin": { "$type": "dimension", "$value": "2.75rem" },
+    "icon": { "$type": "dimension", "$value": "1rem" }
+  },
+  "radius": {
+    "sm": { "$type": "dimension", "$value": "{primitives.radius.sm}" },
+    "md": { "$type": "dimension", "$value": "{primitives.radius.md}" },
+    "lg": { "$type": "dimension", "$value": "{primitives.radius.lg}" }
+  },
+  "font": {
+    "size": {
+      "body": { "$type": "dimension", "$value": "{primitives.font.size.md}" },
+      "label": { "$type": "dimension", "$value": "{primitives.font.size.sm}" },
+      "title": { "$type": "dimension", "$value": "{primitives.font.size.lg}" }
+    },
+    "weight": {
+      "label": { "$type": "number", "$value": "{primitives.font.weight.medium}" },
+      "title": { "$type": "number", "$value": "{primitives.font.weight.semibold}" }
+    }
+  },
+  "shadow": {
+    "card": { "$type": "shadow", "$value": "{primitives.shadow.sm}" },
+    "overlay": { "$type": "shadow", "$value": "{primitives.shadow.md}" }
+  },
+  "motion": {
+    "durationFast": { "$type": "duration", "$value": "120ms" },
+    "durationNormal": { "$type": "duration", "$value": "200ms" }
+  }
+}

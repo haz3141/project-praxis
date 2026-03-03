@@ -1,0 +1,16 @@
+{
+  "space": {
+    "controlX": { "$value": "{primitives.space.10}" },
+    "controlY": { "$value": "{primitives.space.6}" }
+  },
+  "size": {
+    "controlHeight": { "$value": "2.125rem" },
+    "targetMin": { "$value": "2.5rem" }
+  },
+  "font": {
+    "size": {
+      "body": { "$value": "0.9375rem" },
+      "label": { "$value": "0.8125rem" }
+    }
+  }
+}

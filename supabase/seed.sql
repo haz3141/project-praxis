@@ -1,0 +1,2 @@
+-- Intentionally minimal for solo-first MVP.
+-- Add deterministic local fixtures here when integration tests require seeded data.

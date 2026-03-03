@@ -1,0 +1,3 @@
+name = "studio-worker"
+mode = "implementation"
+description = "Own minimal Excalidraw studio route with pointer-only metadata storage."

@@ -1,0 +1,26 @@
+{
+  "color": {
+    "bg": {
+      "canvas": { "$value": "{primitives.color.neutral.950}" },
+      "surface": { "$value": "{primitives.color.neutral.900}" },
+      "elevated": { "$value": "{primitives.color.neutral.700}" },
+      "interactive": { "$value": "{primitives.color.accent.400}" },
+      "interactiveHover": { "$value": "{primitives.color.accent.500}" }
+    },
+    "fg": {
+      "default": { "$value": "{primitives.color.neutral.50}" },
+      "muted": { "$value": "{primitives.color.neutral.300}" },
+      "onInteractive": { "$value": "{primitives.color.neutral.0}" },
+      "danger": { "$value": "#fca5a5" }
+    },
+    "border": {
+      "default": { "$value": "{primitives.color.neutral.700}" },
+      "muted": { "$value": "{primitives.color.neutral.900}" },
+      "focus": { "$value": "{primitives.color.accent.400}" }
+    }
+  },
+  "shadow": {
+    "card": { "$value": "none" },
+    "overlay": { "$value": "0 12px 32px -12px rgb(0 0 0 / 0.6)" }
+  }
+}

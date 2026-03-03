@@ -1,0 +1,17 @@
+{
+  "name": "Praxis Planner",
+  "short_name": "Praxis",
+  "start_url": "/today",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#2563eb",
+  "description": "Planner-first execution loop with offline inbox capture.",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
