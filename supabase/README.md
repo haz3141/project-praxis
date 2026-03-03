@@ -1,27 +1,10 @@
 # Supabase Local Development
 
-## Prerequisites
+Use the repository workflow guide:
 
-- Docker Desktop running
-- Supabase CLI installed
+- [`docs/dev/supabase.md`](../docs/dev/supabase.md)
 
-## Start Local Stack
+This directory stores migrations and seed data:
 
-```bash
-supabase start
-supabase db reset
-```
-
-`supabase db reset` applies all migrations in `supabase/migrations` and runs `supabase/seed.sql`.
-
-## Apply New Migration
-
-```bash
-supabase migration new <name>
-```
-
-Then place SQL changes in the new migration file and run:
-
-```bash
-supabase db reset
-```
+- `supabase/migrations`
+- `supabase/seed.sql`
