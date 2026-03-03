@@ -36,6 +36,8 @@ pnpm supabase:status
 pnpm supabase:stop
 ```
 
+Use `127.0.0.1` for local app/test URLs to match repository Playwright and CI defaults.
+
 ## Migrations
 
 Create a new migration:
@@ -70,4 +72,6 @@ Types are generated at `packages/supabase/src/database.types.ts`.
 
 - Never commit secrets.
 - Keep secrets in local environment files only.
-- Browser code must only use `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
+- Browser code must only use `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`.
+- For backward compatibility, `NEXT_PUBLIC_SUPABASE_ANON_KEY` is accepted as a fallback.
+- Server-only admin operations should use `SUPABASE_SECRET_KEY`; fallback to `SUPABASE_SERVICE_ROLE_KEY` only when needed.
