@@ -5,13 +5,17 @@
       "surface": { "$value": "{primitives.color.neutral.900}" },
       "elevated": { "$value": "{primitives.color.neutral.700}" },
       "interactive": { "$value": "{primitives.color.accent.400}" },
-      "interactiveHover": { "$value": "{primitives.color.accent.500}" }
+      "interactiveHover": { "$value": "{primitives.color.accent.500}" },
+      "success": { "$value": "{primitives.color.success.400}" },
+      "warning": { "$value": "{primitives.color.warning.400}" }
     },
     "fg": {
       "default": { "$value": "{primitives.color.neutral.50}" },
       "muted": { "$value": "{primitives.color.neutral.300}" },
       "onInteractive": { "$value": "{primitives.color.neutral.0}" },
-      "danger": { "$value": "#fca5a5" }
+      "danger": { "$value": "{primitives.color.danger.400}" },
+      "success": { "$value": "{primitives.color.success.400}" },
+      "warning": { "$value": "{primitives.color.warning.400}" }
     },
     "border": {
       "default": { "$value": "{primitives.color.neutral.700}" },
@@ -21,6 +25,7 @@
   },
   "shadow": {
     "card": { "$value": "none" },
-    "overlay": { "$value": "0 12px 32px -12px rgb(0 0 0 / 0.6)" }
+    "elevated": { "$value": "0 8px 20px -8px rgba(0,0,0,0.5)" },
+    "overlay": { "$value": "0 12px 32px -12px rgba(0,0,0,0.6)" }
   }
 }
