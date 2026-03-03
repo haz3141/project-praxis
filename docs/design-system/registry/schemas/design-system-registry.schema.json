@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://project-praxis.local/schemas/design-system-registry.schema.json",
+  "title": "DesignSystemRegistry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["systems", "metadata"],
+  "properties": {
+    "systems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "homepage",
+          "component_count",
+          "platform_tags",
+          "tech_tags",
+          "feature_tags",
+          "provenance"
+        ],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "homepage": { "type": "string", "format": "uri" },
+          "component_count": { "type": "integer", "minimum": 0 },
+          "platform_tags": { "type": "array", "items": { "type": "string" } },
+          "tech_tags": { "type": "array", "items": { "type": "string" } },
+          "feature_tags": { "type": "array", "items": { "type": "string" } },
+          "provenance": {
+            "$ref": "./provenance.schema.json"
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["generated_at", "source_url"],
+      "properties": {
+        "generated_at": { "type": "string", "format": "date-time" },
+        "source_url": { "type": "string", "format": "uri" },
+        "extractor_version": { "type": "string" },
+        "checksum": { "type": "string" }
+      }
+    }
+  }
+}

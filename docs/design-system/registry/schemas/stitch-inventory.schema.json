@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://project-praxis.local/schemas/stitch-inventory.schema.json",
+  "title": "StitchInventory",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["generated_at", "projects", "totals"],
+  "properties": {
+    "generated_at": { "type": "string", "format": "date-time" },
+    "source_command": { "type": "string" },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["project_id", "project_title", "total_screens", "canonical_coverage", "duplicate_count", "unmapped_count"],
+        "properties": {
+          "project_id": { "type": "string" },
+          "project_title": { "type": "string" },
+          "total_screens": { "type": "integer", "minimum": 0 },
+          "canonical_coverage": { "type": "string" },
+          "duplicate_count": { "type": "integer", "minimum": 0 },
+          "unmapped_count": { "type": "integer", "minimum": 0 },
+          "slot_coverage": {
+            "type": "object",
+            "additionalProperties": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "totals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["project_count", "screen_count"],
+      "properties": {
+        "project_count": { "type": "integer", "minimum": 0 },
+        "screen_count": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

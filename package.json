@@ -33,11 +33,18 @@
     "typecheck": "pnpm -r --if-present typecheck",
     "validate": "pnpm lint:md && bash scripts/validate_docs.sh",
     "stitch:validate": "node scripts/stitch/validate-config.mjs",
-    "stitch:catalog": "node scripts/stitch/export-screen-catalog.mjs"
+    "stitch:catalog": "node scripts/stitch/export-screen-catalog.mjs",
+    "ds:audit": "node scripts/ds/audit.mjs",
+    "ds:sync:gallery": "node scripts/ds/sync-gallery.mjs",
+    "ds:sync:stitch": "node scripts/ds/sync-stitch.mjs",
+    "ds:build:patterns": "node scripts/ds/build-patterns.mjs",
+    "ds:validate": "node scripts/ds/validate.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.2",
     "@playwright/test": "^1.56.1",
+    "ajv": "^8.18.0",
+    "ajv-formats": "^3.0.1",
     "markdownlint-cli2": "^0.21.0",
     "typescript": "^5.9.2"
   }

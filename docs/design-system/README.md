@@ -12,6 +12,7 @@ Praxis MVP uses a token-first, accessibility-first design system.
 - [Stitch Exports](./stitch/exports.md)
 - [Stitch Audit & Runbook](./stitch/audit.md)
 - [Stitch Full Screen Catalog](./stitch/screens-catalog.md)
+- [Registry Scaffold](./registry/README.md)
 
 ## Source of Truth
 

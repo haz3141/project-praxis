@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://project-praxis.local/schemas/pattern-definition.schema.json",
+  "title": "PatternDefinition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "purpose",
+    "composition_graph",
+    "route_mapping",
+    "acceptance_checks",
+    "source_components",
+    "stitch_slots"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "purpose": { "type": "string" },
+    "composition_graph": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["nodes", "edges"],
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "tier"],
+            "properties": {
+              "id": { "type": "string" },
+              "tier": {
+                "type": "string",
+                "enum": ["atom", "molecule", "organism", "template", "page"]
+              }
+            }
+          }
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["from", "to"],
+            "properties": {
+              "from": { "type": "string" },
+              "to": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "route_mapping": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "acceptance_checks": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "source_components": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "stitch_slots": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}
