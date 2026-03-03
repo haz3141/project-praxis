@@ -16,3 +16,7 @@ test-results/
 supabase/.temp/
 
 packages/ui/storybook-static/
+
+# Local Stitch skill artifacts
+/stitch.json
+/queue/
