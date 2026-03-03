@@ -7,5 +7,6 @@
 - [ ] Comfortable/Compact density mappings implemented for planner-critical components.
 - [ ] Interactive states include hover/focus/active/disabled/loading.
 - [ ] Focus ring is visible in all variants and themes.
+- [ ] Sync/offline indicators expose textual state and use live-region semantics when status changes.
 - [ ] Overlays enforce escape-to-close and focus management.
 - [ ] Planner remains primary when overlays are present.
