@@ -747,6 +747,46 @@
   min-block-size: var(--ds-size-target-min);
 }
 
+.ds-sync-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ds-space-xs);
+  min-height: var(--ds-size-target-min);
+  border: 1px solid var(--ds-color-border-default);
+  border-radius: var(--ds-radius-xl);
+  background: var(--ds-color-bg-surface);
+  color: var(--ds-color-fg-default);
+  padding: var(--ds-space-control-y) var(--ds-space-control-x);
+  font-size: var(--ds-font-size-label);
+  font-weight: var(--ds-font-weight-label);
+  line-height: 1;
+}
+
+.ds-sync-status-pill[data-density="compact"] {
+  min-height: var(--ds-size-control-height);
+  padding: var(--ds-component-button-padding-y) var(--ds-component-button-padding-x);
+}
+
+.ds-sync-status-pill--offline {
+  border-color: var(--ds-color-border-strong);
+}
+
+.ds-sync-status-pill--syncing {
+  background: var(--ds-color-bg-elevated);
+}
+
+.ds-sync-status-pill--synced {
+  border-color: var(--ds-color-bg-success);
+}
+
+.ds-sync-status-pill--conflict {
+  border-color: var(--ds-color-border-danger);
+}
+
+.ds-sync-status-pill-text {
+  white-space: nowrap;
+}
+
 /* ------------------------------------------------------------------ */
 /* Reduced motion                                                     */
 /* ------------------------------------------------------------------ */

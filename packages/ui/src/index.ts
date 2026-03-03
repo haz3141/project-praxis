@@ -52,6 +52,8 @@ export { LabeledField } from './components/molecules/LabeledField';
 export type { LabeledFieldProps } from './components/molecules/LabeledField';
 export { SearchField } from './components/molecules/SearchField';
 export type { SearchFieldProps } from './components/molecules/SearchField';
+export { SyncStatusPill } from './components/molecules/SyncStatusPill';
+export type { SyncStatusPillProps, SyncStatusPillState } from './components/molecules/SyncStatusPill';
 export { TaskMeta } from './components/molecules/TaskMeta';
 export type { TaskMetaProps } from './components/molecules/TaskMeta';
 export { EmptyState } from './components/molecules/EmptyState';
