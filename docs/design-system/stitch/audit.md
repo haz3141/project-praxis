@@ -25,6 +25,16 @@ Live source of truth: Stitch MCP `list_projects` + `list_screens` on
 | Praxis UI Kit — Minimal | `7285948406539466076` | Stitch MCP `projects/7285948406539466076`; snapshot in `docs/design-system/stitch/exports.md` | Variant screens (`UI Kit` titles) with `screenshot` and `htmlCode` payloads | MCP direct and MCP-via-skills | live total=7, canonical coverage=6/6, duplicates=1 |
 | Praxis UI Kit — Desktop | `5252820721296843802` | Stitch MCP `projects/5252820721296843802`; details in `/tmp/praxis_stitch_audit.md` | Desktop-oriented variant set with canonical slots plus variants | MCP direct and MCP-via-skills | live total=10, canonical coverage=6/6, duplicates=4 |
 
+Detailed per-screen inventory and comparisons across all four projects are
+published in:
+
+- `docs/design-system/stitch/screens-catalog.md` (human-readable table + matrix)
+- `docs/design-system/stitch/screens-catalog.csv` (machine-readable)
+
+Regenerate these artifacts with:
+
+- `pnpm run stitch:catalog`
+
 ## Two Ways Praxis Has Used Stitch
 
 ## 1) Direct Stitch MCP (Way #1)
