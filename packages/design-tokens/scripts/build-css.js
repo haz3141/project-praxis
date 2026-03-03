@@ -129,6 +129,16 @@ function build() {
   const primitivesFile = readJson(path.join(tokensDir, 'primitives.json'));
   const primitives = primitivesFile.primitives || primitivesFile;
   const semanticBase = readJson(path.join(tokensDir, 'semantic.json'));
+  const modes = {
+    theme: {
+      light: readJson(path.join(tokensDir, 'modes', 'theme.light.json')),
+      dark: readJson(path.join(tokensDir, 'modes', 'theme.dark.json')),
+    },
+    density: {
+      comfortable: readJson(path.join(tokensDir, 'modes', 'density.comfortable.json')),
+      compact: readJson(path.join(tokensDir, 'modes', 'density.compact.json')),
+    },
+  };
 
   fs.mkdirSync(distDir, { recursive: true });
 
@@ -158,6 +168,10 @@ function build() {
   const banner = '/* Generated from DTCG-aligned semantic tokens. Do not edit directly. */';
   fs.writeFileSync(path.join(distDir, 'tokens.css'), `${banner}\n\n${blocks.join('\n\n')}\n`);
   fs.writeFileSync(path.join(distDir, 'tokens.resolved.json'), `${JSON.stringify(resolved, null, 2)}\n`);
+  fs.writeFileSync(
+    path.join(distDir, 'tokens.json'),
+    `${JSON.stringify({ primitives, semantic: semanticBase, modes }, null, 2)}\n`,
+  );
 }
 
 build();

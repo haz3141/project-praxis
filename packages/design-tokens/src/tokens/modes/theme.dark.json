@@ -3,29 +3,40 @@
     "bg": {
       "canvas": { "$value": "{primitives.color.neutral.950}" },
       "surface": { "$value": "{primitives.color.neutral.900}" },
-      "elevated": { "$value": "{primitives.color.neutral.700}" },
+      "elevated": { "$value": "{primitives.color.neutral.800}" },
+      "overlay": { "$value": "{primitives.color.neutral.950}" },
       "interactive": { "$value": "{primitives.color.accent.400}" },
-      "interactiveHover": { "$value": "{primitives.color.accent.500}" },
+      "interactiveHover": { "$value": "{primitives.color.accent.300}" },
+      "interactiveActive": { "$value": "{primitives.color.accent.300}" },
       "success": { "$value": "{primitives.color.success.400}" },
-      "warning": { "$value": "{primitives.color.warning.400}" }
+      "warning": { "$value": "{primitives.color.warning.400}" },
+      "danger": { "$value": "{primitives.color.danger.400}" },
+      "muted": { "$value": "{primitives.color.neutral.800}" }
     },
     "fg": {
       "default": { "$value": "{primitives.color.neutral.50}" },
       "muted": { "$value": "{primitives.color.neutral.300}" },
+      "subtle": { "$value": "{primitives.color.neutral.400}" },
       "onInteractive": { "$value": "{primitives.color.neutral.0}" },
-      "danger": { "$value": "{primitives.color.danger.400}" },
-      "success": { "$value": "{primitives.color.success.400}" },
-      "warning": { "$value": "{primitives.color.warning.400}" }
+      "danger": { "$value": "{primitives.color.danger.300}" },
+      "success": { "$value": "{primitives.color.success.300}" },
+      "warning": { "$value": "{primitives.color.warning.300}" },
+      "disabled": { "$value": "{primitives.color.neutral.500}" }
     },
     "border": {
       "default": { "$value": "{primitives.color.neutral.700}" },
-      "muted": { "$value": "{primitives.color.neutral.900}" },
-      "focus": { "$value": "{primitives.color.accent.400}" }
+      "muted": { "$value": "{primitives.color.neutral.800}" },
+      "strong": { "$value": "{primitives.color.neutral.500}" },
+      "focus": { "$value": "{primitives.color.accent.400}" },
+      "danger": { "$value": "{primitives.color.danger.300}" }
     }
   },
   "shadow": {
-    "card": { "$value": "none" },
-    "elevated": { "$value": "0 8px 20px -8px rgba(0,0,0,0.5)" },
-    "overlay": { "$value": "0 12px 32px -12px rgba(0,0,0,0.6)" }
+    "card": { "$value": "0 0 0 1px rgba(255,255,255,0.08)" },
+    "elevated": { "$value": "0 12px 24px rgba(0,0,0,0.5)" },
+    "overlay": { "$value": "0 20px 40px rgba(0,0,0,0.6)" },
+    "level2": { "$value": "0 8px 20px rgba(0,0,0,0.45)" },
+    "level3": { "$value": "0 12px 30px rgba(0,0,0,0.55)" },
+    "level4": { "$value": "0 20px 48px rgba(0,0,0,0.65)" }
   }
 }

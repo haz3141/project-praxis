@@ -6,5 +6,30 @@
   "size": {
     "controlHeight": { "$value": "2.5rem" },
     "targetMin": { "$value": "2.75rem" }
+  },
+  "component": {
+    "button": {
+      "height": { "$value": "2.75rem" },
+      "paddingX": { "$value": "{primitives.space.16}" },
+      "paddingY": { "$value": "{primitives.space.8}" }
+    },
+    "input": {
+      "height": { "$value": "2.75rem" },
+      "paddingX": { "$value": "{primitives.space.12}" },
+      "paddingY": { "$value": "{primitives.space.8}" }
+    },
+    "taskRow": {
+      "height": { "$value": "3.375rem" },
+      "paddingX": { "$value": "{primitives.space.16}" },
+      "paddingY": { "$value": "{primitives.space.12}" }
+    },
+    "priorityCard": {
+      "padding": { "$value": "{primitives.space.24}" },
+      "minHeight": { "$value": "5.5rem" }
+    },
+    "overlay": {
+      "modalPadding": { "$value": "{primitives.space.24}" },
+      "drawerPadding": { "$value": "{primitives.space.24}" }
+    }
   }
 }

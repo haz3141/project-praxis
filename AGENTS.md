@@ -2,7 +2,10 @@
 
 ## Branch and Git Hygiene
 
-- Work only on `docs/decision` unless maintainers direct otherwise.
+- Work from `dev` as the integration baseline.
+- Create short-lived feature branches from `dev` for implementation work.
+- Merge feature branches into `dev` via pull request.
+- Keep `main` and `dev` aligned when no other active release/hotfix branches are in progress.
 - Never commit directly to `main` or `dev`.
 - Use atomic Conventional Commits.
 - Run relevant checks before each commit (`lint`, `typecheck`, tests, and build for affected scope).

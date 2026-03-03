@@ -53,3 +53,5 @@
 ## 7) Output artifacts
 - Decision Tree and Mindmap: [DECISION_TREE_MINDMAP.md](./DECISION_TREE_MINDMAP.md)
 - Decision Matrix template: [DECISION_MATRIX_TEMPLATE.csv](./DECISION_MATRIX_TEMPLATE.csv)
+- Atomic DS source docs: `docs/design-system/atomic/*`
+- Stitch export snapshot index: `docs/design-system/stitch/exports.md`

@@ -85,10 +85,11 @@
   align-items: center;
   justify-content: center;
   gap: var(--ds-space-sm);
-  min-height: var(--ds-size-target-min);
+  min-height: var(--ds-component-button-height, var(--ds-size-target-min));
   border: 1px solid var(--ds-color-border-default);
   border-radius: var(--ds-radius-md);
-  padding: var(--ds-space-control-y) var(--ds-space-control-x);
+  padding: var(--ds-component-button-padding-y, var(--ds-space-control-y))
+    var(--ds-component-button-padding-x, var(--ds-space-control-x));
   font-family: inherit;
   font-size: var(--ds-font-size-label);
   font-weight: var(--ds-font-weight-label);
@@ -140,8 +141,19 @@
   color: var(--ds-color-fg-default);
 }
 
+.ds-button--destructive {
+  background: var(--ds-color-bg-danger);
+  border-color: var(--ds-color-bg-danger);
+  color: var(--ds-color-fg-on-interactive);
+}
+
+.ds-button--destructive:hover:not(:disabled) {
+  background: var(--ds-color-fg-danger);
+  border-color: var(--ds-color-fg-danger);
+}
+
 .ds-button:disabled {
-  opacity: 0.55;
+  opacity: var(--ds-state-interactive-disabled-opacity, 0.55);
   cursor: not-allowed;
 }
 
@@ -151,12 +163,13 @@
 .ds-input,
 .ds-select-control {
   width: 100%;
-  min-height: var(--ds-size-control-height);
+  min-height: var(--ds-component-input-height, var(--ds-size-control-height));
   border: 1px solid var(--ds-color-border-default);
   border-radius: var(--ds-radius-sm);
   background: var(--ds-color-bg-elevated);
   color: var(--ds-color-fg-default);
-  padding: var(--ds-space-control-y) var(--ds-space-control-x);
+  padding: var(--ds-component-input-padding-y, var(--ds-space-control-y))
+    var(--ds-component-input-padding-x, var(--ds-space-control-x));
   font-family: inherit;
   font-size: var(--ds-font-size-body);
   transition: border-color var(--ds-motion-duration-fast)
@@ -165,6 +178,11 @@
 
 .ds-field {
   width: 100%;
+}
+
+.ds-input--textarea {
+  min-height: calc(var(--ds-component-input-height, var(--ds-size-control-height)) * 2);
+  resize: vertical;
 }
 
 .ds-checkbox {
@@ -193,7 +211,7 @@
 .ds-overlay {
   position: fixed;
   inset: 0;
-  background: rgb(2 6 23 / 0.45);
+  background: color-mix(in srgb, var(--ds-color-bg-overlay) 45%, transparent);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -273,7 +291,7 @@
 .ds-drawer-backdrop {
   position: absolute;
   inset: 0;
-  background: rgb(2 6 23 / 0.45);
+  background: color-mix(in srgb, var(--ds-color-bg-overlay) 45%, transparent);
   pointer-events: auto;
 }
 
@@ -419,9 +437,214 @@
   color: var(--ds-color-fg-on-interactive);
 }
 
+.ds-badge--neutral {
+  background: var(--ds-color-bg-muted);
+  color: var(--ds-color-fg-default);
+}
+
 .ds-badge--warning {
   background: var(--ds-color-bg-warning);
   color: var(--ds-color-fg-default);
+}
+
+.ds-surface {
+  border: 1px solid var(--ds-color-border-default);
+  border-radius: var(--ds-radius-md);
+  background: var(--ds-color-bg-surface);
+  padding: var(--ds-space-lg);
+}
+
+.ds-surface--elevated {
+  background: var(--ds-color-bg-elevated);
+  box-shadow: var(--ds-shadow-elevated);
+}
+
+.ds-switch {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ds-space-md);
+}
+
+.ds-switch-meta {
+  display: grid;
+  gap: var(--ds-space-2);
+}
+
+.ds-switch-label {
+  font-weight: var(--ds-font-weight-label);
+}
+
+.ds-switch-description {
+  font-size: var(--ds-font-size-label);
+  color: var(--ds-color-fg-muted);
+}
+
+.ds-switch-control {
+  position: relative;
+  inline-size: 2.25rem;
+  block-size: 1.25rem;
+}
+
+.ds-switch-input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.ds-switch-track {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  border-radius: 999px;
+  background: var(--ds-color-bg-muted);
+  border: 1px solid var(--ds-color-border-default);
+  transition: background var(--ds-motion-duration-fast) var(--ds-motion-easing);
+}
+
+.ds-switch-track::after {
+  content: "";
+  position: absolute;
+  inset-block-start: 1px;
+  inset-inline-start: 1px;
+  inline-size: calc(1.25rem - 4px);
+  block-size: calc(1.25rem - 4px);
+  border-radius: 999px;
+  background: var(--ds-color-bg-elevated);
+  transition: transform var(--ds-motion-duration-fast) var(--ds-motion-easing);
+}
+
+.ds-switch-input:checked + .ds-switch-track {
+  background: var(--ds-color-bg-interactive);
+}
+
+.ds-switch-input:checked + .ds-switch-track::after {
+  transform: translateX(1rem);
+}
+
+.ds-task-meta {
+  display: inline-flex;
+  gap: var(--ds-space-sm);
+  align-items: center;
+}
+
+.ds-task-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: var(--ds-space-md);
+  border: 1px solid var(--ds-color-border-muted);
+  border-radius: var(--ds-radius-md);
+  background: var(--ds-color-bg-surface);
+  min-height: var(--ds-component-task-row-height, var(--ds-size-target-min));
+  padding: var(--ds-component-task-row-padding-y, var(--ds-space-sm))
+    var(--ds-component-task-row-padding-x, var(--ds-space-md));
+}
+
+.ds-priority-card {
+  border: 1px solid var(--ds-color-border-default);
+  border-left: 4px solid var(--ds-color-bg-interactive);
+  border-radius: var(--ds-radius-md);
+  background: var(--ds-color-bg-elevated);
+  box-shadow: var(--ds-shadow-card);
+  min-height: var(--ds-component-priority-card-min-height, 5.5rem);
+  padding: var(--ds-component-priority-card-padding, var(--ds-space-xl));
+}
+
+.ds-priority-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--ds-space-sm);
+}
+
+.ds-priority-card-actions {
+  margin-top: var(--ds-space-md);
+  display: flex;
+  gap: var(--ds-space-sm);
+}
+
+.ds-empty-state {
+  border: 1px dashed var(--ds-color-border-default);
+  border-radius: var(--ds-radius-md);
+  background: var(--ds-color-bg-surface);
+  padding: var(--ds-space-xl);
+}
+
+.ds-empty-state-action {
+  margin-top: var(--ds-space-md);
+}
+
+.ds-app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr) 320px;
+  background: var(--ds-color-bg-canvas);
+}
+
+.ds-app-shell-sidebar,
+.ds-app-shell-utility {
+  border-inline-end: 1px solid var(--ds-color-border-default);
+  background: var(--ds-color-bg-surface);
+  padding: var(--ds-space-lg);
+}
+
+.ds-app-shell-utility {
+  border-inline-end: 0;
+  border-inline-start: 1px solid var(--ds-color-border-default);
+}
+
+.ds-app-shell-main-wrap {
+  padding: var(--ds-space-lg);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: var(--ds-space-md);
+}
+
+.ds-app-shell-topbar {
+  border: 1px solid var(--ds-color-border-default);
+  border-radius: var(--ds-radius-md);
+  background: var(--ds-color-bg-elevated);
+  padding: var(--ds-space-md);
+}
+
+.ds-template-today {
+  display: grid;
+  gap: var(--ds-space-lg);
+}
+
+.ds-template-priorities {
+  display: grid;
+  gap: var(--ds-space-md);
+}
+
+.ds-template-week {
+  border: 1px solid var(--ds-color-border-default);
+  border-radius: var(--ds-radius-md);
+  background: var(--ds-color-bg-elevated);
+  padding: var(--ds-space-md);
+}
+
+.ds-table-lite {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ds-table-lite th,
+.ds-table-lite td {
+  border-bottom: 1px solid var(--ds-color-border-muted);
+  padding: var(--ds-space-sm) var(--ds-space-md);
+  text-align: left;
+}
+
+.ds-toast-region {
+  position: fixed;
+  right: var(--ds-space-lg);
+  bottom: var(--ds-space-lg);
+  display: grid;
+  gap: var(--ds-space-sm);
+  z-index: 45;
 }
 
 .ds-badge--danger {
