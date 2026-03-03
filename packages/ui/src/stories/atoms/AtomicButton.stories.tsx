@@ -17,6 +17,18 @@ type Story = StoryObj<typeof AtomicButton>;
 
 export const Default: Story = {};
 
+export const Hover: Story = {
+  args: {
+    className: 'ds-button--state-hover',
+  },
+};
+
+export const FocusVisible: Story = {
+  args: {
+    className: 'ds-button--state-focus-visible',
+  },
+};
+
 export const Secondary: Story = {
   args: {
     variant: 'secondary',

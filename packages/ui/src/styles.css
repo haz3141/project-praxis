@@ -130,6 +130,11 @@
   border-color: var(--ds-color-bg-interactive-hover);
 }
 
+.ds-button.ds-button--state-hover.ds-button--primary {
+  background: var(--ds-color-bg-interactive-hover);
+  border-color: var(--ds-color-bg-interactive-hover);
+}
+
 .ds-button--secondary {
   background: var(--ds-color-bg-elevated);
   color: var(--ds-color-fg-default);
@@ -150,6 +155,16 @@
 .ds-button--destructive:hover:not(:disabled) {
   background: var(--ds-color-fg-danger);
   border-color: var(--ds-color-fg-danger);
+}
+
+.ds-button.ds-button--state-hover.ds-button--destructive {
+  background: var(--ds-color-fg-danger);
+  border-color: var(--ds-color-fg-danger);
+}
+
+.ds-button.ds-button--state-focus-visible {
+  outline: 2px solid var(--ds-color-border-focus);
+  outline-offset: 2px;
 }
 
 .ds-button:disabled {
@@ -541,6 +556,26 @@
   min-height: var(--ds-component-task-row-height, var(--ds-size-target-min));
   padding: var(--ds-component-task-row-padding-y, var(--ds-space-sm))
     var(--ds-component-task-row-padding-x, var(--ds-space-md));
+}
+
+.ds-task-row:hover,
+.ds-task-row.ds-task-row--state-hover {
+  border-color: var(--ds-color-border-default);
+  background: var(--ds-color-bg-elevated);
+}
+
+.ds-task-row:focus-within,
+.ds-task-row.ds-task-row--state-focus-visible {
+  border-color: var(--ds-color-border-focus);
+  box-shadow: 0 0 0 1px var(--ds-color-border-focus);
+}
+
+.ds-task-row.ds-task-row--disabled {
+  opacity: var(--ds-state-interactive-disabled-opacity, 0.55);
+}
+
+.ds-task-row.ds-task-row--loading {
+  cursor: progress;
 }
 
 .ds-priority-card {
