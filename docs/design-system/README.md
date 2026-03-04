@@ -10,6 +10,7 @@ cross-variant Stitch evidence.
 - [Token Naming](./token-naming.md)
 - [Component Spec Template](./component-spec-template.md)
 - [Accessibility Checklist](./accessibility-checklist.md)
+- [Liquid Neon Guide](./liquid-neon.md)
 - [Microcopy Tone](./microcopy-tone.md)
 - [Stitch Exports](./stitch/exports.md)
 - [Stitch Audit & Runbook](./stitch/audit.md)
@@ -30,8 +31,19 @@ cross-variant Stitch evidence.
 
 ## Variant Architecture
 
-- Default variants: `light`, `dark`
+- Supported variants: `light`, `dark`, `liquid-neon`
+- Runtime default (planner): `liquid-neon` with `comfortable` density
 - Separate Stitch kit: `liquid-neon` (kept independent from the core four kits)
 - Surface policy:
   planner routes remain WCAG-first and readability constrained, while studio
   surfaces can use stronger liquid-glass/neon emphasis.
+- Legacy alias map:
+  - `calm` -> `light`
+  - `neon_holo` -> `liquid-neon`
+
+## Verification Commands
+
+- `pnpm --filter @praxis/design-tokens build`
+- `pnpm lint:ds`
+- `pnpm test:e2e:axe`
+- `pnpm test:e2e:keyboard`

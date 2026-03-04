@@ -10,7 +10,7 @@ import { PlannerStoreProvider, usePlannerStore } from "@/lib/planner-store";
 function SyncBadge() {
   const { syncLabel, replayNow } = usePlannerStore();
   return (
-    <button type="button" className="chip-btn" onClick={() => void replayNow()} aria-live="polite">
+    <button type="button" className="chip-btn" onClick={() => void replayNow()} aria-label={`Sync status: ${syncLabel}`}>
       {syncLabel}
     </button>
   );
@@ -35,7 +35,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           </div>
           <nav aria-label="Planner sections" className="side-nav">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href} className={pathname === item.href ? "nav-link active" : "nav-link"}>
+              <Link
+                key={item.href}
+                href={item.href}
+                className={pathname === item.href ? "nav-link active" : "nav-link"}
+                aria-current={pathname === item.href ? "page" : undefined}
+              >
                 {item.label}
               </Link>
             ))}
@@ -64,7 +69,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
         <nav className="bottom-nav" aria-label="Planner sections mobile">
           {navItems.slice(0, 6).map((item) => (
-            <Link key={item.href} href={item.href} className={pathname === item.href ? "bottom-link active" : "bottom-link"}>
+            <Link
+              key={item.href}
+              href={item.href}
+              className={pathname === item.href ? "bottom-link active" : "bottom-link"}
+              aria-current={pathname === item.href ? "page" : undefined}
+            >
               {item.shortLabel}
             </Link>
           ))}

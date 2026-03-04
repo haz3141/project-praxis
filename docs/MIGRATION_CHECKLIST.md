@@ -8,7 +8,7 @@ Status legend: `DONE`, `IN_PROGRESS`, `TODO`, `BLOCKED`
 1. `DONE` Add master audit document.
 - Evidence: `docs/AUDIT_MASTER.md`
 
-2. `DONE` Add design-system canon with dual mode strategy.
+2. `DONE` Add design-system canon with multi-mode strategy (`light`/`dark`/`liquid-neon`).
 - Evidence: `docs/DESIGN_SYSTEM_CANON.md`
 
 3. `DONE` Add architecture canon with precedence and ownership.
