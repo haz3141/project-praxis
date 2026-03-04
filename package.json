@@ -38,7 +38,8 @@
     "ds:sync:gallery": "node scripts/ds/sync-gallery.mjs",
     "ds:sync:stitch": "node scripts/ds/sync-stitch.mjs",
     "ds:build:patterns": "node scripts/ds/build-patterns.mjs",
-    "ds:validate": "node scripts/ds/validate.mjs"
+    "ds:validate": "node scripts/ds/validate.mjs",
+    "ci:design-system": "bash scripts/ci/gate-design-system.sh"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.2",
