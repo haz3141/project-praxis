@@ -1,6 +1,7 @@
 # Design System v0
 
-Praxis MVP uses a token-first, accessibility-first design system.
+Praxis MVP uses a token-first, accessibility-first design system with
+cross-variant Stitch evidence.
 
 ## Contents
 
@@ -20,3 +21,15 @@ Praxis MVP uses a token-first, accessibility-first design system.
 - Generated CSS variables: `packages/design-tokens/dist/tokens.css`
 - UI primitives: `packages/ui/src/components`
 - Atomic matrix: `docs/design-system/atomic/component-matrix.json`
+- Stitch inventory + canonical matrix:
+  `docs/design-system/registry/data/stitch-inventory.json`
+- Pattern slot mapping:
+  `docs/pattern-library/registry.json`
+
+## Variant Architecture
+
+- Default variants: `light`, `dark`
+- Separate Stitch kit: `liquid-neon` (kept independent from the core four kits)
+- Surface policy:
+  planner routes remain WCAG-first and readability constrained, while studio
+  surfaces can use stronger liquid-glass/neon emphasis.
