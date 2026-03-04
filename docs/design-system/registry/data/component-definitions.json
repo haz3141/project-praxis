@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-03-03T21:02:39.012Z",
+    "generated_at": "2026-03-03T21:03:14.645Z",
     "component_count": 60
   },
   "components": [
@@ -48,14 +48,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Accordion",
         "component_slug": "accordion",
         "url": "https://component.gallery/components/accordion",
         "example_count": 101,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -102,14 +102,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Alert",
         "component_slug": "alert",
         "url": "https://component.gallery/components/alert",
         "example_count": 108,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -156,14 +156,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Avatar",
         "component_slug": "avatar",
         "url": "https://component.gallery/components/avatar",
         "example_count": 37,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -212,14 +212,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Badge",
         "component_slug": "badge",
         "url": "https://component.gallery/components/badge",
         "example_count": 122,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -266,14 +266,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Breadcrumbs",
         "component_slug": "breadcrumbs",
         "url": "https://component.gallery/components/breadcrumbs",
         "example_count": 55,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -323,14 +323,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Button",
         "component_slug": "button",
         "url": "https://component.gallery/components/button",
         "example_count": 118,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -379,14 +379,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Button group",
         "component_slug": "button-group",
         "url": "https://component.gallery/components/button-group",
         "example_count": 36,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -436,14 +436,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Card",
         "component_slug": "card",
         "url": "https://component.gallery/components/card",
         "example_count": 79,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -490,14 +490,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Carousel",
         "component_slug": "carousel",
         "url": "https://component.gallery/components/carousel",
         "example_count": 22,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -547,14 +547,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Checkbox",
         "component_slug": "checkbox",
         "url": "https://component.gallery/components/checkbox",
         "example_count": 84,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -601,14 +601,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Color picker",
         "component_slug": "color-picker",
         "url": "https://component.gallery/components/color-picker",
         "example_count": 16,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -655,14 +655,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Combobox",
         "component_slug": "combobox",
         "url": "https://component.gallery/components/combobox",
         "example_count": 37,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -711,14 +711,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Date input",
         "component_slug": "date-input",
         "url": "https://component.gallery/components/date-input",
         "example_count": 17,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -765,14 +765,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Datepicker",
         "component_slug": "datepicker",
         "url": "https://component.gallery/components/datepicker",
         "example_count": 43,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -822,14 +822,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Drawer",
         "component_slug": "drawer",
         "url": "https://component.gallery/components/drawer",
         "example_count": 38,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -876,14 +876,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Dropdown menu",
         "component_slug": "dropdown-menu",
         "url": "https://component.gallery/components/dropdown-menu",
         "example_count": 48,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -930,14 +930,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Empty state",
         "component_slug": "empty-state",
         "url": "https://component.gallery/components/empty-state",
         "example_count": 16,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -984,14 +984,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Fieldset",
         "component_slug": "fieldset",
         "url": "https://component.gallery/components/fieldset",
         "example_count": 31,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -1038,14 +1038,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "File",
         "component_slug": "file",
         "url": "https://component.gallery/components/file",
         "example_count": 6,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -1092,14 +1092,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "File upload",
         "component_slug": "file-upload",
         "url": "https://component.gallery/components/file-upload",
         "example_count": 32,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -1146,14 +1146,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Footer",
         "component_slug": "footer",
         "url": "https://component.gallery/components/footer",
         "example_count": 19,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -1200,14 +1200,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Form",
         "component_slug": "form",
         "url": "https://component.gallery/components/form",
         "example_count": 22,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -1254,14 +1254,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Header",
         "component_slug": "header",
         "url": "https://component.gallery/components/header",
         "example_count": 41,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -1308,14 +1308,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Heading",
         "component_slug": "heading",
         "url": "https://component.gallery/components/heading",
         "example_count": 28,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -1362,14 +1362,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Hero",
         "component_slug": "hero",
         "url": "https://component.gallery/components/hero",
         "example_count": 9,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -1416,14 +1416,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Icon",
         "component_slug": "icon",
         "url": "https://component.gallery/components/icon",
         "example_count": 45,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -1470,14 +1470,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Image",
         "component_slug": "image",
         "url": "https://component.gallery/components/image",
         "example_count": 27,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -1526,14 +1526,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Label",
         "component_slug": "label",
         "url": "https://component.gallery/components/label",
         "example_count": 15,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -1580,14 +1580,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Link",
         "component_slug": "link",
         "url": "https://component.gallery/components/link",
         "example_count": 64,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -1636,14 +1636,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "List",
         "component_slug": "list",
         "url": "https://component.gallery/components/list",
         "example_count": 69,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -1692,14 +1692,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Modal",
         "component_slug": "modal",
         "url": "https://component.gallery/components/modal",
         "example_count": 82,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -1746,14 +1746,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Navigation",
         "component_slug": "navigation",
         "url": "https://component.gallery/components/navigation",
         "example_count": 63,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -1800,14 +1800,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Pagination",
         "component_slug": "pagination",
         "url": "https://component.gallery/components/pagination",
         "example_count": 49,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -1854,14 +1854,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Popover",
         "component_slug": "popover",
         "url": "https://component.gallery/components/popover",
         "example_count": 50,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -1908,14 +1908,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Progress bar",
         "component_slug": "progress-bar",
         "url": "https://component.gallery/components/progress-bar",
         "example_count": 41,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -1962,14 +1962,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Progress indicator",
         "component_slug": "progress-indicator",
         "url": "https://component.gallery/components/progress-indicator",
         "example_count": 38,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -2016,14 +2016,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Quote",
         "component_slug": "quote",
         "url": "https://component.gallery/components/quote",
         "example_count": 11,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -2072,14 +2072,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Radio button",
         "component_slug": "radio-button",
         "url": "https://component.gallery/components/radio-button",
         "example_count": 86,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -2126,14 +2126,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Rating",
         "component_slug": "rating",
         "url": "https://component.gallery/components/rating",
         "example_count": 19,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -2180,14 +2180,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Rich text editor",
         "component_slug": "rich-text-editor",
         "url": "https://component.gallery/components/rich-text-editor",
         "example_count": 5,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -2236,14 +2236,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Search input",
         "component_slug": "search-input",
         "url": "https://component.gallery/components/search-input",
         "example_count": 29,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -2290,14 +2290,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Segmented control",
         "component_slug": "segmented-control",
         "url": "https://component.gallery/components/segmented-control",
         "example_count": 28,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -2347,14 +2347,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Select",
         "component_slug": "select",
         "url": "https://component.gallery/components/select",
         "example_count": 82,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -2401,14 +2401,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Separator",
         "component_slug": "separator",
         "url": "https://component.gallery/components/separator",
         "example_count": 33,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -2455,14 +2455,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Skeleton",
         "component_slug": "skeleton",
         "url": "https://component.gallery/components/skeleton",
         "example_count": 35,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -2509,14 +2509,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Skip link",
         "component_slug": "skip-link",
         "url": "https://component.gallery/components/skip-link",
         "example_count": 14,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -2563,14 +2563,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Slider",
         "component_slug": "slider",
         "url": "https://component.gallery/components/slider",
         "example_count": 39,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -2617,14 +2617,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Spinner",
         "component_slug": "spinner",
         "url": "https://component.gallery/components/spinner",
         "example_count": 66,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -2671,14 +2671,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Stack",
         "component_slug": "stack",
         "url": "https://component.gallery/components/stack",
         "example_count": 9,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -2725,14 +2725,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Stepper",
         "component_slug": "stepper",
         "url": "https://component.gallery/components/stepper",
         "example_count": 19,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -2781,14 +2781,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Table",
         "component_slug": "table",
         "url": "https://component.gallery/components/table",
         "example_count": 74,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -2837,14 +2837,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Tabs",
         "component_slug": "tabs",
         "url": "https://component.gallery/components/tabs",
         "example_count": 81,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -2893,14 +2893,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Text input",
         "component_slug": "text-input",
         "url": "https://component.gallery/components/text-input",
         "example_count": 72,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -2949,14 +2949,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Textarea",
         "component_slug": "textarea",
         "url": "https://component.gallery/components/textarea",
         "example_count": 51,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -3006,14 +3006,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Toast",
         "component_slug": "toast",
         "url": "https://component.gallery/components/toast",
         "example_count": 42,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -3060,14 +3060,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Toggle",
         "component_slug": "toggle",
         "url": "https://component.gallery/components/toggle",
         "example_count": 59,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -3114,14 +3114,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Tooltip",
         "component_slug": "tooltip",
         "url": "https://component.gallery/components/tooltip",
         "example_count": 74,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -3168,14 +3168,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Tree view",
         "component_slug": "tree-view",
         "url": "https://component.gallery/components/tree-view",
         "example_count": 14,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -3222,14 +3222,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Video",
         "component_slug": "video",
         "url": "https://component.gallery/components/video",
         "example_count": 15,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     },
     {
@@ -3276,14 +3276,14 @@
           "04",
           "05"
         ],
-        "captured_at": "2026-03-03T21:02:38.208Z"
+        "captured_at": "2026-03-03T21:03:13.845Z"
       },
       "gallery_evidence": {
         "component_name": "Visually hidden",
         "component_slug": "visually-hidden",
         "url": "https://component.gallery/components/visually-hidden",
         "example_count": 11,
-        "fetched_at": "2026-03-03T21:02:32.681Z"
+        "fetched_at": "2026-03-03T21:03:07.623Z"
       }
     }
   ]

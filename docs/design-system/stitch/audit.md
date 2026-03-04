@@ -20,10 +20,10 @@ Live source of truth: Stitch MCP `list_projects` + `list_screens` on
 
 | Name | Project ID | Evidence path/source | What it outputs | Generation path | Current status |
 |---|---|---|---|---|---|
-| Praxis UI Kit — Calm | `13394915692903823935` | Stitch MCP `projects/13394915692903823935`; snapshot in `docs/design-system/stitch/exports.md` | Stitch screens with `screenshot` and `htmlCode` payloads for canonical slots `00`-`05` plus additional variants | MCP direct and MCP-via-skills | live total=23, canonical coverage=6/6, duplicates=16, extras=1 (`SMOKE TEST SINGLE`) |
-| Praxis UI Kit — Executive | `5764765102702214376` | Stitch MCP `projects/5764765102702214376`; baseline refs in `docs/pattern-library/registry.json` and `docs/pattern-library/README.md` | Canonical baseline screens consumed by pattern-library scaffolds | MCP direct and MCP-via-skills | live total=7, canonical coverage=6/6, duplicates=1 |
-| Praxis UI Kit — Minimal | `7285948406539466076` | Stitch MCP `projects/7285948406539466076`; snapshot in `docs/design-system/stitch/exports.md` | Variant screens (`UI Kit` titles) with `screenshot` and `htmlCode` payloads | MCP direct and MCP-via-skills | live total=7, canonical coverage=6/6, duplicates=1 |
-| Praxis UI Kit — Desktop | `5252820721296843802` | Stitch MCP `projects/5252820721296843802`; details in `/tmp/praxis_stitch_audit.md` | Desktop-oriented variant set with canonical slots plus variants | MCP direct and MCP-via-skills | live total=10, canonical coverage=6/6, duplicates=4 |
+| Praxis UI Kit — Calm | `13394915692903823935` | Stitch MCP `projects/13394915692903823935`; snapshot in `docs/design-system/stitch/exports.md` | Stitch screens with `screenshot` and `htmlCode` payloads for canonical slots `00`-`05` plus additional variants | MCP direct and MCP-via-skills | live total=23, canonical coverage=6/6, duplicated rows=21, extras=1 (`SMOKE TEST SINGLE`) |
+| Praxis UI Kit — Executive | `5764765102702214376` | Stitch MCP `projects/5764765102702214376`; baseline refs in `docs/pattern-library/registry.json` and `docs/pattern-library/README.md` | Canonical baseline screens consumed by pattern-library scaffolds | MCP direct and MCP-via-skills | live total=7, canonical coverage=6/6, duplicated rows=2 |
+| Praxis UI Kit — Minimal | `7285948406539466076` | Stitch MCP `projects/7285948406539466076`; snapshot in `docs/design-system/stitch/exports.md` | Variant screens (`UI Kit` titles) with `screenshot` and `htmlCode` payloads | MCP direct and MCP-via-skills | live total=7, canonical coverage=6/6, duplicated rows=2 |
+| Praxis UI Kit — Desktop | `5252820721296843802` | Stitch MCP `projects/5252820721296843802`; snapshots in `docs/design-system/stitch/exports.md` and `docs/design-system/stitch/screens-catalog.md` | Desktop-oriented variant set with canonical slots plus variants | MCP direct and MCP-via-skills | live total=10, canonical coverage=6/6, duplicated rows=7 |
 
 Detailed per-screen inventory and comparisons across all four projects are
 published in:
@@ -78,6 +78,10 @@ Evidence:
 ## Canonical Standard (Praxis)
 
 Use **direct Stitch MCP** as the single canonical integration path.
+
+Prompt canon default for Stitch generation is the **Neon** direction (electric
+blue accent posture) anchored to the Executive baseline unless a task specifies
+another direction.
 
 Keep skills optional for specific workflows (design synthesis, react conversion,
 baton loops), but require that skills:
@@ -147,14 +151,11 @@ Rationale:
 
 ## Drift Findings Recorded in This Audit
 
-- Repo snapshot docs list three UI Kit projects while live inventory contains
-  four (`Desktop` missing from snapshot index).
-- Repo snapshot counts are stale relative to live projects (new duplicates and
-  extras exist in live inventory).
-- `skills-lock.json` does not represent the currently linked Stitch skill set.
-- Some skill docs use `npm` commands, conflicting with repo `pnpm` policy.
-- Prior to this audit, there was no dedicated non-network Stitch config
-  validator command in repo scripts.
+- `exports.md` is canonical-slot snapshot data (6 rows per project), not a full
+  live-screen ledger.
+- Duplicate metrics use duplicated rows in duplicate slots across stitch docs
+  and pipeline outputs.
+- `/tmp` artifacts are evidence-only and not canonical input to repo snapshots.
 
 ## Evidence References
 
@@ -165,9 +166,6 @@ Rationale:
 - `skills/design-md/SKILL.md`
 - `skills/stitch-loop/SKILL.md`
 - `skills/react-components/SKILL.md`
-- `skills/react-components/scripts/fetch-stitch.sh`
 - `skills/remotion/SKILL.md`
-- `skills-lock.json`
-- `/tmp/praxis_stitch_audit.md`
 - `~/.codex/config.toml`
 - `~/.gemini/antigravity/mcp_config.json`

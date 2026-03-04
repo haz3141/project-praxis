@@ -63,6 +63,12 @@
       "xl": { "$type": "dimension", "$value": "1rem" }
     },
     "font": {
+      "family": {
+        "sans": {
+          "$type": "fontFamily",
+          "$value": "\"Geist\", system-ui, -apple-system, sans-serif"
+        }
+      },
       "size": {
         "caption": { "$type": "dimension", "$value": "0.75rem" },
         "small": { "$type": "dimension", "$value": "0.875rem" },

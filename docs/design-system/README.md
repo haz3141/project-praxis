@@ -4,6 +4,7 @@ Praxis MVP uses a token-first, accessibility-first design system.
 
 ## Contents
 
+- [Design System Canon](../DESIGN_SYSTEM_CANON.md)
 - [Atomic System](./atomic/README.md)
 - [Token Naming](./token-naming.md)
 - [Component Spec Template](./component-spec-template.md)
@@ -16,6 +17,7 @@ Praxis MVP uses a token-first, accessibility-first design system.
 
 ## Source of Truth
 
+- Canonical design contract: `docs/DESIGN_SYSTEM_CANON.md`
 - Token sources: `packages/design-tokens/src/tokens`
 - Generated CSS variables: `packages/design-tokens/dist/tokens.css`
 - UI primitives: `packages/ui/src/components`

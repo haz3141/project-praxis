@@ -3,11 +3,7 @@
 
 :root {
   color-scheme: light dark;
-  font-family:
-    "Geist",
-    system-ui,
-    -apple-system,
-    sans-serif;
+  font-family: var(--ds-font-family-base, "Geist", system-ui, -apple-system, sans-serif);
   background: var(--ds-color-bg-canvas);
   color: var(--ds-color-fg-default);
   font-size: var(--ds-font-size-body);
@@ -226,7 +222,11 @@
 .ds-overlay {
   position: fixed;
   inset: 0;
-  background: color-mix(in srgb, var(--ds-color-bg-overlay) 45%, transparent);
+  background:
+    radial-gradient(circle at 10% 5%, var(--ds-color-fx-neon-primary), transparent 42%),
+    radial-gradient(circle at 88% 82%, var(--ds-color-fx-neon-secondary), transparent 46%),
+    color-mix(in srgb, var(--ds-color-bg-overlay) 58%, transparent);
+  backdrop-filter: blur(var(--ds-effect-blur-glass)) saturate(var(--ds-effect-saturation-glass));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -235,11 +235,20 @@
 
 .ds-dialog,
 .ds-drawer {
-  background: var(--ds-color-bg-elevated);
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--ds-color-glass-surface-strong) 90%, var(--ds-color-bg-elevated)) 0%,
+      color-mix(in srgb, var(--ds-color-glass-surface) 86%, var(--ds-color-bg-elevated)) 100%
+    );
   color: var(--ds-color-fg-default);
   border-radius: var(--ds-radius-lg);
-  box-shadow: var(--ds-shadow-overlay);
-  border: 1px solid var(--ds-color-border-default);
+  box-shadow:
+    var(--ds-shadow-overlay),
+    0 0 0 1px var(--ds-color-glass-highlight),
+    0 0 var(--ds-space-2xl) color-mix(in srgb, var(--ds-color-fx-neon-primary) 58%, transparent);
+  border: 1px solid var(--ds-color-glass-border);
+  backdrop-filter: blur(var(--ds-effect-blur-glass)) saturate(var(--ds-effect-saturation-glass));
 }
 
 .ds-dialog {
@@ -306,7 +315,10 @@
 .ds-drawer-backdrop {
   position: absolute;
   inset: 0;
-  background: color-mix(in srgb, var(--ds-color-bg-overlay) 45%, transparent);
+  background:
+    radial-gradient(circle at 82% 15%, var(--ds-color-fx-neon-primary), transparent 48%),
+    color-mix(in srgb, var(--ds-color-bg-overlay) 50%, transparent);
+  backdrop-filter: blur(calc(var(--ds-effect-blur-glass) * 0.75)) saturate(var(--ds-effect-saturation-glass));
   pointer-events: auto;
 }
 
@@ -333,9 +345,17 @@
 .ds-toast {
   width: min(24rem, 92vw);
   border-radius: var(--ds-radius-md);
-  border: 1px solid var(--ds-color-border-default);
-  box-shadow: var(--ds-shadow-card);
-  background: var(--ds-color-bg-elevated);
+  border: 1px solid var(--ds-color-glass-border);
+  box-shadow:
+    var(--ds-shadow-card),
+    0 0 24px color-mix(in srgb, var(--ds-color-fx-neon-primary) 44%, transparent);
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--ds-color-glass-surface-strong) 86%, var(--ds-color-bg-elevated)) 0%,
+      color-mix(in srgb, var(--ds-color-glass-surface) 82%, var(--ds-color-bg-surface)) 100%
+    );
+  backdrop-filter: blur(calc(var(--ds-effect-blur-glass) * 0.7)) saturate(var(--ds-effect-saturation-glass));
   padding: var(--ds-space-md);
 }
 
@@ -386,10 +406,18 @@
 /* Card                                                               */
 /* ------------------------------------------------------------------ */
 .ds-card {
-  border: 1px solid var(--ds-color-border-default);
+  border: 1px solid var(--ds-color-glass-border);
   border-radius: var(--ds-radius-md);
-  background: var(--ds-color-bg-elevated);
-  box-shadow: var(--ds-shadow-card);
+  background:
+    linear-gradient(
+      140deg,
+      color-mix(in srgb, var(--ds-color-glass-surface-strong) 88%, var(--ds-color-bg-elevated)) 0%,
+      color-mix(in srgb, var(--ds-color-glass-surface) 86%, var(--ds-color-bg-surface)) 100%
+    );
+  box-shadow:
+    var(--ds-shadow-card),
+    0 0 var(--ds-space-lg) color-mix(in srgb, var(--ds-color-fx-neon-primary) 40%, transparent);
+  backdrop-filter: blur(calc(var(--ds-effect-blur-glass) * 0.6)) saturate(var(--ds-effect-saturation-glass));
   padding: var(--ds-space-lg);
 }
 
@@ -463,9 +491,16 @@
 }
 
 .ds-surface {
-  border: 1px solid var(--ds-color-border-default);
+  border: 1px solid var(--ds-color-glass-border);
   border-radius: var(--ds-radius-md);
-  background: var(--ds-color-bg-surface);
+  background:
+    linear-gradient(
+      140deg,
+      color-mix(in srgb, var(--ds-color-glass-surface-strong) 86%, var(--ds-color-bg-surface)) 0%,
+      color-mix(in srgb, var(--ds-color-glass-surface) 84%, var(--ds-color-bg-canvas)) 100%
+    );
+  box-shadow: 0 0 var(--ds-space-lg) color-mix(in srgb, var(--ds-color-fx-neon-secondary) 34%, transparent);
+  backdrop-filter: blur(calc(var(--ds-effect-blur-glass) * 0.55)) saturate(var(--ds-effect-saturation-glass));
   padding: var(--ds-space-lg);
 }
 
@@ -621,7 +656,13 @@
 .ds-app-shell-sidebar,
 .ds-app-shell-utility {
   border-inline-end: 1px solid var(--ds-color-border-default);
-  background: var(--ds-color-bg-surface);
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--ds-color-glass-surface-strong) 84%, var(--ds-color-bg-surface)) 0%,
+      color-mix(in srgb, var(--ds-color-glass-surface) 80%, var(--ds-color-bg-canvas)) 100%
+    );
+  backdrop-filter: blur(calc(var(--ds-effect-blur-glass) * 0.65)) saturate(var(--ds-effect-saturation-glass));
   padding: var(--ds-space-lg);
 }
 
@@ -638,9 +679,16 @@
 }
 
 .ds-app-shell-topbar {
-  border: 1px solid var(--ds-color-border-default);
+  border: 1px solid var(--ds-color-glass-border);
   border-radius: var(--ds-radius-md);
-  background: var(--ds-color-bg-elevated);
+  background:
+    linear-gradient(
+      125deg,
+      color-mix(in srgb, var(--ds-color-glass-surface-strong) 88%, var(--ds-color-bg-elevated)) 0%,
+      color-mix(in srgb, var(--ds-color-glass-surface) 84%, var(--ds-color-bg-surface)) 100%
+    );
+  box-shadow: 0 0 var(--ds-space-lg) color-mix(in srgb, var(--ds-color-fx-neon-primary) 34%, transparent);
+  backdrop-filter: blur(calc(var(--ds-effect-blur-glass) * 0.65)) saturate(var(--ds-effect-saturation-glass));
   padding: var(--ds-space-md);
 }
 
@@ -785,6 +833,28 @@
 
 .ds-sync-status-pill-text {
   white-space: nowrap;
+}
+
+/* ------------------------------------------------------------------ */
+/* Glass fallback                                                      */
+/* ------------------------------------------------------------------ */
+@supports not (backdrop-filter: blur(1px)) {
+  .ds-overlay {
+    background: color-mix(in srgb, var(--ds-color-bg-overlay) 52%, transparent);
+  }
+
+  .ds-dialog,
+  .ds-drawer,
+  .ds-toast,
+  .ds-card,
+  .ds-surface,
+  .ds-app-shell-sidebar,
+  .ds-app-shell-utility,
+  .ds-app-shell-topbar {
+    background: var(--ds-color-bg-elevated);
+    border-color: var(--ds-color-border-default);
+    box-shadow: var(--ds-shadow-card);
+  }
 }
 
 /* ------------------------------------------------------------------ */

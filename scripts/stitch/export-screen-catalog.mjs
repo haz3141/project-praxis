@@ -268,25 +268,25 @@ function projectOrderMap() {
   return map;
 }
 
-function countDuplicateOverflowRows(projectRows) {
+function countDuplicatedRows(projectRows) {
   const slotCounts = new Map();
   for (const row of projectRows) {
     if (row.slot_code === "UNMAPPED") continue;
     slotCounts.set(row.slot_code, (slotCounts.get(row.slot_code) || 0) + 1);
   }
 
-  let overflowCount = 0;
+  let duplicatedRows = 0;
   for (const count of slotCounts.values()) {
-    if (count > 1) overflowCount += count - 1;
+    if (count > 1) duplicatedRows += count;
   }
-  return overflowCount;
+  return duplicatedRows;
 }
 
 function buildProjectProfiles(projectById, rows) {
   return TARGET_PROJECTS.map((project) => {
     const projectRows = rows.filter((row) => row.project_id === project.id);
     const canonicalSlots = new Set(projectRows.filter((row) => row.slot_code !== "UNMAPPED").map((row) => row.slot_code));
-    const duplicateCount = countDuplicateOverflowRows(projectRows);
+    const duplicateCount = countDuplicatedRows(projectRows);
 
     const unmappedCount = projectRows.filter((row) => row.slot_code === "UNMAPPED").length;
 
@@ -384,27 +384,50 @@ function computeWithinVariantSlotRows(rows, projectId) {
   return result;
 }
 
+function parseExportsSnapshotByProject(exportsRaw) {
+  const out = new Map();
+  const sectionRegex = /###\s+[^\n]+\n- Project ID: `(\d+)`\n([\s\S]*?)(?=\n###\s+|\s*$)/g;
+  let match;
+  while ((match = sectionRegex.exec(exportsRaw))) {
+    const projectId = match[1];
+    const sectionBody = match[2];
+    const slotSet = new Set();
+    for (const row of sectionBody.matchAll(/^\|\s*(\d{2})\s*\|/gm)) {
+      slotSet.add(row[1]);
+    }
+    out.set(projectId, slotSet);
+  }
+  return out;
+}
+
 function buildDriftNotes(rows) {
   const exportsPath = "docs/design-system/stitch/exports.md";
   const exportsRaw = readFileSafe(exportsPath);
+  const snapshotSlotsByProject = parseExportsSnapshotByProject(exportsRaw);
 
-  const calmRows = (exportsRaw.match(/projects\/13394915692903823935\/files\//g) || []).length;
-  const execRows = (exportsRaw.match(/projects\/5764765102702214376\/files\//g) || []).length;
-  const minimalRows = (exportsRaw.match(/projects\/7285948406539466076\/files\//g) || []).length;
-  const hasDesktop = exportsRaw.includes("5252820721296843802");
-
-  const liveByProject = new Map();
+  const liveSlotsByProject = new Map();
   for (const row of rows) {
-    liveByProject.set(row.project_id, (liveByProject.get(row.project_id) || 0) + 1);
+    if (!CANONICAL_SLOT_SET.has(row.slot_code)) continue;
+    if (!liveSlotsByProject.has(row.project_id)) liveSlotsByProject.set(row.project_id, new Set());
+    liveSlotsByProject.get(row.project_id).add(row.slot_code);
   }
 
-  const tick = "`";
+  const notes = [];
+  for (const project of TARGET_PROJECTS) {
+    const snapshotCount = snapshotSlotsByProject.get(project.id)?.size || 0;
+    const liveCount = liveSlotsByProject.get(project.id)?.size || 0;
+    notes.push(
+      `- Snapshot \`exports.md\` canonical rows for ${project.label}: ${snapshotCount}/6; live canonical slot coverage in this run: ${liveCount}/6.`
+    );
+  }
 
-  return [
-    `- Snapshot ${tick}exports.md${tick} lists only ${calmRows} Calm screen rows, ${execRows} Executive rows, and ${minimalRows} Minimal rows; live catalog currently has ${liveByProject.get("13394915692903823935") || 0}, ${liveByProject.get("5764765102702214376") || 0}, and ${liveByProject.get("7285948406539466076") || 0} respectively.`,
-    `- Snapshot ${tick}exports.md${tick} ${hasDesktop ? "includes" : "does not include"} Desktop project ID ${tick}5252820721296843802${tick}; live catalog includes ${liveByProject.get("5252820721296843802") || 0} Desktop screens.`,
+  notes.push(
+    "- Duplicate semantics in this catalog use duplicated rows in duplicate slots (not overflow-only rows) to align with registry inventory metrics."
+  );
+  notes.push(
     "- Pattern registry remains a canonical-6 baseline, while this catalog captures the full live screen set (including duplicates and unmapped screens)."
-  ];
+  );
+  return notes;
 }
 
 function buildMarkdown(rows, projectProfiles, representativeMatrix, generatedAt) {
@@ -468,11 +491,11 @@ function buildMarkdown(rows, projectProfiles, representativeMatrix, generatedAt)
       )
     );
 
-    const duplicateOverflowCount = rows.filter(
+    const duplicatedRowsCount = rows.filter(
       (row) =>
         row.project_id === project.id &&
         row.within_project_duplicate === "true" &&
-        Number(row.within_project_duplicate_rank) > 1
+        Number(row.within_project_duplicate_rank) >= 1
     ).length;
 
     const unmapped = rows.filter(
@@ -480,7 +503,7 @@ function buildMarkdown(rows, projectProfiles, representativeMatrix, generatedAt)
     );
 
     sections.push("");
-    sections.push(`- Duplicate overflow rows in variant: **${duplicateOverflowCount}**`);
+    sections.push(`- Duplicated rows in duplicate slots: **${duplicatedRowsCount}**`);
     if (unmapped.length) {
       sections.push(`- Unmapped rows: ${unmapped.map((row) => `${row.screen_id} (${row.title})`).join("; ")}`);
     } else {

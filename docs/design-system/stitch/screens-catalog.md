@@ -1,6 +1,6 @@
 # Praxis Stitch Full Screen Catalog
 
-Generated: 2026-03-03T21:02:38.179Z
+Generated: 2026-03-03T21:34:19.653Z
 Source command: `pnpm run stitch:catalog`
 Total screens cataloged: **47**
 
@@ -8,10 +8,10 @@ Total screens cataloged: **47**
 
 | project_title | project_id | total_screens | canonical_coverage | duplicate_count | unmapped_count | color_mode | font | roundness | custom_color |
 |---|---|---|---|---|---|---|---|---|---|
-| Praxis UI Kit — Calm | 13394915692903823935 | 23 | 6/6 | 16 | 1 | LIGHT | INTER | ROUND_EIGHT | #5048e5 |
-| Praxis UI Kit — Executive | 5764765102702214376 | 7 | 6/6 | 1 | 0 | DARK | MANROPE | ROUND_EIGHT | #135bec |
-| Praxis UI Kit — Minimal | 7285948406539466076 | 7 | 6/6 | 1 | 0 | LIGHT | INTER | ROUND_EIGHT | #195de6 |
-| Praxis UI Kit — Desktop | 5252820721296843802 | 10 | 6/6 | 4 | 0 | LIGHT | MANROPE | ROUND_EIGHT | #0d7ff2 |
+| Praxis UI Kit — Calm | 13394915692903823935 | 23 | 6/6 | 21 | 1 | LIGHT | INTER | ROUND_EIGHT | #5048e5 |
+| Praxis UI Kit — Executive | 5764765102702214376 | 7 | 6/6 | 2 | 0 | DARK | MANROPE | ROUND_EIGHT | #135bec |
+| Praxis UI Kit — Minimal | 7285948406539466076 | 7 | 6/6 | 2 | 0 | LIGHT | INTER | ROUND_EIGHT | #195de6 |
+| Praxis UI Kit — Desktop | 5252820721296843802 | 10 | 6/6 | 7 | 0 | LIGHT | MANROPE | ROUND_EIGHT | #0d7ff2 |
 
 ## Full Screen Ledger
 
@@ -79,7 +79,7 @@ Total screens cataloged: **47**
 | 05 | Planner Patterns | 1 | 5c8a7262369b4490957b954cd28440cb | 05 — Planner Patterns | 2048 | 2048 |
 | UNMAPPED | Unmapped | 1 | 49b7aa4657274ff48227dde7175ef169 | SMOKE TEST SINGLE | 2048 | 2048 |
 
-- Duplicate overflow rows in variant: **16**
+- Duplicated rows in duplicate slots: **21**
 - Unmapped rows: 49b7aa4657274ff48227dde7175ef169 (SMOKE TEST SINGLE)
 
 ### Praxis UI Kit — Executive
@@ -93,7 +93,7 @@ Total screens cataloged: **47**
 | 04 | Feedback & Overlays | 1 | 946f33c6c90646f7b900bbcd124409ef | 04 — Feedback & Overlays | 3412 | 3412 |
 | 05 | Planner Patterns | 1 | 69d9263d31944d7093b9be93638077df | 05 — Planner Patterns | 2048 | 2048 |
 
-- Duplicate overflow rows in variant: **1**
+- Duplicated rows in duplicate slots: **2**
 - Unmapped rows: none
 
 ### Praxis UI Kit — Minimal
@@ -107,7 +107,7 @@ Total screens cataloged: **47**
 | 04 | Feedback & Overlays | 1 | c4d2bebfaa6b4956a1386b9e356c8099 | 04 — Feedback & Overlays UI Kit | 3358 | 3358 |
 | 05 | Planner Patterns | 1 | 95d04f044d4a4b41b58e67e21f0cc0e1 | 05 — Planner Patterns UI Kit | 2048 | 2048 |
 
-- Duplicate overflow rows in variant: **1**
+- Duplicated rows in duplicate slots: **2**
 - Unmapped rows: none
 
 ### Praxis UI Kit — Desktop
@@ -121,7 +121,7 @@ Total screens cataloged: **47**
 | 04 | Feedback & Overlays | 1 | 5c8db29f0ef04ef59da6ea55071aedfd | 04 — Feedback & Overlays | 3300 | 3300 |
 | 05 | Planner Patterns | 1 | 1a98ac2e5ee94df0991b1bac1d732f53 | 05 — Planner Patterns | 4610 | 4610 |
 
-- Duplicate overflow rows in variant: **4**
+- Duplicated rows in duplicate slots: **7**
 - Unmapped rows: none
 
 ## Cross-Variant Canonical Slot Matrix
@@ -148,7 +148,10 @@ Total screens cataloged: **47**
 
 ## Drift Notes
 
-- Snapshot `exports.md` lists only 0 Calm screen rows, 0 Executive rows, and 0 Minimal rows; live catalog currently has 23, 7, and 7 respectively.
-- Snapshot `exports.md` includes Desktop project ID `5252820721296843802`; live catalog includes 10 Desktop screens.
+- Snapshot `exports.md` canonical rows for Praxis UI Kit — Calm: 6/6; live canonical slot coverage in this run: 6/6.
+- Snapshot `exports.md` canonical rows for Praxis UI Kit — Executive: 6/6; live canonical slot coverage in this run: 6/6.
+- Snapshot `exports.md` canonical rows for Praxis UI Kit — Minimal: 6/6; live canonical slot coverage in this run: 6/6.
+- Snapshot `exports.md` canonical rows for Praxis UI Kit — Desktop: 6/6; live canonical slot coverage in this run: 6/6.
+- Duplicate semantics in this catalog use duplicated rows in duplicate slots (not overflow-only rows) to align with registry inventory metrics.
 - Pattern registry remains a canonical-6 baseline, while this catalog captures the full live screen set (including duplicates and unmapped screens).
 

@@ -23,12 +23,30 @@
       "warning": { "$value": "{primitives.color.warning.600}" },
       "disabled": { "$value": "{primitives.color.neutral.400}" }
     },
+    "glass": {
+      "surface": { "$value": "rgba(248, 250, 252, 0.72)" },
+      "surfaceStrong": { "$value": "rgba(255, 255, 255, 0.84)" },
+      "border": { "$value": "rgba(148, 163, 184, 0.35)" },
+      "highlight": { "$value": "rgba(255, 255, 255, 0.6)" }
+    },
+    "fx": {
+      "neonPrimary": { "$value": "rgba(99, 102, 241, 0.22)" },
+      "neonSecondary": { "$value": "rgba(16, 185, 129, 0.16)" }
+    },
     "border": {
       "default": { "$value": "{primitives.color.neutral.200}" },
       "muted": { "$value": "{primitives.color.neutral.100}" },
       "strong": { "$value": "{primitives.color.neutral.300}" },
       "focus": { "$value": "{primitives.color.accent.500}" },
       "danger": { "$value": "{primitives.color.danger.500}" }
+    }
+  },
+  "effect": {
+    "blur": {
+      "glass": { "$value": "12px" }
+    },
+    "saturation": {
+      "glass": { "$value": "130%" }
     }
   }
 }
