@@ -51,30 +51,41 @@ export function CommandPalette({ isOpen, onOpenChange }: CommandPaletteProps) {
         aria-label="Command palette"
         onClick={(event) => event.stopPropagation()}
       >
+        <label className="sr-only" htmlFor="command-palette-input">
+          Search commands
+        </label>
         <input
+          id="command-palette-input"
           autoFocus
           className="palette-input"
+          name="command-search"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           placeholder="Search routes or actions (stub)"
+          autoComplete="off"
         />
-        <div className="palette-list" role="listbox" aria-label="Available commands">
+        <ul className="palette-list" aria-label="Available commands">
           {filteredItems.map((item) => (
-            <button
-              key={item.href}
-              className="palette-item"
-              onClick={() => {
-                onOpenChange(false);
-                router.push(item.href);
-              }}
-              type="button"
-            >
-              <span>{item.label}</span>
-              {pathname === item.href ? <span className="palette-chip">Current</span> : null}
-            </button>
+            <li key={item.href}>
+              <button
+                className="palette-item"
+                onClick={() => {
+                  onOpenChange(false);
+                  router.push(item.href);
+                }}
+                type="button"
+              >
+                <span>{item.label}</span>
+                {pathname === item.href ? <span className="palette-chip">Current</span> : null}
+              </button>
+            </li>
           ))}
-          {filteredItems.length === 0 ? <p className="palette-empty">No route matches your query yet.</p> : null}
-        </div>
+          {filteredItems.length === 0 ? (
+            <li>
+              <p className="palette-empty">No route matches your query yet.</p>
+            </li>
+          ) : null}
+        </ul>
       </div>
     </div>
   );

@@ -1,11 +1,12 @@
 # Praxis Stitch Audit (MCP vs Skills)
 
-Updated: 2026-03-03
+Updated: 2026-03-04
 
 ## Scope
 
-This audit normalizes Stitch usage for Praxis UI Kit work across the four live
-Stitch projects and two historical usage paths:
+This audit normalizes Stitch usage for Praxis UI Kit work across the four core
+canonical Stitch projects (plus optional separate kits such as Liquid Neon) and
+two historical usage paths:
 
 - Direct Stitch MCP client configuration
 - Stitch skills workflow wrappers
@@ -13,7 +14,7 @@ Stitch projects and two historical usage paths:
 Decision: **use direct Stitch MCP as the canonical path**. Keep skills as
 optional helpers that depend on MCP.
 
-## Inventory: Four Praxis UI Kit Stitch Projects
+## Inventory: Core Four Praxis UI Kit Stitch Projects
 
 Live source of truth: Stitch MCP `list_projects` + `list_screens` on
 2026-03-03.
@@ -21,15 +22,25 @@ Live source of truth: Stitch MCP `list_projects` + `list_screens` on
 | Name | Project ID | Evidence path/source | What it outputs | Generation path | Current status |
 |---|---|---|---|---|---|
 | Praxis UI Kit — Calm | `13394915692903823935` | Stitch MCP `projects/13394915692903823935`; snapshot in `docs/design-system/stitch/exports.md` | Stitch screens with `screenshot` and `htmlCode` payloads for canonical slots `00`-`05` plus additional variants | MCP direct and MCP-via-skills | live total=23, canonical coverage=6/6, duplicates=16, extras=1 (`SMOKE TEST SINGLE`) |
-| Praxis UI Kit — Executive | `5764765102702214376` | Stitch MCP `projects/5764765102702214376`; baseline refs in `docs/pattern-library/registry.json` and `docs/pattern-library/README.md` | Canonical baseline screens consumed by pattern-library scaffolds | MCP direct and MCP-via-skills | live total=7, canonical coverage=6/6, duplicates=1 |
+| Praxis UI Kit — Executive | `5764765102702214376` | Stitch MCP `projects/5764765102702214376`; cross-variant refs in `docs/pattern-library/registry.json` and `docs/pattern-library/README.md` | Canonical slot participant in cross-variant matrix consumed by pattern-library scaffolds | MCP direct and MCP-via-skills | live total=7, canonical coverage=6/6, duplicates=1 |
 | Praxis UI Kit — Minimal | `7285948406539466076` | Stitch MCP `projects/7285948406539466076`; snapshot in `docs/design-system/stitch/exports.md` | Variant screens (`UI Kit` titles) with `screenshot` and `htmlCode` payloads | MCP direct and MCP-via-skills | live total=7, canonical coverage=6/6, duplicates=1 |
 | Praxis UI Kit — Desktop | `5252820721296843802` | Stitch MCP `projects/5252820721296843802`; details in `/tmp/praxis_stitch_audit.md` | Desktop-oriented variant set with canonical slots plus variants | MCP direct and MCP-via-skills | live total=10, canonical coverage=6/6, duplicates=4 |
 
-Detailed per-screen inventory and comparisons across all four projects are
+Detailed per-screen inventory and comparisons across the core canonical
+projects are
 published in:
 
 - `docs/design-system/stitch/screens-catalog.md` (human-readable table + matrix)
 - `docs/design-system/stitch/screens-catalog.csv` (machine-readable)
+
+## Separate Kit: Liquid Neon
+
+Liquid Neon is tracked as a separate Stitch kit and excluded from canonical
+representative selection for the core four projects.
+
+| Name | Project ID | Current status |
+|---|---|---|
+| Praxis UI Kit — Liquid Neon | `970655054511238677` | seeded canonical slots `00`-`05` (6 screens) |
 
 Regenerate these artifacts with:
 
@@ -109,11 +120,12 @@ Rationale:
    - `pnpm run stitch:validate`
 4. Use Stitch via direct MCP tool sequence:
    - `list_projects` -> `list_screens` -> `get_screen`
-   - Use `generate_screen_from_text` only after baseline project and slot are
+   - Use `generate_screen_from_text` only after canonical slot and variant
+     representative are
      confirmed.
 5. Sync repo artifacts after approved updates:
    - Refresh `docs/design-system/stitch/exports.md`
-   - Refresh `docs/pattern-library/registry.json` only if baseline mapping
+   - Refresh `docs/pattern-library/registry.json` only if canonical matrix
      changes
    - Never commit `/tmp` audit files or raw secret-bearing configs
 

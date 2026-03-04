@@ -5,9 +5,9 @@
       "surface": { "$value": "{primitives.color.neutral.900}" },
       "elevated": { "$value": "{primitives.color.neutral.800}" },
       "overlay": { "$value": "{primitives.color.neutral.950}" },
-      "interactive": { "$value": "{primitives.color.accent.400}" },
-      "interactiveHover": { "$value": "{primitives.color.accent.300}" },
-      "interactiveActive": { "$value": "{primitives.color.accent.300}" },
+      "interactive": { "$value": "{primitives.color.accent.500}" },
+      "interactiveHover": { "$value": "{primitives.color.accent.400}" },
+      "interactiveActive": { "$value": "{primitives.color.accent.400}" },
       "success": { "$value": "{primitives.color.success.400}" },
       "warning": { "$value": "{primitives.color.warning.400}" },
       "danger": { "$value": "{primitives.color.danger.400}" },
@@ -22,6 +22,16 @@
       "success": { "$value": "{primitives.color.success.300}" },
       "warning": { "$value": "{primitives.color.warning.300}" },
       "disabled": { "$value": "{primitives.color.neutral.500}" }
+    },
+    "glass": {
+      "surface": { "$value": "rgba(15, 23, 42, 0.66)" },
+      "surfaceStrong": { "$value": "rgba(30, 41, 59, 0.82)" },
+      "border": { "$value": "rgba(129, 140, 248, 0.34)" },
+      "highlight": { "$value": "rgba(226, 232, 240, 0.26)" }
+    },
+    "fx": {
+      "neonPrimary": { "$value": "rgba(129, 140, 248, 0.34)" },
+      "neonSecondary": { "$value": "rgba(52, 211, 153, 0.24)" }
     },
     "border": {
       "default": { "$value": "{primitives.color.neutral.700}" },
@@ -38,5 +48,13 @@
     "level2": { "$value": "0 8px 20px rgba(0,0,0,0.45)" },
     "level3": { "$value": "0 12px 30px rgba(0,0,0,0.55)" },
     "level4": { "$value": "0 20px 48px rgba(0,0,0,0.65)" }
+  },
+  "effect": {
+    "blur": {
+      "glass": { "$value": "16px" }
+    },
+    "saturation": {
+      "glass": { "$value": "165%" }
+    }
   }
 }

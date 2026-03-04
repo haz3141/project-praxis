@@ -7,13 +7,37 @@ import path from "node:path";
 const OUTPUT_MD = "docs/design-system/stitch/screens-catalog.md";
 const OUTPUT_CSV = "docs/design-system/stitch/screens-catalog.csv";
 const DEFAULT_MCP_URL = "https://stitch.googleapis.com/mcp";
+const DEFAULT_LIQUID_NEON_PROJECT_ID = "970655054511238677";
 
-const TARGET_PROJECTS = [
+const CORE_CANONICAL_PROJECTS = [
   { label: "Praxis UI Kit — Calm", id: "13394915692903823935" },
   { label: "Praxis UI Kit — Executive", id: "5764765102702214376" },
   { label: "Praxis UI Kit — Minimal", id: "7285948406539466076" },
   { label: "Praxis UI Kit — Desktop", id: "5252820721296843802" }
 ];
+const LIQUID_NEON_PROJECT_ID = (
+  process.env.STITCH_LIQUID_NEON_PROJECT_ID || DEFAULT_LIQUID_NEON_PROJECT_ID
+).trim();
+const LIQUID_NEON_PROJECT_LABEL = (
+  process.env.STITCH_LIQUID_NEON_PROJECT_LABEL || "Praxis UI Kit — Liquid Neon"
+).trim();
+const LIQUID_NEON_SEED_SCREEN_IDS = [
+  "c8e36a8dac8941bc97f17ac3772433a4",
+  "7a302ae01226457c98b44fef65854034",
+  "1caa757d3a7148c88c837ccb2542ba6b",
+  "9083bce8beb94c6a804e608e61bfd0a0",
+  "bded73207d764dc0977557e0a7ffa6a7",
+  "1770a27735f845a3aa69910d93bd7256"
+];
+const SEEDED_SCREEN_IDS_BY_PROJECT = new Map(
+  LIQUID_NEON_PROJECT_ID === DEFAULT_LIQUID_NEON_PROJECT_ID
+    ? [[LIQUID_NEON_PROJECT_ID, LIQUID_NEON_SEED_SCREEN_IDS]]
+    : []
+);
+const OPTIONAL_TRACKED_PROJECTS = LIQUID_NEON_PROJECT_ID
+  ? [{ label: LIQUID_NEON_PROJECT_LABEL, id: LIQUID_NEON_PROJECT_ID }]
+  : [];
+const TARGET_PROJECTS = [...CORE_CANONICAL_PROJECTS, ...OPTIONAL_TRACKED_PROJECTS];
 
 const SLOT_ORDER = ["00", "01", "02", "03", "04", "05", "UNMAPPED"];
 const CANONICAL_SLOT_SET = new Set(["00", "01", "02", "03", "04", "05"]);
@@ -196,6 +220,23 @@ async function callTool(url, authHeaders, name, args) {
   return parseToolText(result);
 }
 
+async function hydrateSeededScreens(url, authHeaders, projectId, seedIds) {
+  const screens = [];
+  for (const screenId of seedIds) {
+    try {
+      const screen = await callTool(url, authHeaders, "get_screen", {
+        name: `projects/${projectId}/screens/${screenId}`
+      });
+      if (screen && typeof screen === "object" && screen.name) {
+        screens.push(screen);
+      }
+    } catch {
+      // Ignore missing seed IDs to keep sync resilient.
+    }
+  }
+  return screens;
+}
+
 function normalizeWhitespace(value) {
   return String(value || "").replace(/\s+/g, " ").trim();
 }
@@ -308,9 +349,11 @@ function buildProjectProfiles(projectById, rows) {
 }
 
 function buildCrossSlotStats(rows) {
+  const canonicalProjectIds = new Set(CORE_CANONICAL_PROJECTS.map((project) => project.id));
   const slotToProjects = new Map();
   for (const row of rows) {
     if (!CANONICAL_SLOT_SET.has(row.slot_code)) continue;
+    if (!canonicalProjectIds.has(row.project_id)) continue;
     const key = row.slot_code;
     if (!slotToProjects.has(key)) slotToProjects.set(key, new Set());
     slotToProjects.get(key).add(row.project_id);
@@ -324,6 +367,7 @@ function buildCrossSlotStats(rows) {
 }
 
 function buildRepresentativeMatrix(rows) {
+  const canonicalProjectIds = new Set(CORE_CANONICAL_PROJECTS.map((project) => project.id));
   const matrix = new Map();
 
   const sorted = [...rows].sort((a, b) => {
@@ -338,6 +382,7 @@ function buildRepresentativeMatrix(rows) {
 
   for (const row of sorted) {
     if (!CANONICAL_SLOT_SET.has(row.slot_code)) continue;
+    if (!canonicalProjectIds.has(row.project_id)) continue;
     const key = `${row.slot_code}::${row.project_id}`;
     if (!matrix.has(key)) matrix.set(key, row);
   }
@@ -385,26 +430,27 @@ function computeWithinVariantSlotRows(rows, projectId) {
 }
 
 function buildDriftNotes(rows) {
-  const exportsPath = "docs/design-system/stitch/exports.md";
-  const exportsRaw = readFileSafe(exportsPath);
-
-  const calmRows = (exportsRaw.match(/projects\/13394915692903823935\/files\//g) || []).length;
-  const execRows = (exportsRaw.match(/projects\/5764765102702214376\/files\//g) || []).length;
-  const minimalRows = (exportsRaw.match(/projects\/7285948406539466076\/files\//g) || []).length;
-  const hasDesktop = exportsRaw.includes("5252820721296843802");
-
   const liveByProject = new Map();
   for (const row of rows) {
     liveByProject.set(row.project_id, (liveByProject.get(row.project_id) || 0) + 1);
   }
 
-  const tick = "`";
-
-  return [
-    `- Snapshot ${tick}exports.md${tick} lists only ${calmRows} Calm screen rows, ${execRows} Executive rows, and ${minimalRows} Minimal rows; live catalog currently has ${liveByProject.get("13394915692903823935") || 0}, ${liveByProject.get("5764765102702214376") || 0}, and ${liveByProject.get("7285948406539466076") || 0} respectively.`,
-    `- Snapshot ${tick}exports.md${tick} ${hasDesktop ? "includes" : "does not include"} Desktop project ID ${tick}5252820721296843802${tick}; live catalog includes ${liveByProject.get("5252820721296843802") || 0} Desktop screens.`,
+  const notes = TARGET_PROJECTS.map(
+    (project) =>
+      `- Live catalog currently has ${liveByProject.get(project.id) || 0} screens for ${project.label} (\`${project.id}\`).`
+  );
+  notes.push(
+    "- Canonical slot matrix is computed from the core four kits (Calm, Executive, Minimal, Desktop)."
+  );
+  if (OPTIONAL_TRACKED_PROJECTS.length) {
+    notes.push(
+      "- Additional kits (for example Liquid Neon) are tracked separately and intentionally excluded from canonical representative selection."
+    );
+  }
+  notes.push(
     "- Pattern registry remains a canonical-6 baseline, while this catalog captures the full live screen set (including duplicates and unmapped screens)."
-  ];
+  );
+  return notes;
 }
 
 function buildMarkdown(rows, projectProfiles, representativeMatrix, generatedAt) {
@@ -495,7 +541,7 @@ function buildMarkdown(rows, projectProfiles, representativeMatrix, generatedAt)
   const matrixRows = [];
   for (const slotCode of ["00", "01", "02", "03", "04", "05"]) {
     const row = { slot_code: slotCode };
-    for (const project of TARGET_PROJECTS) {
+    for (const project of CORE_CANONICAL_PROJECTS) {
       const key = `${slotCode}::${project.id}`;
       const rep = representativeMatrix.get(key);
       row[project.label] = rep ? `${rep.screen_id} (${rep.width}x${rep.height})` : "";
@@ -503,7 +549,7 @@ function buildMarkdown(rows, projectProfiles, representativeMatrix, generatedAt)
     matrixRows.push(row);
   }
 
-  sections.push(markdownTable(["slot_code", ...TARGET_PROJECTS.map((p) => p.label)], matrixRows));
+  sections.push(markdownTable(["slot_code", ...CORE_CANONICAL_PROJECTS.map((p) => p.label)], matrixRows));
   sections.push("");
 
   sections.push("## Cross-Variant Dimension Spread by Slot");
@@ -574,7 +620,19 @@ async function main() {
       projectId: project.id
     });
 
-    const screens = Array.isArray(screensData?.screens) ? screensData.screens : [];
+    let screens = Array.isArray(screensData?.screens) ? screensData.screens : [];
+    if (!screens.length) {
+      const seededIds = SEEDED_SCREEN_IDS_BY_PROJECT.get(project.id) || [];
+      if (seededIds.length) {
+        const seededScreens = await hydrateSeededScreens(mcpUrl, auth.headers, project.id, seededIds);
+        if (seededScreens.length) {
+          screens = seededScreens;
+          console.log(
+            `- ${project.label}: recovered ${seededScreens.length} seeded screens via get_screen fallback`
+          );
+        }
+      }
+    }
 
     for (const screen of screens) {
       const title = normalizeWhitespace(screen.title || "");

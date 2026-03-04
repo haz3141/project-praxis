@@ -4,7 +4,7 @@
   "title": "StitchInventory",
   "type": "object",
   "additionalProperties": false,
-  "required": ["generated_at", "projects", "totals"],
+  "required": ["generated_at", "projects", "canonical_policy", "canonical_slots", "totals"],
   "properties": {
     "generated_at": { "type": "string", "format": "date-time" },
     "source_command": { "type": "string" },
@@ -24,6 +24,67 @@
           "slot_coverage": {
             "type": "object",
             "additionalProperties": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "canonical_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["strategy", "representative_rule", "project_priority"],
+      "properties": {
+        "strategy": { "type": "string" },
+        "representative_rule": { "type": "string" },
+        "project_priority": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["project_id", "project_title"],
+            "properties": {
+              "project_id": { "type": "string" },
+              "project_title": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "canonical_slots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "slot_code",
+          "slot_label",
+          "canonical_screens",
+          "representative_screen_id",
+          "representative_project_id",
+          "representative_height",
+          "representative_selection"
+        ],
+        "properties": {
+          "slot_code": { "type": "string" },
+          "slot_label": { "type": "string" },
+          "representative_screen_id": { "type": "string" },
+          "representative_project_id": { "type": "string" },
+          "representative_height": { "type": "integer", "minimum": 0 },
+          "representative_selection": { "type": "string" },
+          "canonical_screens": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["project_id", "project_title", "screen_id", "title", "width", "height"],
+              "properties": {
+                "project_id": { "type": "string" },
+                "project_title": { "type": "string" },
+                "screen_id": { "type": "string" },
+                "title": { "type": "string" },
+                "width": { "type": "integer", "minimum": 0 },
+                "height": { "type": "integer", "minimum": 0 }
+              }
+            }
           }
         }
       }
