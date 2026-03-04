@@ -20,3 +20,15 @@ packages/ui/storybook-static/
 # Local Stitch skill artifacts
 /stitch.json
 /queue/
+
+# Project-scoped Codex runtime state (keep .codex/config.toml trackable)
+.codex/history.jsonl
+.codex/log/
+.codex/sessions/
+.codex/shell_snapshots/
+.codex/skills/
+.codex/tmp/
+.codex/state_*.sqlite
+.codex/state_*.sqlite-shm
+.codex/state_*.sqlite-wal
+.cursor/mcp.json

@@ -1,0 +1,90 @@
+{
+  "color": {
+    "bg": {
+      "canvas": { "$value": "#060a18" },
+      "surface": { "$value": "rgba(8, 14, 32, 0.86)" },
+      "elevated": { "$value": "rgba(15, 23, 46, 0.8)" },
+      "overlay": { "$value": "rgba(2, 6, 23, 0.78)" },
+      "interactive": { "$value": "#2563eb" },
+      "interactiveHover": { "$value": "#1d4ed8" },
+      "interactiveActive": { "$value": "#1e40af" },
+      "success": { "$value": "#22c55e" },
+      "warning": { "$value": "#f59e0b" },
+      "danger": { "$value": "#ef4444" },
+      "muted": { "$value": "rgba(30, 41, 59, 0.92)" }
+    },
+    "fg": {
+      "default": { "$value": "#f4f8ff" },
+      "muted": { "$value": "#c7d2fe" },
+      "subtle": { "$value": "#94a3b8" },
+      "onInteractive": { "$value": "#f8fafc" },
+      "danger": { "$value": "#fda4af" },
+      "success": { "$value": "#86efac" },
+      "warning": { "$value": "#fcd34d" },
+      "disabled": { "$value": "#64748b" }
+    },
+    "border": {
+      "default": { "$value": "rgba(56, 189, 248, 0.35)" },
+      "muted": { "$value": "rgba(71, 85, 105, 0.6)" },
+      "strong": { "$value": "rgba(56, 189, 248, 0.58)" },
+      "focus": { "$value": "#22d3ee" },
+      "danger": { "$value": "#fb7185" }
+    },
+    "planner": {
+      "surface": { "$value": "rgba(10, 15, 33, 0.94)" },
+      "surfaceElevated": { "$value": "rgba(14, 22, 47, 0.92)" },
+      "text": { "$value": "#eef4ff" },
+      "textMuted": { "$value": "#b8c4e8" },
+      "border": { "$value": "rgba(56, 189, 248, 0.3)" }
+    },
+    "glass": {
+      "surface": { "$value": "rgba(18, 27, 54, 0.6)" },
+      "surfaceElevated": { "$value": "rgba(26, 36, 72, 0.68)" },
+      "stroke": { "$value": "rgba(103, 232, 249, 0.34)" },
+      "highlight": { "$value": "rgba(186, 230, 253, 0.48)" }
+    },
+    "neon": {
+      "cyan": { "$value": "#22d3ee" },
+      "blue": { "$value": "#3b82f6" },
+      "magenta": { "$value": "#e879f9" },
+      "violet": { "$value": "#a78bfa" },
+      "lime": { "$value": "#a3e635" }
+    }
+  },
+  "gradient": {
+    "metal": {
+      "base": {
+        "$value": "linear-gradient(135deg, rgba(148, 163, 184, 0.2) 0%, rgba(51, 65, 85, 0.46) 58%, rgba(2, 6, 23, 0.84) 100%)"
+      },
+      "elevated": {
+        "$value": "linear-gradient(160deg, rgba(14, 22, 47, 0.96) 0%, rgba(30, 41, 59, 0.84) 52%, rgba(6, 10, 24, 1) 100%)"
+      }
+    },
+    "neon": {
+      "primary": {
+        "$value": "linear-gradient(120deg, #2563eb 0%, #d946ef 52%, #22d3ee 100%)"
+      },
+      "accent": {
+        "$value": "linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 50%, #ec4899 100%)"
+      }
+    }
+  },
+  "effect": {
+    "blur": {
+      "surface": { "$value": "18px" },
+      "overlay": { "$value": "24px" }
+    },
+    "specular": {
+      "strength": { "$value": "0.35" },
+      "edgeAlpha": { "$value": "0.52" }
+    }
+  },
+  "shadow": {
+    "card": { "$value": "0 0 0 1px rgba(34, 211, 238, 0.3), 0 22px 42px rgba(2, 6, 23, 0.65)" },
+    "elevated": { "$value": "0 0 0 1px rgba(232, 121, 249, 0.24), 0 26px 52px rgba(2, 6, 23, 0.72)" },
+    "overlay": { "$value": "0 0 0 1px rgba(147, 197, 253, 0.22), 0 34px 62px rgba(2, 6, 23, 0.8)" },
+    "level2": { "$value": "0 16px 34px rgba(2, 6, 23, 0.62)" },
+    "level3": { "$value": "0 22px 46px rgba(2, 6, 23, 0.72)" },
+    "level4": { "$value": "0 28px 56px rgba(2, 6, 23, 0.82)" }
+  }
+}

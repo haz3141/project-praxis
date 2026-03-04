@@ -1,8 +1,8 @@
 # Praxis Stitch Full Screen Catalog
 
-Generated: 2026-03-03T21:02:38.179Z
+Generated: 2026-03-04T06:22:14.595Z
 Source command: `pnpm run stitch:catalog`
-Total screens cataloged: **47**
+Total screens cataloged: **53**
 
 ## Project Profiles
 
@@ -12,6 +12,7 @@ Total screens cataloged: **47**
 | Praxis UI Kit — Executive | 5764765102702214376 | 7 | 6/6 | 1 | 0 | DARK | MANROPE | ROUND_EIGHT | #135bec |
 | Praxis UI Kit — Minimal | 7285948406539466076 | 7 | 6/6 | 1 | 0 | LIGHT | INTER | ROUND_EIGHT | #195de6 |
 | Praxis UI Kit — Desktop | 5252820721296843802 | 10 | 6/6 | 4 | 0 | LIGHT | MANROPE | ROUND_EIGHT | #0d7ff2 |
+| Praxis UI Kit — Liquid Neon | 970655054511238677 | 6 | 6/6 | 0 | 0 | DARK | INTER | ROUND_EIGHT | #2525f4 |
 
 ## Full Screen Ledger
 
@@ -64,6 +65,12 @@ Total screens cataloged: **47**
 | Praxis UI Kit — Desktop | 03 | 03 — Data Display | 4231333f9ed245e7ac52451eec13c652 | 2560 | 3460 | DESKTOP | true | 2 | false | false | true | true |
 | Praxis UI Kit — Desktop | 04 | 04 — Feedback & Overlays | 5c8db29f0ef04ef59da6ea55071aedfd | 2560 | 3300 | DESKTOP | false | 1 | false | false | true | true |
 | Praxis UI Kit — Desktop | 05 | 05 — Planner Patterns | 1a98ac2e5ee94df0991b1bac1d732f53 | 2560 | 4610 | DESKTOP | false | 1 | false | false | true | true |
+| Praxis UI Kit — Liquid Neon | 00 | 00 — Foundations | c8e36a8dac8941bc97f17ac3772433a4 | 2560 | 5846 | DESKTOP | false | 1 | false | false | true | true |
+| Praxis UI Kit — Liquid Neon | 01 | 01 — Buttons & Inputs | 7a302ae01226457c98b44fef65854034 | 2560 | 3144 | DESKTOP | false | 1 | false | false | true | true |
+| Praxis UI Kit — Liquid Neon | 02 | 02 — Navigation & Shell | 1caa757d3a7148c88c837ccb2542ba6b | 2560 | 2048 | DESKTOP | false | 1 | false | false | true | true |
+| Praxis UI Kit — Liquid Neon | 03 | 03 — Data Display | 9083bce8beb94c6a804e608e61bfd0a0 | 2560 | 3600 | DESKTOP | false | 1 | false | false | true | true |
+| Praxis UI Kit — Liquid Neon | 04 | 04 — Feedback & Overlays | bded73207d764dc0977557e0a7ffa6a7 | 2560 | 4158 | DESKTOP | false | 1 | false | false | true | true |
+| Praxis UI Kit — Liquid Neon | 05 | 05 — Planner Patterns | 1770a27735f845a3aa69910d93bd7256 | 2560 | 3456 | DESKTOP | false | 1 | false | false | true | true |
 
 ## Within-Variant Comparison
 
@@ -124,6 +131,20 @@ Total screens cataloged: **47**
 - Duplicate overflow rows in variant: **4**
 - Unmapped rows: none
 
+### Praxis UI Kit — Liquid Neon
+
+| slot_code | slot_label | screen_count | screen_ids | title_variants | min_height | max_height |
+|---|---|---|---|---|---|---|
+| 00 | Foundations | 1 | c8e36a8dac8941bc97f17ac3772433a4 | 00 — Foundations | 5846 | 5846 |
+| 01 | Buttons & Inputs | 1 | 7a302ae01226457c98b44fef65854034 | 01 — Buttons & Inputs | 3144 | 3144 |
+| 02 | Navigation & Shell | 1 | 1caa757d3a7148c88c837ccb2542ba6b | 02 — Navigation & Shell | 2048 | 2048 |
+| 03 | Data Display | 1 | 9083bce8beb94c6a804e608e61bfd0a0 | 03 — Data Display | 3600 | 3600 |
+| 04 | Feedback & Overlays | 1 | bded73207d764dc0977557e0a7ffa6a7 | 04 — Feedback & Overlays | 4158 | 4158 |
+| 05 | Planner Patterns | 1 | 1770a27735f845a3aa69910d93bd7256 | 05 — Planner Patterns | 3456 | 3456 |
+
+- Duplicate overflow rows in variant: **0**
+- Unmapped rows: none
+
 ## Cross-Variant Canonical Slot Matrix
 
 | slot_code | Praxis UI Kit — Calm | Praxis UI Kit — Executive | Praxis UI Kit — Minimal | Praxis UI Kit — Desktop |
@@ -139,16 +160,21 @@ Total screens cataloged: **47**
 
 | slot_code | rows | min_width | max_width | min_height | max_height | height_delta |
 |---|---|---|---|---|---|---|
-| 00 | 12 | 2560 | 2560 | 2048 | 7284 | 5236 |
-| 01 | 11 | 2560 | 2560 | 2274 | 5036 | 2762 |
-| 02 | 7 | 2560 | 2560 | 2048 | 3256 | 1208 |
-| 03 | 7 | 2560 | 2560 | 2048 | 3994 | 1946 |
-| 04 | 5 | 2560 | 2560 | 3300 | 4260 | 960 |
-| 05 | 4 | 2560 | 2560 | 2048 | 4610 | 2562 |
+| 00 | 13 | 2560 | 2560 | 2048 | 7284 | 5236 |
+| 01 | 12 | 2560 | 2560 | 2274 | 5036 | 2762 |
+| 02 | 8 | 2560 | 2560 | 2048 | 3256 | 1208 |
+| 03 | 8 | 2560 | 2560 | 2048 | 3994 | 1946 |
+| 04 | 6 | 2560 | 2560 | 3300 | 4260 | 960 |
+| 05 | 5 | 2560 | 2560 | 2048 | 4610 | 2562 |
 
 ## Drift Notes
 
-- Snapshot `exports.md` lists only 0 Calm screen rows, 0 Executive rows, and 0 Minimal rows; live catalog currently has 23, 7, and 7 respectively.
-- Snapshot `exports.md` includes Desktop project ID `5252820721296843802`; live catalog includes 10 Desktop screens.
+- Live catalog currently has 23 screens for Praxis UI Kit — Calm (`13394915692903823935`).
+- Live catalog currently has 7 screens for Praxis UI Kit — Executive (`5764765102702214376`).
+- Live catalog currently has 7 screens for Praxis UI Kit — Minimal (`7285948406539466076`).
+- Live catalog currently has 10 screens for Praxis UI Kit — Desktop (`5252820721296843802`).
+- Live catalog currently has 6 screens for Praxis UI Kit — Liquid Neon (`970655054511238677`).
+- Canonical slot matrix is computed from the core four kits (Calm, Executive, Minimal, Desktop).
+- Additional kits (for example Liquid Neon) are tracked separately and intentionally excluded from canonical representative selection.
 - Pattern registry remains a canonical-6 baseline, while this catalog captures the full live screen set (including duplicates and unmapped screens).
 
