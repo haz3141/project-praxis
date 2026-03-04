@@ -26,7 +26,8 @@ export default defineConfig({
     ? {
         command: webServerCommand,
         url: baseURL,
-        reuseExistingServer: !process.env.CI,
+        // Avoid attaching to a stale dev server process that can exit mid-suite.
+        reuseExistingServer: false,
         timeout: 180_000
       }
     : undefined

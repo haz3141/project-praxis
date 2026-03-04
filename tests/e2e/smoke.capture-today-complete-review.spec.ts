@@ -19,6 +19,8 @@ test("planner smoke: settings persist + capture -> today -> complete -> review",
 
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
   await expect(page.locator("html")).toHaveAttribute("data-density", "compact");
+  await expect(page.locator("#settings-theme")).toHaveValue("dark");
+  await expect(page.locator("#settings-density")).toHaveValue("compact");
 
   await page.goto("/inbox", { waitUntil: "domcontentloaded" });
   await expect(page.locator("body")).toBeVisible();
