@@ -62,9 +62,10 @@ export default function SettingsPage() {
             options={THEME_OPTIONS}
             disabled={!isReady}
             onChange={(event) => {
+              const theme = event.currentTarget.value as ThemeName;
               setPreferences((current) => ({
                 ...current,
-                theme: event.currentTarget.value as ThemeName
+                theme
               }));
             }}
           />
@@ -76,9 +77,10 @@ export default function SettingsPage() {
             options={DENSITY_OPTIONS}
             disabled={!isReady}
             onChange={(event) => {
+              const density = event.currentTarget.value as DensityMode;
               setPreferences((current) => ({
                 ...current,
-                density: event.currentTarget.value as DensityMode
+                density
               }));
             }}
           />
@@ -97,9 +99,10 @@ export default function SettingsPage() {
           checked={preferences.reducedMotion}
           disabled={!isReady}
           onChange={(event) => {
+            const reducedMotion = event.currentTarget.checked;
             setPreferences((current) => ({
               ...current,
-              reducedMotion: event.currentTarget.checked
+              reducedMotion
             }));
           }}
         />
