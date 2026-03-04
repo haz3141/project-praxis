@@ -1,5 +1,6 @@
 import { useEffect, useId, useRef } from 'react';
 import type { ReactNode } from 'react';
+import { trapTabFocus } from './overlayFocus';
 
 export interface DrawerProps {
   open: boolean;
@@ -21,15 +22,23 @@ export function Drawer({
   const titleId = useId();
   const descriptionId = useId();
   const panelRef = useRef<HTMLDivElement>(null);
+  const restoreFocusRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     if (!open) {
       return;
     }
 
+    restoreFocusRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         onClose();
+        return;
+      }
+
+      if (panelRef.current) {
+        trapTabFocus(event, panelRef.current);
       }
     };
 
@@ -38,6 +47,8 @@ export function Drawer({
 
     return () => {
       document.removeEventListener('keydown', onKeyDown);
+      restoreFocusRef.current?.focus();
+      restoreFocusRef.current = null;
     };
   }, [open, onClose]);
 

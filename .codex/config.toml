@@ -44,3 +44,7 @@ config_file = "./agents/studio-worker.toml"
 [execution]
 require_conventional_commits = true
 prefer_atomic_commits = true
+
+[mcp_servers.stitch]
+url = "https://stitch.googleapis.com/mcp"
+env_http_headers = { "X-Goog-Api-Key" = "STITCH_API_KEY" }

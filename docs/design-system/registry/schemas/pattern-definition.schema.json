@@ -12,7 +12,10 @@
     "route_mapping",
     "acceptance_checks",
     "source_components",
-    "stitch_slots"
+    "stitch_slots",
+    "representative_screen_id",
+    "representative_project_id",
+    "canonical_screens"
   ],
   "properties": {
     "id": { "type": "string" },
@@ -67,6 +70,21 @@
     "stitch_slots": {
       "type": "array",
       "items": { "type": "string" }
+    },
+    "representative_screen_id": { "type": "string" },
+    "representative_project_id": { "type": "string" },
+    "canonical_screens": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["project_id", "project_title", "screen_id"],
+        "properties": {
+          "project_id": { "type": "string" },
+          "project_title": { "type": "string" },
+          "screen_id": { "type": "string" }
+        }
+      }
     }
   }
 }

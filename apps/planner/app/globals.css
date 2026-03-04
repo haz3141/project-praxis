@@ -24,14 +24,33 @@ body {
 }
 
 body {
-  background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+  background:
+    radial-gradient(circle at 8% 0%, var(--ds-color-fx-neon-primary), transparent 46%),
+    radial-gradient(circle at 92% 92%, var(--ds-color-fx-neon-secondary), transparent 50%),
+    linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
   color: var(--text);
-  font-family: "Segoe UI", "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--ds-font-family-base, "Geist", system-ui, -apple-system, sans-serif);
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+:where(button, .nav-link, .bottom-link, .palette-item) {
+  min-height: var(--ds-size-target-min);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .shell {
@@ -42,8 +61,13 @@ a {
 
 .sidebar {
   border-right: 1px solid var(--line);
-  background: color-mix(in srgb, var(--surface-strong) 82%, transparent);
-  backdrop-filter: blur(6px);
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--ds-color-glass-surface-strong) 86%, var(--surface-strong)) 0%,
+      color-mix(in srgb, var(--ds-color-glass-surface) 80%, var(--surface)) 100%
+    );
+  backdrop-filter: blur(calc(var(--ds-effect-blur-glass) * 0.55)) saturate(var(--ds-effect-saturation-glass));
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
@@ -101,11 +125,19 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  background: color-mix(in srgb, var(--surface) 82%, transparent);
-  border: 1px solid var(--line);
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--ds-color-glass-surface-strong) 86%, var(--surface-strong)) 0%,
+      color-mix(in srgb, var(--ds-color-glass-surface) 80%, var(--surface)) 100%
+    );
+  border: 1px solid var(--ds-color-glass-border);
   border-radius: var(--radius-lg);
   padding: 0.8rem 1rem;
-  box-shadow: var(--shadow);
+  box-shadow:
+    var(--shadow),
+    0 0 18px color-mix(in srgb, var(--ds-color-fx-neon-primary) 36%, transparent);
+  backdrop-filter: blur(calc(var(--ds-effect-blur-glass) * 0.55)) saturate(var(--ds-effect-saturation-glass));
 }
 
 .topbar-actions {
@@ -139,10 +171,18 @@ a {
 }
 
 .card {
-  background: var(--surface-strong);
-  border: 1px solid var(--line);
+  background:
+    linear-gradient(
+      140deg,
+      color-mix(in srgb, var(--ds-color-glass-surface-strong) 88%, var(--surface-strong)) 0%,
+      color-mix(in srgb, var(--ds-color-glass-surface) 82%, var(--surface)) 100%
+    );
+  border: 1px solid var(--ds-color-glass-border);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
+  box-shadow:
+    var(--shadow),
+    0 0 16px color-mix(in srgb, var(--ds-color-fx-neon-secondary) 34%, transparent);
+  backdrop-filter: blur(calc(var(--ds-effect-blur-glass) * 0.45)) saturate(var(--ds-effect-saturation-glass));
   padding: 1rem;
 }
 
@@ -222,7 +262,7 @@ button {
 
 .primary-btn {
   background: var(--accent);
-  color: #fff;
+  color: var(--ds-color-fg-on-interactive);
 }
 
 .primary-btn:hover {
@@ -304,7 +344,9 @@ button {
 .palette-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(13, 23, 17, 0.34);
+  background:
+    radial-gradient(circle at 16% 12%, var(--ds-color-fx-neon-primary), transparent 48%),
+    color-mix(in srgb, var(--ds-color-bg-overlay) 48%, transparent);
   display: grid;
   place-items: center;
   z-index: 40;
@@ -313,10 +355,18 @@ button {
 
 .palette {
   width: min(640px, 100%);
-  background: var(--surface-strong);
-  border: 1px solid var(--line);
+  background:
+    linear-gradient(
+      140deg,
+      color-mix(in srgb, var(--ds-color-glass-surface-strong) 88%, var(--surface-strong)) 0%,
+      color-mix(in srgb, var(--ds-color-glass-surface) 82%, var(--surface)) 100%
+    );
+  border: 1px solid var(--ds-color-glass-border);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
+  box-shadow:
+    var(--shadow),
+    0 0 22px color-mix(in srgb, var(--ds-color-fx-neon-primary) 40%, transparent);
+  backdrop-filter: blur(calc(var(--ds-effect-blur-glass) * 0.55)) saturate(var(--ds-effect-saturation-glass));
   padding: 0.9rem;
 }
 
@@ -327,6 +377,9 @@ button {
 .palette-list {
   display: grid;
   gap: 0.45rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .palette-item {
@@ -357,8 +410,13 @@ button {
   right: 0;
   bottom: 0;
   border-top: 1px solid var(--line);
-  background: color-mix(in srgb, var(--surface-strong) 94%, transparent);
-  backdrop-filter: blur(10px);
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--ds-color-glass-surface-strong) 90%, var(--surface-strong)) 0%,
+      color-mix(in srgb, var(--ds-color-glass-surface) 84%, var(--surface)) 100%
+    );
+  backdrop-filter: blur(calc(var(--ds-effect-blur-glass) * 0.7)) saturate(var(--ds-effect-saturation-glass));
   padding: 0.5rem;
   display: none;
   gap: 0.5rem;
@@ -368,7 +426,7 @@ button {
 
 .bottom-link {
   border: 1px solid transparent;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   padding: 0.55rem 0.45rem;
   text-align: center;
   font-size: 0.76rem;
@@ -389,6 +447,22 @@ button {
 :where(button, input, textarea, select, a):focus-visible {
   outline: 2px solid var(--ds-color-border-focus);
   outline-offset: 2px;
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .sidebar,
+  .topbar,
+  .card,
+  .palette,
+  .bottom-nav {
+    background: var(--surface-strong);
+    border-color: var(--line);
+    box-shadow: var(--shadow);
+  }
+
+  .palette-overlay {
+    background: color-mix(in srgb, var(--ds-color-bg-overlay) 45%, transparent);
+  }
 }
 
 @media (max-width: 960px) {

@@ -1,44 +1,98 @@
 {
-  "baselineProject": {
-    "title": "Praxis UI Kit — Executive",
-    "id": "5764765102702214376"
+  "canonicalPolicy": {
+    "strategy": "cross-variant-slot-matrix",
+    "representativeRule": "median-height-by-slot-with-project-priority-tiebreak",
+    "projectPriority": [
+      {
+        "title": "Praxis UI Kit — Executive",
+        "id": "5764765102702214376"
+      },
+      {
+        "title": "Praxis UI Kit — Calm",
+        "id": "13394915692903823935"
+      },
+      {
+        "title": "Praxis UI Kit — Minimal",
+        "id": "7285948406539466076"
+      },
+      {
+        "title": "Praxis UI Kit — Desktop",
+        "id": "5252820721296843802"
+      }
+    ]
   },
   "patterns": [
     {
       "slot": "00",
       "title": "Foundations",
-      "screenId": "f03a6af95eba45ffaf671f51d77a9ad7",
-      "path": "docs/pattern-library/foundations/00-foundations"
+      "path": "docs/pattern-library/foundations/00-foundations",
+      "canonicalScreens": {
+        "calm": "0338568b02b14115a4d6b12fe34e747c",
+        "executive": "f03a6af95eba45ffaf671f51d77a9ad7",
+        "minimal": "34fb5fdfa8494d3685bd23362908d75b",
+        "desktop": "bc77c466f60d428ab6b7022386947c07"
+      },
+      "representativeScreenId": "34fb5fdfa8494d3685bd23362908d75b"
     },
     {
       "slot": "01",
       "title": "Buttons & Inputs",
-      "screenId": "855a7a33095843068f53652fb6bdd46e",
-      "path": "docs/pattern-library/inputs/01-buttons-inputs"
+      "path": "docs/pattern-library/inputs/01-buttons-inputs",
+      "canonicalScreens": {
+        "calm": "032445c8f0144422b0c431dda094eb3f",
+        "executive": "855a7a33095843068f53652fb6bdd46e",
+        "minimal": "7bbd054d3650440eb2d2a091c9a93657",
+        "desktop": "6309cf97d8094e2e94276234990d5f74"
+      },
+      "representativeScreenId": "855a7a33095843068f53652fb6bdd46e"
     },
     {
       "slot": "02",
       "title": "Navigation & Shell",
-      "screenId": "a59a4c5ba9b94d929ec9b051fc60ff7f",
-      "path": "docs/pattern-library/navigation/02-navigation-shell"
+      "path": "docs/pattern-library/navigation/02-navigation-shell",
+      "canonicalScreens": {
+        "calm": "858301e669134412a377ff9fc9f76412",
+        "executive": "a59a4c5ba9b94d929ec9b051fc60ff7f",
+        "minimal": "d253ad4149f14cd3bc7bee5ea8a42be3",
+        "desktop": "a6fbdab7d7834177830f5213a9392b58"
+      },
+      "representativeScreenId": "a59a4c5ba9b94d929ec9b051fc60ff7f"
     },
     {
       "slot": "03",
       "title": "Data Display",
-      "screenId": "288d3db61b19477dbc3d497a1a1a0e8b",
-      "path": "docs/pattern-library/data-display/03-data-display"
+      "path": "docs/pattern-library/data-display/03-data-display",
+      "canonicalScreens": {
+        "calm": "24398b59b0de480ea20ddaaf8293746e",
+        "executive": "288d3db61b19477dbc3d497a1a1a0e8b",
+        "minimal": "373a07a89b29494192ddc722f1f51255",
+        "desktop": "2021a3a3de3340b2a453be0ee6744aa9"
+      },
+      "representativeScreenId": "373a07a89b29494192ddc722f1f51255"
     },
     {
       "slot": "04",
       "title": "Feedback & Overlays",
-      "screenId": "946f33c6c90646f7b900bbcd124409ef",
-      "path": "docs/pattern-library/feedback/04-feedback-overlays"
+      "path": "docs/pattern-library/feedback/04-feedback-overlays",
+      "canonicalScreens": {
+        "calm": "7364e1ca876d48fba2307a04f78f58e0",
+        "executive": "946f33c6c90646f7b900bbcd124409ef",
+        "minimal": "c4d2bebfaa6b4956a1386b9e356c8099",
+        "desktop": "5c8db29f0ef04ef59da6ea55071aedfd"
+      },
+      "representativeScreenId": "946f33c6c90646f7b900bbcd124409ef"
     },
     {
       "slot": "05",
       "title": "Planner Patterns",
-      "screenId": "69d9263d31944d7093b9be93638077df",
-      "path": "docs/pattern-library/planner-patterns/05-planner-patterns"
+      "path": "docs/pattern-library/planner-patterns/05-planner-patterns",
+      "canonicalScreens": {
+        "calm": "5c8a7262369b4490957b954cd28440cb",
+        "executive": "69d9263d31944d7093b9be93638077df",
+        "minimal": "95d04f044d4a4b41b58e67e21f0cc0e1",
+        "desktop": "1a98ac2e5ee94df0991b1bac1d732f53"
+      },
+      "representativeScreenId": "69d9263d31944d7093b9be93638077df"
     }
   ]
 }

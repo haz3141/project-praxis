@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-03-03T21:02:39.014Z",
+    "generated_at": "2026-03-04T06:22:15.701Z",
     "pattern_count": 6
   },
   "patterns": [
@@ -55,6 +55,7 @@
       ],
       "acceptance_checks": [
         "slot-mapped-in-stitch-catalog",
+        "cross-variant-canonical-present",
         "schema-valid",
         "token-backed-spacing"
       ],
@@ -66,6 +67,30 @@
       ],
       "stitch_slots": [
         "00"
+      ],
+      "representative_screen_id": "34fb5fdfa8494d3685bd23362908d75b",
+      "representative_project_id": "7285948406539466076",
+      "canonical_screens": [
+        {
+          "project_id": "13394915692903823935",
+          "project_title": "Praxis UI Kit — Calm",
+          "screen_id": "0338568b02b14115a4d6b12fe34e747c"
+        },
+        {
+          "project_id": "5764765102702214376",
+          "project_title": "Praxis UI Kit — Executive",
+          "screen_id": "f03a6af95eba45ffaf671f51d77a9ad7"
+        },
+        {
+          "project_id": "7285948406539466076",
+          "project_title": "Praxis UI Kit — Minimal",
+          "screen_id": "34fb5fdfa8494d3685bd23362908d75b"
+        },
+        {
+          "project_id": "5252820721296843802",
+          "project_title": "Praxis UI Kit — Desktop",
+          "screen_id": "bc77c466f60d428ab6b7022386947c07"
+        }
       ]
     },
     {
@@ -119,6 +144,7 @@
       ],
       "acceptance_checks": [
         "slot-mapped-in-stitch-catalog",
+        "cross-variant-canonical-present",
         "schema-valid",
         "token-backed-spacing"
       ],
@@ -130,6 +156,30 @@
       ],
       "stitch_slots": [
         "01"
+      ],
+      "representative_screen_id": "855a7a33095843068f53652fb6bdd46e",
+      "representative_project_id": "5764765102702214376",
+      "canonical_screens": [
+        {
+          "project_id": "13394915692903823935",
+          "project_title": "Praxis UI Kit — Calm",
+          "screen_id": "032445c8f0144422b0c431dda094eb3f"
+        },
+        {
+          "project_id": "5764765102702214376",
+          "project_title": "Praxis UI Kit — Executive",
+          "screen_id": "855a7a33095843068f53652fb6bdd46e"
+        },
+        {
+          "project_id": "7285948406539466076",
+          "project_title": "Praxis UI Kit — Minimal",
+          "screen_id": "7bbd054d3650440eb2d2a091c9a93657"
+        },
+        {
+          "project_id": "5252820721296843802",
+          "project_title": "Praxis UI Kit — Desktop",
+          "screen_id": "6309cf97d8094e2e94276234990d5f74"
+        }
       ]
     },
     {
@@ -183,6 +233,7 @@
       ],
       "acceptance_checks": [
         "slot-mapped-in-stitch-catalog",
+        "cross-variant-canonical-present",
         "schema-valid",
         "token-backed-spacing"
       ],
@@ -194,6 +245,30 @@
       ],
       "stitch_slots": [
         "02"
+      ],
+      "representative_screen_id": "a59a4c5ba9b94d929ec9b051fc60ff7f",
+      "representative_project_id": "5764765102702214376",
+      "canonical_screens": [
+        {
+          "project_id": "13394915692903823935",
+          "project_title": "Praxis UI Kit — Calm",
+          "screen_id": "858301e669134412a377ff9fc9f76412"
+        },
+        {
+          "project_id": "5764765102702214376",
+          "project_title": "Praxis UI Kit — Executive",
+          "screen_id": "a59a4c5ba9b94d929ec9b051fc60ff7f"
+        },
+        {
+          "project_id": "7285948406539466076",
+          "project_title": "Praxis UI Kit — Minimal",
+          "screen_id": "d253ad4149f14cd3bc7bee5ea8a42be3"
+        },
+        {
+          "project_id": "5252820721296843802",
+          "project_title": "Praxis UI Kit — Desktop",
+          "screen_id": "a6fbdab7d7834177830f5213a9392b58"
+        }
       ]
     },
     {
@@ -247,6 +322,7 @@
       ],
       "acceptance_checks": [
         "slot-mapped-in-stitch-catalog",
+        "cross-variant-canonical-present",
         "schema-valid",
         "token-backed-spacing"
       ],
@@ -258,6 +334,30 @@
       ],
       "stitch_slots": [
         "03"
+      ],
+      "representative_screen_id": "373a07a89b29494192ddc722f1f51255",
+      "representative_project_id": "7285948406539466076",
+      "canonical_screens": [
+        {
+          "project_id": "13394915692903823935",
+          "project_title": "Praxis UI Kit — Calm",
+          "screen_id": "24398b59b0de480ea20ddaaf8293746e"
+        },
+        {
+          "project_id": "5764765102702214376",
+          "project_title": "Praxis UI Kit — Executive",
+          "screen_id": "288d3db61b19477dbc3d497a1a1a0e8b"
+        },
+        {
+          "project_id": "7285948406539466076",
+          "project_title": "Praxis UI Kit — Minimal",
+          "screen_id": "373a07a89b29494192ddc722f1f51255"
+        },
+        {
+          "project_id": "5252820721296843802",
+          "project_title": "Praxis UI Kit — Desktop",
+          "screen_id": "2021a3a3de3340b2a453be0ee6744aa9"
+        }
       ]
     },
     {
@@ -311,6 +411,7 @@
       ],
       "acceptance_checks": [
         "slot-mapped-in-stitch-catalog",
+        "cross-variant-canonical-present",
         "schema-valid",
         "token-backed-spacing"
       ],
@@ -322,6 +423,30 @@
       ],
       "stitch_slots": [
         "04"
+      ],
+      "representative_screen_id": "946f33c6c90646f7b900bbcd124409ef",
+      "representative_project_id": "5764765102702214376",
+      "canonical_screens": [
+        {
+          "project_id": "13394915692903823935",
+          "project_title": "Praxis UI Kit — Calm",
+          "screen_id": "7364e1ca876d48fba2307a04f78f58e0"
+        },
+        {
+          "project_id": "5764765102702214376",
+          "project_title": "Praxis UI Kit — Executive",
+          "screen_id": "946f33c6c90646f7b900bbcd124409ef"
+        },
+        {
+          "project_id": "7285948406539466076",
+          "project_title": "Praxis UI Kit — Minimal",
+          "screen_id": "c4d2bebfaa6b4956a1386b9e356c8099"
+        },
+        {
+          "project_id": "5252820721296843802",
+          "project_title": "Praxis UI Kit — Desktop",
+          "screen_id": "5c8db29f0ef04ef59da6ea55071aedfd"
+        }
       ]
     },
     {
@@ -375,6 +500,7 @@
       ],
       "acceptance_checks": [
         "slot-mapped-in-stitch-catalog",
+        "cross-variant-canonical-present",
         "schema-valid",
         "token-backed-spacing"
       ],
@@ -386,6 +512,30 @@
       ],
       "stitch_slots": [
         "05"
+      ],
+      "representative_screen_id": "69d9263d31944d7093b9be93638077df",
+      "representative_project_id": "5764765102702214376",
+      "canonical_screens": [
+        {
+          "project_id": "13394915692903823935",
+          "project_title": "Praxis UI Kit — Calm",
+          "screen_id": "5c8a7262369b4490957b954cd28440cb"
+        },
+        {
+          "project_id": "5764765102702214376",
+          "project_title": "Praxis UI Kit — Executive",
+          "screen_id": "69d9263d31944d7093b9be93638077df"
+        },
+        {
+          "project_id": "7285948406539466076",
+          "project_title": "Praxis UI Kit — Minimal",
+          "screen_id": "95d04f044d4a4b41b58e67e21f0cc0e1"
+        },
+        {
+          "project_id": "5252820721296843802",
+          "project_title": "Praxis UI Kit — Desktop",
+          "screen_id": "1a98ac2e5ee94df0991b1bac1d732f53"
+        }
       ]
     }
   ]

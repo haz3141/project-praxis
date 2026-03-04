@@ -615,19 +615,20 @@
   min-height: 100vh;
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr) 320px;
-  background: var(--ds-color-bg-canvas);
+  background: var(--ds-color-planner-surface, var(--ds-color-bg-canvas));
+  color: var(--ds-color-planner-text, var(--ds-color-fg-default));
 }
 
 .ds-app-shell-sidebar,
 .ds-app-shell-utility {
-  border-inline-end: 1px solid var(--ds-color-border-default);
-  background: var(--ds-color-bg-surface);
+  border-inline-end: 1px solid var(--ds-color-planner-border, var(--ds-color-border-default));
+  background: var(--ds-color-planner-surface-elevated, var(--ds-color-bg-surface));
   padding: var(--ds-space-lg);
 }
 
 .ds-app-shell-utility {
   border-inline-end: 0;
-  border-inline-start: 1px solid var(--ds-color-border-default);
+  border-inline-start: 1px solid var(--ds-color-planner-border, var(--ds-color-border-default));
 }
 
 .ds-app-shell-main-wrap {
@@ -638,9 +639,9 @@
 }
 
 .ds-app-shell-topbar {
-  border: 1px solid var(--ds-color-border-default);
+  border: 1px solid var(--ds-color-planner-border, var(--ds-color-border-default));
   border-radius: var(--ds-radius-md);
-  background: var(--ds-color-bg-elevated);
+  background: var(--ds-color-planner-surface-elevated, var(--ds-color-bg-elevated));
   padding: var(--ds-space-md);
 }
 
@@ -655,9 +656,9 @@
 }
 
 .ds-template-week {
-  border: 1px solid var(--ds-color-border-default);
+  border: 1px solid var(--ds-color-planner-border, var(--ds-color-border-default));
   border-radius: var(--ds-radius-md);
-  background: var(--ds-color-bg-elevated);
+  background: var(--ds-color-planner-surface-elevated, var(--ds-color-bg-elevated));
   padding: var(--ds-space-md);
 }
 
@@ -717,6 +718,89 @@
 .ds-status-dot--warning {
   background: var(--ds-color-bg-warning);
   border-color: var(--ds-color-bg-warning);
+}
+
+/* ------------------------------------------------------------------ */
+/* Liquid Neon variant (bold showcase, planner-safe text hierarchy)   */
+/* ------------------------------------------------------------------ */
+[data-theme="liquid-neon"] {
+  color-scheme: dark;
+  background:
+    radial-gradient(circle at 12% 8%, color-mix(in srgb, var(--ds-color-neon-cyan) 26%, transparent) 0%, transparent 38%),
+    radial-gradient(circle at 86% 10%, color-mix(in srgb, var(--ds-color-neon-magenta) 22%, transparent) 0%, transparent 42%),
+    var(--ds-gradient-metal-elevated);
+}
+
+[data-theme="liquid-neon"] .ds-overlay,
+[data-theme="liquid-neon"] .ds-drawer-backdrop {
+  backdrop-filter: blur(var(--ds-effect-blur-overlay));
+}
+
+[data-theme="liquid-neon"] .ds-card,
+[data-theme="liquid-neon"] .ds-dialog,
+[data-theme="liquid-neon"] .ds-drawer,
+[data-theme="liquid-neon"] .ds-toast,
+[data-theme="liquid-neon"] .ds-surface,
+[data-theme="liquid-neon"] .ds-template-week,
+[data-theme="liquid-neon"] .ds-app-shell-topbar {
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--ds-color-glass-highlight) 42%, transparent) 0%,
+      transparent 46%
+    ),
+    var(--ds-color-glass-surface-elevated);
+  border-color: var(--ds-color-glass-stroke);
+  box-shadow: var(--ds-shadow-elevated);
+  backdrop-filter: blur(var(--ds-effect-blur-surface));
+}
+
+[data-theme="liquid-neon"] .ds-button--primary {
+  background: var(--ds-gradient-neon-primary);
+  border-color: color-mix(in srgb, var(--ds-color-neon-cyan) 70%, var(--ds-color-glass-stroke));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--ds-color-neon-cyan) 48%, transparent),
+    0 16px 32px color-mix(in srgb, var(--ds-color-neon-magenta) 28%, transparent);
+}
+
+[data-theme="liquid-neon"] .ds-button--primary:hover:not(:disabled),
+[data-theme="liquid-neon"] .ds-button.ds-button--state-hover.ds-button--primary {
+  background: var(--ds-gradient-neon-accent);
+}
+
+[data-theme="liquid-neon"] .ds-button--secondary,
+[data-theme="liquid-neon"] .ds-button--ghost,
+[data-theme="liquid-neon"] .ds-input,
+[data-theme="liquid-neon"] .ds-select-control,
+[data-theme="liquid-neon"] .ds-list-row,
+[data-theme="liquid-neon"] .ds-task-row,
+[data-theme="liquid-neon"] .ds-priority-card,
+[data-theme="liquid-neon"] .ds-empty-state,
+[data-theme="liquid-neon"] .ds-app-shell-sidebar,
+[data-theme="liquid-neon"] .ds-app-shell-utility {
+  background: var(--ds-color-glass-surface);
+  border-color: var(--ds-color-glass-stroke);
+  color: var(--ds-color-planner-text);
+}
+
+[data-theme="liquid-neon"] .ds-caption,
+[data-theme="liquid-neon"] .ds-hint,
+[data-theme="liquid-neon"] .ds-list-row-subtitle,
+[data-theme="liquid-neon"] .ds-dialog-description,
+[data-theme="liquid-neon"] .ds-drawer-description,
+[data-theme="liquid-neon"] .ds-card-description,
+[data-theme="liquid-neon"] .ds-switch-description {
+  color: var(--ds-color-planner-text-muted);
+}
+
+[data-theme="liquid-neon"] .ds-task-row:focus-within,
+[data-theme="liquid-neon"] .ds-task-row.ds-task-row--state-focus-visible,
+[data-theme="liquid-neon"] .ds-button:focus-visible,
+[data-theme="liquid-neon"] .ds-input:focus-visible,
+[data-theme="liquid-neon"] .ds-select-control:focus-visible,
+[data-theme="liquid-neon"] .ds-checkbox-input:focus-visible {
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--ds-color-neon-cyan) 62%, transparent);
+  outline: 2px solid var(--ds-color-border-focus);
+  outline-offset: 2px;
 }
 
 .ds-status-dot--error {

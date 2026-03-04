@@ -182,35 +182,52 @@ function buildComponents() {
 
 function buildPatterns() {
   const registry = readJson("docs/pattern-library/registry.json");
+  const stitchInventory = readJson("docs/design-system/registry/data/stitch-inventory.json");
+  const canonicalBySlot = new Map(
+    (stitchInventory.canonical_slots || []).map((slot) => [slot.slot_code, slot])
+  );
 
-  return registry.patterns.map((pattern) => ({
-    id: `pattern-${pattern.slot}`,
-    name: pattern.title,
-    purpose: `Canonical Stitch slot ${pattern.slot} mapped into Praxis pattern library.`,
-    composition_graph: {
-      nodes: [
-        { id: `atom-${pattern.slot}`, tier: "atom" },
-        { id: `molecule-${pattern.slot}`, tier: "molecule" },
-        { id: `organism-${pattern.slot}`, tier: "organism" },
-        { id: `template-${pattern.slot}`, tier: "template" },
-        { id: `page-${pattern.slot}`, tier: "page" }
+  return registry.patterns.map((pattern) => {
+    const slotCanonical = canonicalBySlot.get(pattern.slot);
+    return {
+      id: `pattern-${pattern.slot}`,
+      name: pattern.title,
+      purpose: `Canonical Stitch slot ${pattern.slot} mapped into Praxis pattern library.`,
+      composition_graph: {
+        nodes: [
+          { id: `atom-${pattern.slot}`, tier: "atom" },
+          { id: `molecule-${pattern.slot}`, tier: "molecule" },
+          { id: `organism-${pattern.slot}`, tier: "organism" },
+          { id: `template-${pattern.slot}`, tier: "template" },
+          { id: `page-${pattern.slot}`, tier: "page" }
+        ],
+        edges: [
+          { from: `atom-${pattern.slot}`, to: `molecule-${pattern.slot}` },
+          { from: `molecule-${pattern.slot}`, to: `organism-${pattern.slot}` },
+          { from: `organism-${pattern.slot}`, to: `template-${pattern.slot}` },
+          { from: `template-${pattern.slot}`, to: `page-${pattern.slot}` }
+        ]
+      },
+      route_mapping: [pattern.path],
+      acceptance_checks: [
+        "slot-mapped-in-stitch-catalog",
+        "cross-variant-canonical-present",
+        "schema-valid",
+        "token-backed-spacing"
       ],
-      edges: [
-        { from: `atom-${pattern.slot}`, to: `molecule-${pattern.slot}` },
-        { from: `molecule-${pattern.slot}`, to: `organism-${pattern.slot}` },
-        { from: `organism-${pattern.slot}`, to: `template-${pattern.slot}` },
-        { from: `template-${pattern.slot}`, to: `page-${pattern.slot}` }
-      ]
-    },
-    route_mapping: [pattern.path],
-    acceptance_checks: [
-      "slot-mapped-in-stitch-catalog",
-      "schema-valid",
-      "token-backed-spacing"
-    ],
-    source_components: ["button", "input", "card", "navigation"],
-    stitch_slots: [pattern.slot]
-  }));
+      source_components: ["button", "input", "card", "navigation"],
+      stitch_slots: [pattern.slot],
+      representative_screen_id:
+        pattern.representativeScreenId || slotCanonical?.representative_screen_id || "",
+      representative_project_id: slotCanonical?.representative_project_id || "",
+      canonical_screens:
+        (slotCanonical?.canonical_screens || []).map((screen) => ({
+          project_id: screen.project_id,
+          project_title: screen.project_title,
+          screen_id: screen.screen_id
+        })) || []
+    };
+  });
 }
 
 function buildProvenance() {
