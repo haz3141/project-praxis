@@ -60,6 +60,7 @@ export default function SettingsPage() {
             label="Theme"
             value={preferences.theme}
             options={THEME_OPTIONS}
+            disabled={!isReady}
             onChange={(event) => {
               setPreferences((current) => ({
                 ...current,
@@ -73,6 +74,7 @@ export default function SettingsPage() {
             label="Density"
             value={preferences.density}
             options={DENSITY_OPTIONS}
+            disabled={!isReady}
             onChange={(event) => {
               setPreferences((current) => ({
                 ...current,
@@ -93,6 +95,7 @@ export default function SettingsPage() {
           label="Reduce motion"
           description="Applies reduced-motion preference to planner UI data attributes."
           checked={preferences.reducedMotion}
+          disabled={!isReady}
           onChange={(event) => {
             setPreferences((current) => ({
               ...current,
