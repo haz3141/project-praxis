@@ -37,6 +37,10 @@ a {
   text-decoration: none;
 }
 
+:where(button, .nav-link, .bottom-link, .palette-item) {
+  min-height: var(--ds-size-target-min);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

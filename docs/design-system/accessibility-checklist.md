@@ -3,7 +3,7 @@
 ## Foundation
 - [x] Meets WCAG 2.2 AA contrast for text and controls.
 - [x] Visible focus indicator on all interactive elements.
-- [ ] Hit area target is at least ~44x44 CSS px for primary touch actions.
+- [x] Hit area target is at least ~44x44 CSS px for primary touch actions.
 - [x] Supports keyboard-only navigation for all P0 flows.
 
 ## Semantics
@@ -21,7 +21,7 @@
 ## Motion and Theming
 - [x] Honors `prefers-reduced-motion`.
 - [x] Light, dark, and liquid-neon themes preserve readability and state clarity.
-- [ ] Comfortable and compact density both preserve target size rules.
+- [x] Comfortable and compact density both preserve target size rules.
 
 ## QA Pass
 - [x] Keyboard walkthrough done for Button/Input/Checkbox/Select.
@@ -33,3 +33,4 @@
 - `pnpm test:e2e:axe` passes for planner `/inbox` and `/today`.
 - `pnpm test:e2e:keyboard` passes for planner `/inbox` and `/today`.
 - `pnpm lint:ds:contrast` enforces contrast checks across light/dark/liquid-neon + comfortable/compact.
+- Primary interactive controls use `--ds-size-target-min` for minimum hit area.
