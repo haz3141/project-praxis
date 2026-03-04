@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-03T20:56:40.566Z",
+  "generated_at": "2026-03-04T06:22:15.679Z",
   "sources": [
     {
       "id": "component-gallery-components",
@@ -16,7 +16,7 @@
     {
       "id": "stitch-catalog",
       "source_url": "https://project-praxis.local/docs/design-system/stitch/screens-catalog.csv",
-      "fetched_at": "2026-03-03T20:56:39.803Z",
+      "fetched_at": "2026-03-04T06:22:14.674Z",
       "extractor_version": "pnpm-run-stitch-catalog"
     }
   ]
