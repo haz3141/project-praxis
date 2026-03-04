@@ -146,6 +146,7 @@ Plus complete **Blocks** like:
 
 ### Theme-Level Customization
 Modify CSS variables in `globals.css`:
+
 ```css
 :root {
   --primary: 221.2 83.2% 53.3%;
@@ -156,6 +157,7 @@ Modify CSS variables in `globals.css`:
 
 ### Component-Level Customization
 Components use `class-variance-authority` for variants:
+
 ```typescript
 const buttonVariants = cva(
   "base-classes",
@@ -170,6 +172,7 @@ const buttonVariants = cva(
 
 ### Composition
 Create higher-level components:
+
 ```typescript
 // Compose existing components
 export function FeatureCard({ title, description, icon }) {
@@ -212,6 +215,7 @@ This skill leverages shadcn MCP server capabilities:
 
 ### "Module not found" errors
 Check your `tsconfig.json` includes path aliases:
+
 ```json
 {
   "compilerOptions": {

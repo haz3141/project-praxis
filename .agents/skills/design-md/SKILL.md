@@ -20,7 +20,7 @@ This skill helps you create `DESIGN.md` files that serve as the "source of truth
 
 - Access to the Stitch MCP Server
 - A Stitch project with at least one designed screen
-- Access to the Stitch Effective Prompting Guide: https://stitch.withgoogle.com/docs/learn/prompting/
+- Access to the Stitch Effective Prompting Guide: <https://stitch.withgoogle.com/docs/learn/prompting/>
 
 ## The Goal
 
@@ -42,7 +42,7 @@ To analyze a Stitch project, you must retrieve screen metadata and design assets
    - Review screen titles to identify the target screen (e.g., "Home", "Landing Page")
    - Extract the Screen ID from the screen's `name` field
 
-4. **Metadata fetch**: 
+4. **Metadata fetch**:
    - Call `[prefix]:get_screen` with both `projectId` and `screenId` (both as numeric IDs only)
    - This returns the complete screen object including:
      - `screenshot.downloadUrl` - Visual reference of the design
@@ -121,17 +121,20 @@ Explain how the UI handles layers. Describe the presence and quality of shadows 
 To use this skill for the Furniture Collection project:
 
 1. **Retrieve project information:**
-   ```
+
+   ```text
    Use the Stitch MCP Server to get the Furniture Collection project
    ```
 
 2. **Get the Home page screen details:**
-   ```
+
+   ```text
    Retrieve the Home page screen's code, image, and screen object information
    ```
 
 3. **Reference best practices:**
-   ```
+
+   ```text
    Review the Stitch Effective Prompting Guide at:
    https://stitch.withgoogle.com/docs/learn/prompting/
    ```

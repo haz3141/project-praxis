@@ -31,7 +31,7 @@ Read my next-prompt.md and generate the page using Stitch, then prepare the next
 
 ## Skill Structure
 
-```
+```text
 stitch-loop/
 ├── SKILL.md              — Core pattern instructions
 ├── README.md             — This file

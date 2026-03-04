@@ -99,7 +99,7 @@ The overall mood is **airy yet grounded**, creating an aspirational aesthetic th
 - **Max Content Width:** 1440px for optimal readability and visual balance on large displays
 - **Grid System:** Responsive 12-column grid with fluid gutters (24px mobile, 32px desktop)
 - **Product Grid:** 4 columns on large desktop, 3 on desktop, 2 on tablet, 1 on mobile
-- **Breakpoints:** 
+- **Breakpoints:**
   - Mobile: <768px
   - Tablet: 768-1024px  
   - Desktop: 1024-1440px

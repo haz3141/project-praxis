@@ -54,7 +54,7 @@ It ensures your UI adapts correctly to layout direction without manual refactori
 
 ## From Material-UI (MUI)
 
-### Component Mapping
+### Chakra Component Mapping
 
 | MUI Component | shadcn/ui Equivalent | Notes |
 |---------------|----------------------|-------|
@@ -73,9 +73,10 @@ It ensures your UI adapts correctly to layout direction without manual refactori
 | Snackbar | Toast | Different implementation |
 | Autocomplete | Combobox | Use with Command |
 
-### Key Differences
+### Chakra Key Differences
 
 **1. Import Structure**
+
 ```tsx
 // MUI
 import Button from '@mui/material/Button'
@@ -85,6 +86,7 @@ import { Button } from '@/components/ui/button'
 ```
 
 **2. Form Components**
+
 ```tsx
 // MUI
 <TextField
@@ -125,6 +127,7 @@ import { Button } from '@/components/ui/button'
 ```
 
 **3. Theming**
+
 ```tsx
 // MUI
 import { ThemeProvider, createTheme } from '@mui/material/styles'
@@ -147,6 +150,7 @@ const theme = createTheme({
 ```
 
 **4. Styling Approach**
+
 ```tsx
 // MUI (sx prop)
 <Button sx={{ px: 4, py: 2, borderRadius: 2 }}>
@@ -162,6 +166,7 @@ const theme = createTheme({
 ### Migration Example: Login Form
 
 **Before (MUI)**:
+
 ```tsx
 import { TextField, Button, Box } from '@mui/material'
 
@@ -179,6 +184,7 @@ export function LoginForm() {
 ```
 
 **After (shadcn/ui)**:
+
 ```tsx
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -203,7 +209,7 @@ export function LoginForm() {
 
 ## From Chakra UI
 
-### Component Mapping
+### Ant Design Component Mapping
 
 | Chakra UI | shadcn/ui | Notes |
 |-----------|-----------|-------|
@@ -220,9 +226,10 @@ export function LoginForm() {
 | useToast | useToast | Different API |
 | Menu | Dropdown Menu | Similar |
 
-### Key Differences
+### Ant Design Key Differences
 
 **1. Layout Components**
+
 ```tsx
 // Chakra UI
 <Stack spacing={4} direction="column">
@@ -238,6 +245,7 @@ export function LoginForm() {
 ```
 
 **2. Responsive Styles**
+
 ```tsx
 // Chakra UI
 <Box display={{ base: 'block', md: 'flex' }} />
@@ -247,6 +255,7 @@ export function LoginForm() {
 ```
 
 **3. Color Mode**
+
 ```tsx
 // Chakra UI
 import { useColorMode } from '@chakra-ui/react'
@@ -261,7 +270,7 @@ const { theme, setTheme } = useTheme()
 
 ## From Ant Design
 
-### Component Mapping
+### Bootstrap Component Mapping
 
 | Ant Design | shadcn/ui | Notes |
 |------------|-----------|-------|
@@ -277,9 +286,10 @@ const { theme, setTheme } = useTheme()
 | message | Toast | Different API |
 | notification | Toast | Similar concept |
 
-### Key Differences
+### Bootstrap Key Differences
 
 **1. Form Handling**
+
 ```tsx
 // Ant Design
 <Form
@@ -315,6 +325,7 @@ const { theme, setTheme } = useTheme()
 ```
 
 **2. Notifications**
+
 ```tsx
 // Ant Design
 import { message } from 'antd'
@@ -351,6 +362,7 @@ toast({
 ### Key Differences
 
 **1. Class-Based vs Component-Based**
+
 ```tsx
 // Bootstrap
 <button className="btn btn-primary btn-lg">
@@ -364,6 +376,7 @@ toast({
 ```
 
 **2. Cards**
+
 ```html
 <!-- Bootstrap -->
 <div class="card">

@@ -71,13 +71,16 @@ Run `list_tools` to identify available MCP servers and their prefixes:
    - If exists, use the existing project structure
 
 2. **Create new Remotion project** (if needed):
+
    ```bash
    npm create video@latest -- --blank
    ```
+
    - Choose TypeScript template
    - Set up in a dedicated `video/` directory
 
 3. **Install dependencies**:
+
    ```bash
    cd video
    npm install @remotion/transitions @remotion/animated-emoji
@@ -109,11 +112,13 @@ Create a modular Remotion composition with these components:
 Use Remotion's `@remotion/transitions` for professional effects:
 
 - **Fade**: Smooth cross-fade between screens
+
   ```tsx
   import {fade} from '@remotion/transitions/fade';
   ```
 
 - **Slide**: Directional slide transitions
+
   ```tsx
   import {slide} from '@remotion/transitions/slide';
   ```
@@ -195,9 +200,11 @@ Create the video components following Remotion best practices:
 ### Step 3: Preview and Refine
 
 1. **Start Remotion Studio**:
+
    ```bash
    npm run dev
    ```
+
    - Opens browser-based preview
    - Allows real-time editing and refinement
 
@@ -214,6 +221,7 @@ Create the video components following Remotion best practices:
 ### Step 4: Render Video
 
 1. **Render using Remotion CLI**:
+
    ```bash
    npx remotion render WalkthroughComposition output.mp4
    ```
@@ -278,7 +286,7 @@ Extract text from Stitch HTML code for automatic annotations:
 
 ## File Structure
 
-```
+```text
 project/
 ├── video/                      # Remotion project directory
 │   ├── src/
@@ -303,7 +311,7 @@ project/
 
 Remotion maintains its own Agent Skills that define best practices. Review these for advanced techniques:
 
-- **Repository**: https://github.com/remotion-dev/remotion/tree/main/packages/skills
+- **Repository**: <https://github.com/remotion-dev/remotion/tree/main/packages/skills>
 - **Installation**: `npx skills add remotion-dev/skills`
 
 Key Remotion skills to leverage:
@@ -360,7 +368,8 @@ Show step-by-step user journey:
 ## Example Usage
 
 **User prompt:**
-```
+
+```text
 Look up the screens in my Stitch project "Calculator App" and build a remotion video 
 that shows a walkthrough of the screens.
 ```
@@ -386,8 +395,8 @@ that shows a walkthrough of the screens.
 
 ## References
 
-- **Stitch Documentation**: https://stitch.withgoogle.com/docs/
-- **Remotion Documentation**: https://www.remotion.dev/docs/
-- **Remotion Skills**: https://www.remotion.dev/docs/ai/skills
-- **Remotion MCP**: https://www.remotion.dev/docs/ai/mcp
-- **Remotion Transitions**: https://www.remotion.dev/docs/transitions
+- **Stitch Documentation**: <https://stitch.withgoogle.com/docs/>
+- **Remotion Documentation**: <https://www.remotion.dev/docs/>
+- **Remotion Skills**: <https://www.remotion.dev/docs/ai/skills>
+- **Remotion MCP**: <https://www.remotion.dev/docs/ai/mcp>
+- **Remotion Transitions**: <https://www.remotion.dev/docs/transitions>

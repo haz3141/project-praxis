@@ -83,7 +83,7 @@ Before generating, read these files:
 Use the Stitch MCP tools to generate the page:
 
 1. **Discover namespace**: Run `list_tools` to find the Stitch MCP prefix
-2. **Get or create project**: 
+2. **Get or create project**:
    - If `stitch.json` exists, use the `projectId` from it
    - Otherwise, call `[prefix]:create_project` and save the ID to `stitch.json`
 3. **Generate screen**: Call `[prefix]:generate_screen_from_text` with:
@@ -127,7 +127,7 @@ Modify `SITE.md`:
 
 **You MUST update `next-prompt.md` before completing.** This keeps the loop alive.
 
-1. **Decide the next page**: 
+1. **Decide the next page**:
    - Check `SITE.md` Section 5 (Roadmap) for pending items
    - If empty, pick from Section 6 (Creative Freedom)
    - Or invent something new that fits the site vision
@@ -150,7 +150,7 @@ A competitive achievements page showing developer badges and milestones.
 
 ## File Structure Reference
 
-```
+```text
 project/
 ├── next-prompt.md      # The baton — current task
 ├── stitch.json         # Stitch project ID (persist this!)

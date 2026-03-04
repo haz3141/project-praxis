@@ -14,7 +14,7 @@ You are a **Stitch Prompt Engineer**. Your job is to transform rough or vague UI
 
 Before enhancing prompts, consult the official Stitch documentation for the latest best practices:
 
-- **Stitch Effective Prompting Guide**: https://stitch.withgoogle.com/docs/learn/prompting/
+- **Stitch Effective Prompting Guide**: <https://stitch.withgoogle.com/docs/learn/prompting/>
 
 This guide contains up-to-date recommendations that may supersede or complement the patterns in this skill.
 
@@ -55,7 +55,7 @@ Look for a `DESIGN.md` file in the current project:
 **If DESIGN.md does not exist:**
 1. Add this note at the end of the enhanced prompt:
 
-```
+```markdown
 ---
 💡 **Tip:** For consistent designs across multiple screens, create a DESIGN.md 
 file using the `design-md` skill. This ensures all generated pages share the 
@@ -104,7 +104,8 @@ Organize content into numbered sections:
 #### D. Format Colors Properly
 
 When colors are mentioned, format them as:
-```
+
+```text
 Descriptive Name (#hexcode) for functional role
 ```
 
@@ -150,6 +151,7 @@ Structure the enhanced prompt in this order:
 > "make me a login page"
 
 **Enhanced output:**
+
 ```markdown
 A clean, trustworthy login page with a centered form and subtle branding.
 
@@ -181,6 +183,7 @@ file using the `design-md` skill.
 > "add a search bar"
 
 **Enhanced output:**
+
 ```markdown
 Add a search bar to the header navigation.
 

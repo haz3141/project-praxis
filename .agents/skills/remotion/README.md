@@ -50,7 +50,7 @@ npx skills add google-labs-code/stitch-skills --skill remotion --global
 
 When using this skill, the agent will create:
 
-```
+```text
 project/
 ├── video/                      # Remotion project
 │   ├── src/

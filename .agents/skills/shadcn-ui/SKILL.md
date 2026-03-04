@@ -36,6 +36,7 @@ Use the shadcn MCP tools to explore the component catalog and Registry Directory
 There are two approaches to adding components:
 
 **A. Direct Installation (Recommended)**
+
 ```bash
 npx shadcn@latest add [component-name]
 ```
@@ -97,7 +98,8 @@ shadcn/ui components require:
 ## Component Architecture
 
 ### File Structure
-```
+
+```text
 src/
 ├── components/
 │   ├── ui/              # shadcn components
@@ -236,6 +238,7 @@ When customizing, maintain accessibility:
 ## Common Patterns
 
 ### Form Building
+
 ```typescript
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -246,6 +249,7 @@ import { useForm } from "react-hook-form"
 ```
 
 ### Dialog/Modal Patterns
+
 ```typescript
 import {
   Dialog,
@@ -258,6 +262,7 @@ import {
 ```
 
 ### Data Display
+
 ```typescript
 import {
   Table,
@@ -274,6 +279,7 @@ import {
 ### Import Errors
 - Check `components.json` for correct alias configuration
 - Verify `tsconfig.json` includes the `@` path alias:
+
   ```json
   {
     "compilerOptions": {

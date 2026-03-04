@@ -136,6 +136,7 @@ You can now choose between **Radix UI** and **Base UI** as the underlying primit
 The init command creates/updates several files:
 
 **components.json** (root of project):
+
 ```json
 {
   "$schema": "https://ui.shadcn.com/schema.json",
@@ -156,6 +157,7 @@ The init command creates/updates several files:
 ```
 
 **src/lib/utils.ts**:
+
 ```typescript
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
@@ -166,6 +168,7 @@ export function cn(...inputs: ClassValue[]) {
 ```
 
 **Updated tailwind.config.js**:
+
 ```javascript
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -223,6 +226,7 @@ module.exports = {
 ```
 
 **Updated globals.css** (or equivalent):
+
 ```css
 @tailwind base;
 @tailwind components;
@@ -343,7 +347,8 @@ Components will be added to `src/components/ui/` by default.
 ## Verification Steps
 
 1. **Check file structure**:
-   ```
+
+   ```text
    src/
    ├── components/
    │   └── ui/
@@ -353,6 +358,7 @@ Components will be added to `src/components/ui/` by default.
    ```
 
 2. **Test a simple component**:
+
    ```tsx
    import { Button } from "@/components/ui/button"
    
@@ -366,6 +372,7 @@ Components will be added to `src/components/ui/` by default.
    - Check browser dev tools for applied classes
 
 4. **Test dark mode** (if using CSS variables):
+
    ```tsx
    <html className="dark">
    ```
@@ -378,7 +385,7 @@ Components will be added to `src/components/ui/` by default.
 
 ### Styles not applying
 
-**Solution**: 
+**Solution**:
 - Ensure `globals.css` is imported in your app entry point
 - Verify Tailwind config `content` paths include your files
 - Check CSS variables are defined in `globals.css`

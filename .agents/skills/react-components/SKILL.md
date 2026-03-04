@@ -22,15 +22,15 @@ You are a frontend engineer focused on transforming designs into clean React cod
 4. **Visual audit**: Check `screenshot.downloadUrl` to confirm the design intent and layout details.
 
 ## Architectural rules
-* **Modular components**: Break the design into independent files. Avoid large, single-file outputs.
-* **Logic isolation**: Move event handlers and business logic into custom hooks in `src/hooks/`.
-* **Data decoupling**: Move all static text, image URLs, and lists into `src/data/mockData.ts`.
-* **Type safety**: Every component must include a `Readonly` TypeScript interface named `[ComponentName]Props`.
-* **Project specific**: Focus on the target project's needs and constraints. Leave Google license headers out of the generated React components.
-* **Style mapping**:
-    * Extract the `tailwind.config` from the HTML `<head>`.
-    * Sync these values with `resources/style-guide.json`.
-    * Use theme-mapped Tailwind classes instead of arbitrary hex codes.
+- **Modular components**: Break the design into independent files. Avoid large, single-file outputs.
+- **Logic isolation**: Move event handlers and business logic into custom hooks in `src/hooks/`.
+- **Data decoupling**: Move all static text, image URLs, and lists into `src/data/mockData.ts`.
+- **Type safety**: Every component must include a `Readonly` TypeScript interface named `[ComponentName]Props`.
+- **Project specific**: Focus on the target project's needs and constraints. Leave Google license headers out of the generated React components.
+- **Style mapping**:
+    - Extract the `tailwind.config` from the HTML `<head>`.
+    - Sync these values with `resources/style-guide.json`.
+    - Use theme-mapped Tailwind classes instead of arbitrary hex codes.
 
 ## Execution steps
 1. **Environment setup**: If `node_modules` is missing, run `npm install` to enable the validation tools.
@@ -38,10 +38,10 @@ You are a frontend engineer focused on transforming designs into clean React cod
 3. **Component drafting**: Use `resources/component-template.tsx` as a base. Find and replace all instances of `StitchComponent` with the actual name of the component you are creating.
 4. **Application wiring**: Update the project entry point (like `App.tsx`) to render the new components.
 5. **Quality check**:
-    * Run `npm run validate <file_path>` for each component.
-    * Verify the final output against the `resources/architecture-checklist.md`.
-    * Start the dev server with `npm run dev` to verify the live result.
+    - Run `npm run validate <file_path>` for each component.
+    - Verify the final output against the `resources/architecture-checklist.md`.
+    - Start the dev server with `npm run dev` to verify the live result.
 
 ## Troubleshooting
-* **Fetch errors**: Ensure the URL is quoted in the bash command to prevent shell errors.
-* **Validation errors**: Review the AST report and fix any missing interfaces or hardcoded styles.
+- **Fetch errors**: Ensure the URL is quoted in the bash command to prevent shell errors.
+- **Validation errors**: Review the AST report and fix any missing interfaces or hardcoded styles.

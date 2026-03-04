@@ -2,6 +2,7 @@ globs:
   - "**/*.md"
 ignores:
   - "node_modules/**"
+  - "**/node_modules/**"
   - "_import_from_drive/**"
 config:
   MD003:
