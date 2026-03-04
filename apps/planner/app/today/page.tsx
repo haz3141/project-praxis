@@ -1,6 +1,14 @@
 "use client";
 
 import { useMemo } from "react";
+import {
+  AtomicButton,
+  Card,
+  EmptyState,
+  PriorityCard,
+  TaskRow,
+  TodayTemplate
+} from "@praxis/ui";
 import { CoreLoopRail } from "@/components/core-loop-rail";
 import { usePlannerStore } from "@/lib/planner-store";
 
@@ -11,42 +19,58 @@ export default function TodayPage() {
   const doneCount = useMemo(() => data.tasks.filter((task) => task.status === "done").length, [data.tasks]);
 
   return (
-    <div className="card-grid">
-      <section className="card">
-        <p className="eyebrow">Commit + Complete</p>
-        <h3>Today stack</h3>
-        <p className="muted">Work the committed list. Completing here closes the active execution phase.</p>
+    <TodayTemplate
+      priorities={
+        <PriorityCard
+          title="Today stack"
+          description="Work the committed list. Completing here closes the active execution phase."
+          meta={<span>{todayTasks.length} active</span>}
+          actions={
+            <span className="muted">
+              {doneCount} completed overall
+            </span>
+          }
+        />
+      }
+      weekStrip={
+        <Card as="section" title="Execution snapshot" description="Current completion pace for this session.">
+          <p className="muted">
+            {todayTasks.length} active today · {doneCount} completed overall
+          </p>
+        </Card>
+      }
+      taskList={
+        <Card as="section" title="Committed tasks" description="Complete committed items to close the loop.">
+          <div className="list">
+            {todayTasks.map((task) => (
+              <TaskRow
+                key={task.id}
+                title={<strong>{task.title}</strong>}
+                description={task.notes || "No notes"}
+                trailing={
+                  <AtomicButton
+                    type="button"
+                    variant="primary"
+                    density="compact"
+                    data-testid="task-complete"
+                    onClick={() => completeTask(task.id)}
+                  >
+                    Complete
+                  </AtomicButton>
+                }
+              />
+            ))}
 
-        <div className="row" style={{ marginTop: "0.8rem" }}>
-          <div>
-            <strong>{todayTasks.length} active today</strong>
-            <small>{doneCount} completed overall</small>
+            {todayTasks.length === 0 ? (
+              <EmptyState
+                title="No committed tasks yet"
+                description="Pull items from Inbox to begin execution."
+              />
+            ) : null}
           </div>
-        </div>
-
-        <div className="list">
-          {todayTasks.map((task) => (
-            <article className="row" key={task.id}>
-              <div>
-                <strong>{task.title}</strong>
-                <small>{task.notes || "No notes"}</small>
-              </div>
-              <div className="row-actions">
-                <button
-                  type="button"
-                  className="primary-btn"
-                  data-testid="task-complete"
-                  onClick={() => completeTask(task.id)}
-                >
-                  Complete
-                </button>
-              </div>
-            </article>
-          ))}
-          {todayTasks.length === 0 ? <p className="muted">No committed tasks yet. Pull items from Inbox.</p> : null}
-        </div>
-      </section>
-      <CoreLoopRail activeStage="complete" />
-    </div>
+        </Card>
+      }
+      overlays={<CoreLoopRail activeStage="complete" />}
+    />
   );
 }
