@@ -5,16 +5,12 @@ test("planner smoke: settings persist + capture -> today -> complete -> review",
   const taskText = `ci-smoke-${Date.now()}`;
 
   await openRoute(page, "/settings", ["Settings"]);
-  await page.evaluate(() => {
-    window.localStorage.setItem(
-      "praxis-ui-preferences-v1",
-      JSON.stringify({
-        theme: "dark",
-        density: "compact",
-        reducedMotion: false
-      })
-    );
-  });
+  await expect(page.locator("#settings-theme")).toBeEnabled();
+  await expect(page.locator("#settings-density")).toBeEnabled();
+  await page.locator("#settings-theme").selectOption("dark");
+  await page.locator("#settings-density").selectOption("compact");
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+  await expect(page.locator("html")).toHaveAttribute("data-density", "compact");
   await page.reload({ waitUntil: "domcontentloaded" });
 
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
