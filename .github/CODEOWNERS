@@ -1,0 +1,15 @@
+# Canonical ownership map for workflow, governance, and app boundaries.
+* @hazael
+
+# Workflow and governance policy.
+/.github/ @hazael
+/governance/ @hazael
+/docs/constitution/ @hazael
+/docs/adrs/ @hazael
+/docs/decision/ @hazael
+/scripts/ci/ @hazael
+
+# Surface ownership.
+/apps/planner/ @hazael
+/apps/site/ @hazael
+/packages/ @hazael
