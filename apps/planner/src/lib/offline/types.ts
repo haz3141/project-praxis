@@ -2,6 +2,7 @@ export const ENTITY_TABLES = [
   "tasks",
   "habits",
   "goals",
+  "projects",
   "notes",
   "studio_canvas_layout",
 ] as const;
@@ -40,4 +41,3 @@ export interface SyncEventInsertInput {
   payload: MutationPayload;
   client_timestamp: string;
 }
-

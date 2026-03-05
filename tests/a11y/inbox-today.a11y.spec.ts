@@ -4,7 +4,8 @@ import { openRoute } from "../helpers/navigation";
 
 const routes: Array<{ path: string; labels: string[] }> = [
   { path: "/inbox", labels: ["Inbox"] },
-  { path: "/today", labels: ["Today"] }
+  { path: "/today", labels: ["Today"] },
+  { path: "/settings", labels: ["Settings"] }
 ];
 
 async function readActiveElement(page: Page) {

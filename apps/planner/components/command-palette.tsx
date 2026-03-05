@@ -15,20 +15,53 @@ export function CommandPalette({ isOpen, onOpenChange }: CommandPaletteProps) {
   const [query, setQuery] = useState("");
 
   useEffect(() => {
+    let pendingGo = false;
+
+    const routeByKey = (key: string): string | null => {
+      if (key === "i") return "/inbox";
+      if (key === "t") return "/today";
+      if (key === "w") return "/week";
+      if (key === "h") return "/habits";
+      if (key === "g") return "/goals";
+      if (key === "r") return "/review";
+      if (key === "s") return "/settings";
+      return null;
+    };
+
     const onKeyDown = (event: KeyboardEvent): void => {
       const isPaletteShortcut = (event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k";
       if (isPaletteShortcut) {
         event.preventDefault();
         onOpenChange(!isOpen);
+        pendingGo = false;
+        return;
       }
+
+      if (event.key.toLowerCase() === "g") {
+        pendingGo = true;
+        return;
+      }
+
+      if (pendingGo) {
+        const route = routeByKey(event.key.toLowerCase());
+        pendingGo = false;
+        if (route) {
+          event.preventDefault();
+          onOpenChange(false);
+          router.push(route);
+          return;
+        }
+      }
+
       if (event.key === "Escape") {
+        pendingGo = false;
         onOpenChange(false);
       }
     };
 
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [isOpen, onOpenChange]);
+  }, [isOpen, onOpenChange, router]);
 
   const filteredItems = useMemo(() => {
     const normalized = query.trim().toLowerCase();

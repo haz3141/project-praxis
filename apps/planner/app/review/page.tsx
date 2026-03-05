@@ -9,6 +9,7 @@ export default function ReviewPage() {
   const [note, setNote] = useState("");
 
   const completedTasks = useMemo(() => data.tasks.filter((task) => task.status === "done"), [data.tasks]);
+  const reviewNotes = useMemo(() => data.notes.filter((entry) => entry.kind === "review"), [data.notes]);
 
   const onSubmit = (event: FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
@@ -58,11 +59,11 @@ export default function ReviewPage() {
             </article>
           ))}
 
-          {data.reviews.map((review) => (
-            <article className="row" key={review.id}>
+          {reviewNotes.map((reviewNote) => (
+            <article className="row" key={reviewNote.id}>
               <div>
-                <strong>{new Date(review.createdAt).toLocaleString()}</strong>
-                <small>{review.body}</small>
+                <strong>{new Date(reviewNote.createdAt).toLocaleString()}</strong>
+                <small>{reviewNote.body}</small>
               </div>
             </article>
           ))}

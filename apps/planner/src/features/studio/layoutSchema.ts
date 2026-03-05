@@ -1,4 +1,4 @@
-export const STUDIO_ENTITY_TYPES = ["task", "habit", "goal", "note"] as const;
+export const STUDIO_ENTITY_TYPES = ["task", "habit", "goal", "project", "note"] as const;
 export type StudioEntityType = (typeof STUDIO_ENTITY_TYPES)[number];
 
 export interface StudioPointerMeta extends Record<string, unknown> {

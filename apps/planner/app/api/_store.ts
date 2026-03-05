@@ -1,4 +1,5 @@
 type TaskStatus = "inbox" | "today" | "done";
+type ProjectStatus = "active" | "paused" | "done";
 
 type Task = {
   id: string;
@@ -25,16 +26,27 @@ type Habit = {
   doneToday: boolean;
 };
 
-type Review = {
+type Project = {
+  id: string;
+  title: string;
+  status: ProjectStatus;
+  createdAt: string;
+};
+
+type Note = {
   id: string;
   body: string;
+  kind: "review" | "general";
   createdAt: string;
+  taskId?: string | null;
+  goalId?: string | null;
+  projectId?: string | null;
 };
 
 type StudioLayoutPointer = {
   id: string;
   canvasId: string;
-  entityType: "task" | "habit" | "goal" | "note";
+  entityType: "task" | "habit" | "goal" | "project" | "note";
   entityId: string;
   x: number;
   y: number;
@@ -50,7 +62,8 @@ type MemoryDb = {
   tasks: Task[];
   goals: Goal[];
   habits: Habit[];
-  reviews: Review[];
+  projects: Project[];
+  notes: Note[];
   studioLayouts: Record<string, StudioLayoutPointer[]>;
   replayKeys: Set<string>;
 };
@@ -71,7 +84,15 @@ const createDb = (): MemoryDb => ({
     { id: "f55f8180-d4a8-44bb-9483-e4eb8be7f83a", name: "10 minute planning reset", cadence: "Daily", streak: 5, doneToday: false },
     { id: "63413c80-63cf-4939-8b8e-fb4131ab7307", name: "Evening shutdown review", cadence: "Weekdays", streak: 3, doneToday: false }
   ],
-  reviews: [],
+  projects: [
+    {
+      id: "6de5f86c-a95f-4ea1-9f60-ec1fd1f8f2a8",
+      title: "Planner MVP stabilization",
+      status: "active",
+      createdAt: nowIso()
+    }
+  ],
+  notes: [],
   studioLayouts: {},
   replayKeys: new Set<string>()
 });
@@ -122,14 +143,15 @@ export function completeTask(taskId: string): Task | null {
   return found;
 }
 
-export function addReview(body: string): Review {
-  const review: Review = {
+export function addReview(body: string): Note {
+  const note: Note = {
     id: crypto.randomUUID(),
     body,
+    kind: "review",
     createdAt: nowIso()
   };
-  memoryDb.reviews.unshift(review);
-  return review;
+  memoryDb.notes.unshift(note);
+  return note;
 }
 
 export function listGoals(): Goal[] {
@@ -140,8 +162,16 @@ export function listHabits(): Habit[] {
   return memoryDb.habits;
 }
 
-export function listReviews(): Review[] {
-  return memoryDb.reviews;
+export function listProjects(): Project[] {
+  return memoryDb.projects;
+}
+
+export function listReviews(): Note[] {
+  return memoryDb.notes.filter((note) => note.kind === "review");
+}
+
+export function listNotes(): Note[] {
+  return memoryDb.notes;
 }
 
 export function isDuplicateReplayKey(key: string): boolean {

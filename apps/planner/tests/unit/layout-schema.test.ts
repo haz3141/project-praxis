@@ -23,6 +23,23 @@ describe("studio pointer-only layout schema", () => {
     expect(normalizePointerLayoutItem(item)).toMatchObject(item);
   });
 
+  it("accepts project pointer entity type", () => {
+    const projectPointer = {
+      canvasId: "default",
+      entityType: "project" as const,
+      entityId: "3be691a6-e4b8-4810-b8c4-2924f3c37abc",
+      x: 8,
+      y: 12,
+      width: 220,
+      height: 120,
+      zIndex: 2,
+      collapsed: true
+    };
+
+    expect(() => assertPointerOnlyLayoutItem(projectPointer)).not.toThrow();
+    expect(normalizePointerLayoutItem(projectPointer).entityType).toBe("project");
+  });
+
   it("rejects content payload keys", () => {
     const item = {
       canvasId: "default",
