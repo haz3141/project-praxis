@@ -10,11 +10,11 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "test:unit": "vitest run",
-    "test:e2e": "playwright test tests/e2e/smoke.capture-today-complete-review.spec.ts",
-    "test:e2e:smoke": "playwright test tests/e2e/smoke.capture-today-complete-review.spec.ts",
-    "test:a11y": "playwright test tests/a11y/inbox-today.a11y.spec.ts",
-    "test:e2e:axe": "playwright test tests/a11y/inbox-today.a11y.spec.ts",
-    "test:e2e:keyboard": "playwright test tests/a11y/inbox-today.a11y.spec.ts --grep \"keyboard focus\""
+    "test:e2e": "CI_WEB_SERVER_COMMAND='pnpm --filter @praxis/design-tokens build && pnpm --dir apps/planner exec next dev --hostname 127.0.0.1 --port 4173' playwright test --config ../../playwright.config.ts e2e/smoke.capture-today-complete-review.spec.ts",
+    "test:e2e:smoke": "pnpm test:e2e",
+    "test:a11y": "CI_WEB_SERVER_COMMAND='pnpm --filter @praxis/design-tokens build && pnpm --dir apps/planner exec next dev --hostname 127.0.0.1 --port 4173' playwright test --config ../../playwright.config.ts a11y/inbox-today.a11y.spec.ts",
+    "test:e2e:axe": "CI_WEB_SERVER_COMMAND='pnpm --filter @praxis/design-tokens build && pnpm --dir apps/planner exec next dev --hostname 127.0.0.1 --port 4173' playwright test --config ../../playwright.config.ts a11y/inbox-today.a11y.spec.ts --grep \"axe scan\"",
+    "test:e2e:keyboard": "CI_WEB_SERVER_COMMAND='pnpm --filter @praxis/design-tokens build && pnpm --dir apps/planner exec next dev --hostname 127.0.0.1 --port 4173' playwright test --config ../../playwright.config.ts a11y/inbox-today.a11y.spec.ts --grep \"keyboard focus\""
   },
   "dependencies": {
     "@praxis/design-tokens": "workspace:*",

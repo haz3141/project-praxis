@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { AppShell } from "@/components/app-shell";
+import { UiPreferencesHydrator } from "@/components/ui-preferences-hydrator";
 import "@/app/globals.css";
 import "@praxis/design-tokens/dist/tokens.css";
 import "@praxis/ui/src/styles.css";
@@ -13,8 +14,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="liquid-neon" data-density="comfortable">
       <body>
+        <UiPreferencesHydrator />
         <ServiceWorkerRegistration />
         <AppShell>{children}</AppShell>
       </body>

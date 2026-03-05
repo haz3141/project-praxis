@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "generated_at": "2026-03-03T20:56:34.419Z",
+    "generated_at": "2026-03-03T21:03:07.623Z",
     "source_url": "https://component.gallery/components/",
     "extractor_version": "v1",
-    "checksum": "8ea9f31a4c8f2005e8acc7dc4579da880183e447d3753a8f100fcb3b4dfb0eb5"
+    "checksum": "61cd9090dbfe4f6ccbd8d72ef94aabd566f88e176b61608bc2abb197e21c45a9"
   },
   "components": [
     {
@@ -13,7 +13,7 @@
       "url": "https://component.gallery/components/accordion",
       "example_count": 101,
       "description": "An accordion is a vertical stack of interactive headings used to toggle the display of further information; each item can be 'collapsed' with just a short label visible or 'expanded' to show the full content.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-alert",
@@ -22,7 +22,7 @@
       "url": "https://component.gallery/components/alert",
       "example_count": 108,
       "description": "A way of informing the user of important changes in a prominent way.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-avatar",
@@ -31,7 +31,7 @@
       "url": "https://component.gallery/components/avatar",
       "example_count": 37,
       "description": "A graphical representation of a user: usually a photo, illustration, or initial.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-badge",
@@ -40,7 +40,7 @@
       "url": "https://component.gallery/components/badge",
       "example_count": 122,
       "description": "A small label, generally appearing inside or in close proximity to another larger interface component, representing a status, property, or some other metadata.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-breadcrumbs",
@@ -49,7 +49,7 @@
       "url": "https://component.gallery/components/breadcrumbs",
       "example_count": 55,
       "description": "A list of links showing the location of the current page in the navigational hierarchy.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-button",
@@ -58,7 +58,7 @@
       "url": "https://component.gallery/components/button",
       "example_count": 118,
       "description": "Buttons trigger an action such as submitting a form or showing/hiding an interface component.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-button-group",
@@ -67,7 +67,7 @@
       "url": "https://component.gallery/components/button-group",
       "example_count": 36,
       "description": "A wrapper for multiple, related buttons.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-card",
@@ -76,7 +76,7 @@
       "url": "https://component.gallery/components/card",
       "example_count": 79,
       "description": "A container for content representing a single entity. e.g. a contact, article, or task.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-carousel",
@@ -85,7 +85,7 @@
       "url": "https://component.gallery/components/carousel",
       "example_count": 22,
       "description": "A means of displaying multiple slides of content, one or more at a time. Navigation between slides can be controlled via swiping, scrolling, or buttons.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-checkbox",
@@ -94,7 +94,7 @@
       "url": "https://component.gallery/components/checkbox",
       "example_count": 84,
       "description": "",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-color-picker",
@@ -103,7 +103,7 @@
       "url": "https://component.gallery/components/color-picker",
       "example_count": 16,
       "description": "An input for choosing a color.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-combobox",
@@ -112,7 +112,7 @@
       "url": "https://component.gallery/components/combobox",
       "example_count": 37,
       "description": "An input that behaves similarly to a select, with the addition of a free text input to filter options.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-date-input",
@@ -121,7 +121,7 @@
       "url": "https://component.gallery/components/date-input",
       "example_count": 17,
       "description": "A means of inputting a date – often separated into multiple individual fields for day/month/year.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-datepicker",
@@ -130,7 +130,7 @@
       "url": "https://component.gallery/components/datepicker",
       "example_count": 43,
       "description": "A visual way to choose a date using a calendar view.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-drawer",
@@ -139,7 +139,7 @@
       "url": "https://component.gallery/components/drawer",
       "example_count": 38,
       "description": "A panel which slides out from the edge of the screen.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-dropdown-menu",
@@ -148,7 +148,7 @@
       "url": "https://component.gallery/components/dropdown-menu",
       "example_count": 48,
       "description": "A menu in which options are hidden by default but can be shown by interacting with a button; it differs from a select in that it shows actions or navigation options and is not a form input.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-empty-state",
@@ -157,7 +157,7 @@
       "url": "https://component.gallery/components/empty-state",
       "example_count": 16,
       "description": "An indication to the user that there is no data to display in the current view; it often includes an alternative action (e.g. try a different search term).",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-fieldset",
@@ -166,7 +166,7 @@
       "url": "https://component.gallery/components/fieldset",
       "example_count": 31,
       "description": "A wrapper for related form fields.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-file",
@@ -175,7 +175,7 @@
       "url": "https://component.gallery/components/file",
       "example_count": 6,
       "description": "A representation of a file such as an uploaded attachment or a downloadable PDF.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-file-upload",
@@ -184,7 +184,7 @@
       "url": "https://component.gallery/components/file-upload",
       "example_count": 32,
       "description": "An input which allows users to upload a file from their device.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-footer",
@@ -193,7 +193,7 @@
       "url": "https://component.gallery/components/footer",
       "example_count": 19,
       "description": "Commonly appearing at the bottom of a page or section, a footer is used to display copyright and legal information or links to related content.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-form",
@@ -202,7 +202,7 @@
       "url": "https://component.gallery/components/form",
       "example_count": 22,
       "description": "A grouping of input controls that allow a user to submit information to a server.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-header",
@@ -211,7 +211,7 @@
       "url": "https://component.gallery/components/header",
       "example_count": 41,
       "description": "An element that appears across the top of all pages on a website or application; it usually contains the site name and main navigation.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-heading",
@@ -220,7 +220,7 @@
       "url": "https://component.gallery/components/heading",
       "example_count": 28,
       "description": "A title or caption used to introduce a new section.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-hero",
@@ -229,7 +229,7 @@
       "url": "https://component.gallery/components/hero",
       "example_count": 9,
       "description": "A large banner, usually appearing as one of the first items on a page; it often contains a full-width image.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-icon",
@@ -238,7 +238,7 @@
       "url": "https://component.gallery/components/icon",
       "example_count": 45,
       "description": "An icon is a graphic symbol designed to visually indicate the purpose of an interface element.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-image",
@@ -247,7 +247,7 @@
       "url": "https://component.gallery/components/image",
       "example_count": 27,
       "description": "An element for embedding images.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-label",
@@ -256,7 +256,7 @@
       "url": "https://component.gallery/components/label",
       "example_count": 15,
       "description": "A text label for form inputs.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-link",
@@ -265,7 +265,7 @@
       "url": "https://component.gallery/components/link",
       "example_count": 64,
       "description": "A link is a reference to a resource. This can be external (e.g. a different web page) or internal (e.g. a specific element in the current document).",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-list",
@@ -274,7 +274,7 @@
       "url": "https://component.gallery/components/list",
       "example_count": 69,
       "description": "",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-modal",
@@ -283,7 +283,7 @@
       "url": "https://component.gallery/components/modal",
       "example_count": 82,
       "description": "A modal is an interface element that appears over other content. It requires an interaction from the user before they can return to whatever is underneath.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-navigation",
@@ -292,7 +292,7 @@
       "url": "https://component.gallery/components/navigation",
       "example_count": 63,
       "description": "A container for navigation links; these can be to other pages (e.g. main site navigation) or to elements within the current page (e.g. a table of contents).",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-pagination",
@@ -301,7 +301,7 @@
       "url": "https://component.gallery/components/pagination",
       "example_count": 49,
       "description": "Pagination is the process of splitting information over multiple pages instead of showing it all on a single page; also the name for the interface component used for navigating between these pages.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-popover",
@@ -310,7 +310,7 @@
       "url": "https://component.gallery/components/popover",
       "example_count": 50,
       "description": "An element that pops up from another element over other content; it differs from a tooltip in that it is usually triggered via click instead of hover and can contain interactive elements.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-progress-bar",
@@ -319,7 +319,7 @@
       "url": "https://component.gallery/components/progress-bar",
       "example_count": 41,
       "description": "A horizontal bar indicating the current completion status of a long-running task, usually updated continuously as the task progresses, instead of in discrete steps.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-progress-indicator",
@@ -328,7 +328,7 @@
       "url": "https://component.gallery/components/progress-indicator",
       "example_count": 38,
       "description": "A representation of a user’s progress through a series of discrete steps.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-quote",
@@ -337,7 +337,7 @@
       "url": "https://component.gallery/components/quote",
       "example_count": 11,
       "description": "Quotes are used to display a quotation: either from a person or another outside source or to highlight a passage of the current document (a pull quote).",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-radio-button",
@@ -346,7 +346,7 @@
       "url": "https://component.gallery/components/radio-button",
       "example_count": 86,
       "description": "Radio buttons allow a user to select a single option from a list of predefined options.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-rating",
@@ -355,7 +355,7 @@
       "url": "https://component.gallery/components/rating",
       "example_count": 19,
       "description": "Ratings let users see and/or set a star rating for a product or other item.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-rich-text-editor",
@@ -364,7 +364,7 @@
       "url": "https://component.gallery/components/rich-text-editor",
       "example_count": 5,
       "description": "An interface for editing “rich text” content (i.e. with formatting), usually through a WYSIWYG interface.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-search-input",
@@ -373,7 +373,7 @@
       "url": "https://component.gallery/components/search-input",
       "example_count": 29,
       "description": "Search inputs allow users to find content by entering a search term.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-segmented-control",
@@ -382,7 +382,7 @@
       "url": "https://component.gallery/components/segmented-control",
       "example_count": 28,
       "description": "A hybrid somewhere between a button group, radio buttons, and tabs; segmented controls are used to switch between different options or views.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-select",
@@ -391,7 +391,7 @@
       "url": "https://component.gallery/components/select",
       "example_count": 82,
       "description": "A form input used for selecting a value: when collapsed it shows the currently selected option and when expanded, it shows a scrollable list of predefined options for the user to choose from.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-separator",
@@ -400,7 +400,7 @@
       "url": "https://component.gallery/components/separator",
       "example_count": 33,
       "description": "A separator between two elements, usually consisting of a horizontal line.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-skeleton",
@@ -409,7 +409,7 @@
       "url": "https://component.gallery/components/skeleton",
       "example_count": 35,
       "description": "A placeholder layout for content which hasn't yet loaded, usually built up of grey boxes.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-skip-link",
@@ -418,7 +418,7 @@
       "url": "https://component.gallery/components/skip-link",
       "example_count": 14,
       "description": "Links within a page for skipping to another section, primarily for users who navigate using a keyboard.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-slider",
@@ -427,7 +427,7 @@
       "url": "https://component.gallery/components/slider",
       "example_count": 39,
       "description": "A form control for choosing a value within a preset range of values.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-spinner",
@@ -436,7 +436,7 @@
       "url": "https://component.gallery/components/spinner",
       "example_count": 66,
       "description": "A visual indicator that a process is happening in the background but the interface is not yet ready for interaction.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-stack",
@@ -445,7 +445,7 @@
       "url": "https://component.gallery/components/stack",
       "example_count": 9,
       "description": "A wrapper component for adding a consistent margin between components.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-stepper",
@@ -454,7 +454,7 @@
       "url": "https://component.gallery/components/stepper",
       "example_count": 19,
       "description": "A control for editing a numeric value with buttons for decrementing / incrementing.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-table",
@@ -463,7 +463,7 @@
       "url": "https://component.gallery/components/table",
       "example_count": 74,
       "description": "A component for displaying large amounts of data in rows and columns; commonly referred to as a 'Data Table' when it includes sorting and/ or filtering functionality.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-tabs",
@@ -472,7 +472,7 @@
       "url": "https://component.gallery/components/tabs",
       "example_count": 81,
       "description": "Tabbed interfaces are a way of navigating between multiple panels, reducing clutter and fitting more into a smaller space.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-text-input",
@@ -481,7 +481,7 @@
       "url": "https://component.gallery/components/text-input",
       "example_count": 72,
       "description": "A form control that accepts a single line of text.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-textarea",
@@ -490,7 +490,7 @@
       "url": "https://component.gallery/components/textarea",
       "example_count": 51,
       "description": "A form control for editing multi-line text.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-toast",
@@ -499,7 +499,7 @@
       "url": "https://component.gallery/components/toast",
       "example_count": 42,
       "description": "A type of alert which appears in a layer above other content, visually similar to a mobile or desktop push notification.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-toggle",
@@ -508,7 +508,7 @@
       "url": "https://component.gallery/components/toggle",
       "example_count": 59,
       "description": "A control used to switch between two states: often on or off.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-tooltip",
@@ -517,7 +517,7 @@
       "url": "https://component.gallery/components/tooltip",
       "example_count": 74,
       "description": "A means of displaying a description or extra information about an element, usually on hover, but can also be on click or tap.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-tree-view",
@@ -526,7 +526,7 @@
       "url": "https://component.gallery/components/tree-view",
       "example_count": 14,
       "description": "A component for displaying nested hierarchical information, such as a table of contents or directory structure.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-video",
@@ -535,7 +535,7 @@
       "url": "https://component.gallery/components/video",
       "example_count": 15,
       "description": "Video players are used for displaying video content; they often include controls to control playback.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     },
     {
       "id": "cmp-visually-hidden",
@@ -544,7 +544,7 @@
       "url": "https://component.gallery/components/visually-hidden",
       "example_count": 11,
       "description": "Invisible text used to provide extra context for users of assistive technology.",
-      "fetched_at": "2026-03-03T20:56:34.419Z"
+      "fetched_at": "2026-03-03T21:03:07.623Z"
     }
   ]
 }

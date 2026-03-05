@@ -5,10 +5,11 @@ This directory contains the machine-readable registry scaffold used by agent wor
 ## Commands
 
 - `pnpm ds:sync:gallery`: crawl live Component Gallery components and design systems.
-- `pnpm ds:sync:stitch`: refresh Stitch catalog and inventory for the four Praxis UI Kit projects.
+- `pnpm ds:sync:stitch`: refresh Stitch catalog/inventory for the four core Praxis UI Kit projects, plus the separate Liquid Neon kit.
 - `pnpm ds:build:patterns`: build component definitions, crosswalk, pattern graph, and provenance.
 - `pnpm ds:validate`: validate generated artifacts against local JSON Schemas.
 - `pnpm ds:audit`: run the full sequence and emit audit/drift/backlog reports.
+- `bash scripts/ci/gate-design-system.sh`: strict sync gate (catalog, registry, token build, and drift check).
 
 ## Data Outputs
 

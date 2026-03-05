@@ -8,7 +8,7 @@
 ## Hierarchy
 - `primitives.*`: raw palette, spacing scale, radius scale, typography scale.
 - `semantic.*`: product-facing tokens consumed by components.
-- `modes/theme.*`: light/dark semantic overrides.
+- `modes/theme.*`: semantic overrides for `light`, `dark`, and `liquid-neon`.
 - `modes/density.*`: comfortable/compact spacing and sizing overrides.
 
 ## Naming Pattern
@@ -22,3 +22,6 @@
 - Prefer intent over literal values (`color.bg.surface` not `color.gray.50`).
 - Use references instead of duplicate raw values where possible.
 - Add mode overrides only where behavior diverges by theme/density.
+- Keep migration alias docs explicit:
+  - `calm` -> `light`
+  - `neon_holo` -> `liquid-neon`

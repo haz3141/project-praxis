@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-03T20:56:39.803Z",
+  "generated_at": "2026-03-04T06:22:14.674Z",
   "source_command": "pnpm run stitch:catalog",
   "projects": [
     {
@@ -7,7 +7,7 @@
       "project_title": "Praxis UI Kit — Calm",
       "total_screens": 23,
       "canonical_coverage": "6/6",
-      "duplicate_count": 21,
+      "duplicate_count": 16,
       "unmapped_count": 1,
       "slot_coverage": {
         "00": 7,
@@ -23,7 +23,7 @@
       "project_title": "Praxis UI Kit — Desktop",
       "total_screens": 10,
       "canonical_coverage": "6/6",
-      "duplicate_count": 7,
+      "duplicate_count": 4,
       "unmapped_count": 0,
       "slot_coverage": {
         "00": 3,
@@ -39,7 +39,7 @@
       "project_title": "Praxis UI Kit — Executive",
       "total_screens": 7,
       "canonical_coverage": "6/6",
-      "duplicate_count": 2,
+      "duplicate_count": 1,
       "unmapped_count": 0,
       "slot_coverage": {
         "00": 1,
@@ -51,11 +51,27 @@
       }
     },
     {
+      "project_id": "970655054511238677",
+      "project_title": "Praxis UI Kit — Liquid Neon",
+      "total_screens": 6,
+      "canonical_coverage": "6/6",
+      "duplicate_count": 0,
+      "unmapped_count": 0,
+      "slot_coverage": {
+        "00": 1,
+        "01": 1,
+        "02": 1,
+        "03": 1,
+        "04": 1,
+        "05": 1
+      }
+    },
+    {
       "project_id": "7285948406539466076",
       "project_title": "Praxis UI Kit — Minimal",
       "total_screens": 7,
       "canonical_coverage": "6/6",
-      "duplicate_count": 2,
+      "duplicate_count": 1,
       "unmapped_count": 0,
       "slot_coverage": {
         "00": 1,
@@ -67,8 +83,284 @@
       }
     }
   ],
+  "canonical_policy": {
+    "strategy": "cross-variant-slot-matrix",
+    "representative_rule": "median-height-by-slot-with-project-priority-tiebreak",
+    "project_priority": [
+      {
+        "project_id": "5764765102702214376",
+        "project_title": "Praxis UI Kit — Executive"
+      },
+      {
+        "project_id": "13394915692903823935",
+        "project_title": "Praxis UI Kit — Calm"
+      },
+      {
+        "project_id": "7285948406539466076",
+        "project_title": "Praxis UI Kit — Minimal"
+      },
+      {
+        "project_id": "5252820721296843802",
+        "project_title": "Praxis UI Kit — Desktop"
+      }
+    ]
+  },
+  "canonical_slots": [
+    {
+      "slot_code": "00",
+      "slot_label": "Foundations",
+      "canonical_screens": [
+        {
+          "project_id": "13394915692903823935",
+          "project_title": "Praxis UI Kit — Calm",
+          "screen_id": "0338568b02b14115a4d6b12fe34e747c",
+          "title": "00 — Foundations",
+          "width": 2560,
+          "height": 6366
+        },
+        {
+          "project_id": "5764765102702214376",
+          "project_title": "Praxis UI Kit — Executive",
+          "screen_id": "f03a6af95eba45ffaf671f51d77a9ad7",
+          "title": "00 — Foundations",
+          "width": 2560,
+          "height": 2048
+        },
+        {
+          "project_id": "7285948406539466076",
+          "project_title": "Praxis UI Kit — Minimal",
+          "screen_id": "34fb5fdfa8494d3685bd23362908d75b",
+          "title": "00 — Foundations UI Kit",
+          "width": 2560,
+          "height": 3836
+        },
+        {
+          "project_id": "5252820721296843802",
+          "project_title": "Praxis UI Kit — Desktop",
+          "screen_id": "bc77c466f60d428ab6b7022386947c07",
+          "title": "00 — Foundations",
+          "width": 2560,
+          "height": 6270
+        }
+      ],
+      "representative_screen_id": "34fb5fdfa8494d3685bd23362908d75b",
+      "representative_project_id": "7285948406539466076",
+      "representative_height": 3836,
+      "representative_selection": "median-height-by-slot-with-priority-tiebreak"
+    },
+    {
+      "slot_code": "01",
+      "slot_label": "Buttons & Inputs",
+      "canonical_screens": [
+        {
+          "project_id": "13394915692903823935",
+          "project_title": "Praxis UI Kit — Calm",
+          "screen_id": "032445c8f0144422b0c431dda094eb3f",
+          "title": "01 — Buttons & Inputs",
+          "width": 2560,
+          "height": 4580
+        },
+        {
+          "project_id": "5764765102702214376",
+          "project_title": "Praxis UI Kit — Executive",
+          "screen_id": "855a7a33095843068f53652fb6bdd46e",
+          "title": "01 — Buttons & Inputs",
+          "width": 2560,
+          "height": 3376
+        },
+        {
+          "project_id": "7285948406539466076",
+          "project_title": "Praxis UI Kit — Minimal",
+          "screen_id": "7bbd054d3650440eb2d2a091c9a93657",
+          "title": "01 — Buttons & Inputs UI Kit",
+          "width": 2560,
+          "height": 2642
+        },
+        {
+          "project_id": "5252820721296843802",
+          "project_title": "Praxis UI Kit — Desktop",
+          "screen_id": "6309cf97d8094e2e94276234990d5f74",
+          "title": "01 — Buttons & Inputs",
+          "width": 2560,
+          "height": 3952
+        }
+      ],
+      "representative_screen_id": "855a7a33095843068f53652fb6bdd46e",
+      "representative_project_id": "5764765102702214376",
+      "representative_height": 3376,
+      "representative_selection": "median-height-by-slot-with-priority-tiebreak"
+    },
+    {
+      "slot_code": "02",
+      "slot_label": "Navigation & Shell",
+      "canonical_screens": [
+        {
+          "project_id": "13394915692903823935",
+          "project_title": "Praxis UI Kit — Calm",
+          "screen_id": "858301e669134412a377ff9fc9f76412",
+          "title": "02 — Navigation & Shell",
+          "width": 2560,
+          "height": 2048
+        },
+        {
+          "project_id": "5764765102702214376",
+          "project_title": "Praxis UI Kit — Executive",
+          "screen_id": "a59a4c5ba9b94d929ec9b051fc60ff7f",
+          "title": "02 — Navigation & Shell",
+          "width": 2560,
+          "height": 2048
+        },
+        {
+          "project_id": "7285948406539466076",
+          "project_title": "Praxis UI Kit — Minimal",
+          "screen_id": "d253ad4149f14cd3bc7bee5ea8a42be3",
+          "title": "02 — Navigation & Shell UI Kit",
+          "width": 2560,
+          "height": 2694
+        },
+        {
+          "project_id": "5252820721296843802",
+          "project_title": "Praxis UI Kit — Desktop",
+          "screen_id": "a6fbdab7d7834177830f5213a9392b58",
+          "title": "02 — Navigation & Shell",
+          "width": 2560,
+          "height": 2048
+        }
+      ],
+      "representative_screen_id": "a59a4c5ba9b94d929ec9b051fc60ff7f",
+      "representative_project_id": "5764765102702214376",
+      "representative_height": 2048,
+      "representative_selection": "median-height-by-slot-with-priority-tiebreak"
+    },
+    {
+      "slot_code": "03",
+      "slot_label": "Data Display",
+      "canonical_screens": [
+        {
+          "project_id": "13394915692903823935",
+          "project_title": "Praxis UI Kit — Calm",
+          "screen_id": "24398b59b0de480ea20ddaaf8293746e",
+          "title": "03 — Data Display",
+          "width": 2560,
+          "height": 3578
+        },
+        {
+          "project_id": "5764765102702214376",
+          "project_title": "Praxis UI Kit — Executive",
+          "screen_id": "288d3db61b19477dbc3d497a1a1a0e8b",
+          "title": "03 — Data Display",
+          "width": 2560,
+          "height": 2048
+        },
+        {
+          "project_id": "7285948406539466076",
+          "project_title": "Praxis UI Kit — Minimal",
+          "screen_id": "373a07a89b29494192ddc722f1f51255",
+          "title": "03 — Data Display UI Kit",
+          "width": 2560,
+          "height": 2770
+        },
+        {
+          "project_id": "5252820721296843802",
+          "project_title": "Praxis UI Kit — Desktop",
+          "screen_id": "2021a3a3de3340b2a453be0ee6744aa9",
+          "title": "03 — Data Display",
+          "width": 2560,
+          "height": 3448
+        }
+      ],
+      "representative_screen_id": "373a07a89b29494192ddc722f1f51255",
+      "representative_project_id": "7285948406539466076",
+      "representative_height": 2770,
+      "representative_selection": "median-height-by-slot-with-priority-tiebreak"
+    },
+    {
+      "slot_code": "04",
+      "slot_label": "Feedback & Overlays",
+      "canonical_screens": [
+        {
+          "project_id": "13394915692903823935",
+          "project_title": "Praxis UI Kit — Calm",
+          "screen_id": "7364e1ca876d48fba2307a04f78f58e0",
+          "title": "04 — Feedback & Overlays",
+          "width": 2560,
+          "height": 4260
+        },
+        {
+          "project_id": "5764765102702214376",
+          "project_title": "Praxis UI Kit — Executive",
+          "screen_id": "946f33c6c90646f7b900bbcd124409ef",
+          "title": "04 — Feedback & Overlays",
+          "width": 2560,
+          "height": 3412
+        },
+        {
+          "project_id": "7285948406539466076",
+          "project_title": "Praxis UI Kit — Minimal",
+          "screen_id": "c4d2bebfaa6b4956a1386b9e356c8099",
+          "title": "04 — Feedback & Overlays UI Kit",
+          "width": 2560,
+          "height": 3358
+        },
+        {
+          "project_id": "5252820721296843802",
+          "project_title": "Praxis UI Kit — Desktop",
+          "screen_id": "5c8db29f0ef04ef59da6ea55071aedfd",
+          "title": "04 — Feedback & Overlays",
+          "width": 2560,
+          "height": 3300
+        }
+      ],
+      "representative_screen_id": "946f33c6c90646f7b900bbcd124409ef",
+      "representative_project_id": "5764765102702214376",
+      "representative_height": 3412,
+      "representative_selection": "median-height-by-slot-with-priority-tiebreak"
+    },
+    {
+      "slot_code": "05",
+      "slot_label": "Planner Patterns",
+      "canonical_screens": [
+        {
+          "project_id": "13394915692903823935",
+          "project_title": "Praxis UI Kit — Calm",
+          "screen_id": "5c8a7262369b4490957b954cd28440cb",
+          "title": "05 — Planner Patterns",
+          "width": 2560,
+          "height": 2048
+        },
+        {
+          "project_id": "5764765102702214376",
+          "project_title": "Praxis UI Kit — Executive",
+          "screen_id": "69d9263d31944d7093b9be93638077df",
+          "title": "05 — Planner Patterns",
+          "width": 2560,
+          "height": 2048
+        },
+        {
+          "project_id": "7285948406539466076",
+          "project_title": "Praxis UI Kit — Minimal",
+          "screen_id": "95d04f044d4a4b41b58e67e21f0cc0e1",
+          "title": "05 — Planner Patterns UI Kit",
+          "width": 2560,
+          "height": 2048
+        },
+        {
+          "project_id": "5252820721296843802",
+          "project_title": "Praxis UI Kit — Desktop",
+          "screen_id": "1a98ac2e5ee94df0991b1bac1d732f53",
+          "title": "05 — Planner Patterns",
+          "width": 2560,
+          "height": 4610
+        }
+      ],
+      "representative_screen_id": "69d9263d31944d7093b9be93638077df",
+      "representative_project_id": "5764765102702214376",
+      "representative_height": 2048,
+      "representative_selection": "median-height-by-slot-with-priority-tiebreak"
+    }
+  ],
   "totals": {
-    "project_count": 4,
-    "screen_count": 47
+    "project_count": 5,
+    "screen_count": 53
   }
 }

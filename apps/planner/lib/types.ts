@@ -27,9 +27,24 @@ export type Goal = {
   progress: number;
 };
 
-export type ReviewNote = {
+export type ProjectStatus = "active" | "paused" | "done";
+
+export type Project = {
+  id: string;
+  title: string;
+  status: ProjectStatus;
+  createdAt: string;
+};
+
+export type NoteKind = "review" | "general";
+
+export type Note = {
   id: string;
   body: string;
+  kind: NoteKind;
+  taskId?: string | null;
+  goalId?: string | null;
+  projectId?: string | null;
   createdAt: string;
 };
 
@@ -37,5 +52,6 @@ export type PlannerData = {
   tasks: Task[];
   habits: Habit[];
   goals: Goal[];
-  reviews: ReviewNote[];
+  projects: Project[];
+  notes: Note[];
 };

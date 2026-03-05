@@ -1,5 +1,12 @@
 # Praxis Design System — Full Stitch Package
 
+> Current canonical posture (2026-03-04): cross-variant canonical matrix across
+> Calm, Executive, Minimal, and Desktop Stitch projects; representative slot
+> screens selected by median height + deterministic project priority. The
+> `liquid-neon` direction is treated as a separate Stitch kit (not folded into
+> the core four canonical projects), with planner-safe
+> readability constraints.
+
 ## 1. DesignSystem Object
 
 ```json
