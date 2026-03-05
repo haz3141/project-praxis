@@ -11,5 +11,6 @@ export const navItems: NavItem[] = [
   { href: "/habits", label: "Habits", shortLabel: "Habits" },
   { href: "/goals", label: "Goals", shortLabel: "Goals" },
   { href: "/review", label: "Review", shortLabel: "Review" },
+  { href: "/settings", label: "Settings", shortLabel: "Prefs" },
   { href: "/studio", label: "Studio", shortLabel: "Studio" }
 ];

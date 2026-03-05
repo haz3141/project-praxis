@@ -6,7 +6,7 @@ import type { StudioLayoutPointerItem } from "@/src/features/studio/layoutSchema
 
 const CANVAS_ID = "default";
 
-type ObjectOption = { id: string; type: "task" | "goal" | "habit"; label: string };
+type ObjectOption = { id: string; type: "task" | "goal" | "habit" | "project"; label: string };
 
 export function StudioPointerPanel() {
   const { data } = usePlannerStore();
@@ -18,9 +18,10 @@ export function StudioPointerPanel() {
     return [
       ...data.tasks.map((task) => ({ id: task.id, type: "task" as const, label: `Task: ${task.title}` })),
       ...data.goals.map((goal) => ({ id: goal.id, type: "goal" as const, label: `Goal: ${goal.title}` })),
-      ...data.habits.map((habit) => ({ id: habit.id, type: "habit" as const, label: `Habit: ${habit.name}` }))
+      ...data.habits.map((habit) => ({ id: habit.id, type: "habit" as const, label: `Habit: ${habit.name}` })),
+      ...data.projects.map((project) => ({ id: project.id, type: "project" as const, label: `Project: ${project.title}` }))
     ];
-  }, [data.goals, data.habits, data.tasks]);
+  }, [data.goals, data.habits, data.projects, data.tasks]);
 
   useEffect(() => {
     const load = async (): Promise<void> => {
@@ -87,7 +88,7 @@ export function StudioPointerPanel() {
     <section className="card" style={{ marginTop: "0.9rem" }}>
       <p className="eyebrow">Pointer Layout</p>
       <h3>Link existing objects to Studio nodes</h3>
-      <p className="muted">Studio stores position metadata only. Canonical task/goal/habit content stays in planner objects.</p>
+      <p className="muted">Studio stores position metadata only. Canonical task/goal/habit/project content stays in planner objects.</p>
 
       <div className="row" style={{ alignItems: "center" }}>
         <label htmlFor="studio-object" style={{ margin: 0 }}>

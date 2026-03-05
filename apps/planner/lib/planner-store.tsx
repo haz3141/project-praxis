@@ -10,7 +10,7 @@ import {
   useRef,
   useState
 } from "react";
-import type { Goal, Habit, PlannerData, ReviewNote, Task } from "@/lib/types";
+import type { Goal, Habit, Note, PlannerData, Project, Task } from "@/lib/types";
 import {
   IndexedDbMutationQueue,
   buildReplayMutationInput,
@@ -86,7 +86,21 @@ const seedData: PlannerData = {
       progress: 4
     }
   ],
-  reviews: []
+  projects: [
+    {
+      id: "6de5f86c-a95f-4ea1-9f60-ec1fd1f8f2a8",
+      title: "Planner MVP stabilization",
+      status: "active",
+      createdAt: new Date().toISOString()
+    },
+    {
+      id: "cb688e17-5821-4fc9-a86d-0ef055b4fc16",
+      title: "Design system adoption",
+      status: "active",
+      createdAt: new Date().toISOString()
+    }
+  ],
+  notes: []
 };
 
 const restoreData = (): PlannerData | null => {
@@ -100,12 +114,25 @@ const restoreData = (): PlannerData | null => {
   }
 
   try {
-    const parsed = JSON.parse(serialized) as PlannerData;
+    const parsed = JSON.parse(serialized) as Partial<PlannerData> & {
+      reviews?: Array<{ id: string; body: string; createdAt: string }>;
+    };
+
+    const migratedReviewNotes: Note[] = Array.isArray(parsed.reviews)
+      ? parsed.reviews.map((review) => ({
+          id: review.id,
+          body: review.body,
+          kind: "review",
+          createdAt: review.createdAt
+        }))
+      : [];
+
     return {
       tasks: Array.isArray(parsed.tasks) ? parsed.tasks : seedData.tasks,
       habits: Array.isArray(parsed.habits) ? parsed.habits : seedData.habits,
       goals: Array.isArray(parsed.goals) ? parsed.goals : seedData.goals,
-      reviews: Array.isArray(parsed.reviews) ? parsed.reviews : seedData.reviews
+      projects: Array.isArray(parsed.projects) ? parsed.projects : seedData.projects,
+      notes: Array.isArray(parsed.notes) ? parsed.notes : migratedReviewNotes
     };
   } catch {
     return null;
@@ -119,6 +146,7 @@ type PlannerStore = {
   completeTask: (taskId: string) => void;
   toggleHabit: (habitId: string) => void;
   addGoalProgress: (goalId: string, amount: number) => void;
+  addProject: (title: string) => void;
   addReview: (body: string) => void;
   syncState: SyncIndicatorState;
   syncLabel: string;
@@ -179,7 +207,7 @@ export function PlannerStoreProvider({ children }: { children: ReactNode }) {
 
   const enqueueMutation = useCallback(
     async (
-      entityTable: "tasks" | "habits" | "goals" | "notes" | "studio_canvas_layout",
+      entityTable: "tasks" | "habits" | "goals" | "projects" | "notes" | "studio_canvas_layout",
       entityId: string,
       payload: Record<string, unknown>,
       operation: "upsert" | "delete" = "upsert"
@@ -261,7 +289,8 @@ export function PlannerStoreProvider({ children }: { children: ReactNode }) {
         tasks: mergeById(restored.tasks, previous.tasks),
         habits: mergeById(restored.habits, previous.habits),
         goals: mergeById(restored.goals, previous.goals),
-        reviews: mergeById(restored.reviews, previous.reviews)
+        projects: mergeById(restored.projects, previous.projects),
+        notes: mergeById(restored.notes, previous.notes)
       }));
     }
     hasLoadedRef.current = true;
@@ -393,6 +422,30 @@ export function PlannerStoreProvider({ children }: { children: ReactNode }) {
     [enqueueMutation]
   );
 
+  const addProject = useCallback(
+    (title: string) => {
+      const trimmedTitle = title.trim();
+      if (!trimmedTitle) {
+        return;
+      }
+
+      const project: Project = {
+        id: createId(),
+        title: trimmedTitle,
+        status: "active",
+        createdAt: new Date().toISOString()
+      };
+
+      setData((prev) => ({
+        ...prev,
+        projects: [project, ...prev.projects]
+      }));
+
+      void enqueueMutation("projects", project.id, { project });
+    },
+    [enqueueMutation]
+  );
+
   const addReview = useCallback(
     (body: string) => {
       const trimmedBody = body.trim();
@@ -400,17 +453,18 @@ export function PlannerStoreProvider({ children }: { children: ReactNode }) {
         return;
       }
 
-      const newReview: ReviewNote = {
+      const newNote: Note = {
         id: createId(),
         body: trimmedBody,
+        kind: "review",
         createdAt: new Date().toISOString()
       };
 
       setData((prev) => ({
         ...prev,
-        reviews: [newReview, ...prev.reviews]
+        notes: [newNote, ...prev.notes]
       }));
-      void enqueueMutation("notes", newReview.id, { review: newReview });
+      void enqueueMutation("notes", newNote.id, { note: newNote });
     },
     [enqueueMutation]
   );
@@ -425,6 +479,7 @@ export function PlannerStoreProvider({ children }: { children: ReactNode }) {
       completeTask,
       toggleHabit,
       addGoalProgress,
+      addProject,
       addReview,
       syncState,
       syncLabel,
@@ -432,6 +487,7 @@ export function PlannerStoreProvider({ children }: { children: ReactNode }) {
     }),
     [
       addGoalProgress,
+      addProject,
       addReview,
       captureTask,
       commitTask,

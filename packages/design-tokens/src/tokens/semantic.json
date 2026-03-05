@@ -23,12 +23,74 @@
       "warning": { "$type": "color", "$value": "{primitives.color.warning.600}" },
       "disabled": { "$type": "color", "$value": "{primitives.color.neutral.400}" }
     },
+    "glass": {
+      "surface": { "$type": "color", "$value": "rgba(248, 250, 252, 0.72)" },
+      "surfaceStrong": { "$type": "color", "$value": "rgba(255, 255, 255, 0.84)" },
+      "border": { "$type": "color", "$value": "rgba(148, 163, 184, 0.35)" },
+      "highlight": { "$type": "color", "$value": "rgba(255, 255, 255, 0.6)" }
+    },
+    "fx": {
+      "neonPrimary": { "$type": "color", "$value": "rgba(99, 102, 241, 0.28)" },
+      "neonSecondary": { "$type": "color", "$value": "rgba(16, 185, 129, 0.2)" }
+    },
     "border": {
       "default": { "$type": "color", "$value": "{primitives.color.neutral.200}" },
       "muted": { "$type": "color", "$value": "{primitives.color.neutral.100}" },
       "strong": { "$type": "color", "$value": "{primitives.color.neutral.300}" },
       "focus": { "$type": "color", "$value": "{primitives.color.accent.500}" },
       "danger": { "$type": "color", "$value": "{primitives.color.danger.500}" }
+    },
+    "planner": {
+      "surface": { "$type": "color", "$value": "{semantic.color.bg.surface}" },
+      "surfaceElevated": { "$type": "color", "$value": "{semantic.color.bg.elevated}" },
+      "text": { "$type": "color", "$value": "{semantic.color.fg.default}" },
+      "textMuted": { "$type": "color", "$value": "{semantic.color.fg.muted}" },
+      "border": { "$type": "color", "$value": "{semantic.color.border.default}" }
+    },
+    "glass": {
+      "surface": { "$type": "color", "$value": "rgba(255, 255, 255, 0.7)" },
+      "surfaceElevated": { "$type": "color", "$value": "rgba(255, 255, 255, 0.82)" },
+      "stroke": { "$type": "color", "$value": "rgba(255, 255, 255, 0.5)" },
+      "highlight": { "$type": "color", "$value": "rgba(255, 255, 255, 0.92)" }
+    },
+    "neon": {
+      "cyan": { "$type": "color", "$value": "#38bdf8" },
+      "blue": { "$type": "color", "$value": "#2563eb" },
+      "magenta": { "$type": "color", "$value": "#d946ef" },
+      "violet": { "$type": "color", "$value": "#8b5cf6" },
+      "lime": { "$type": "color", "$value": "#84cc16" }
+    }
+  },
+  "gradient": {
+    "metal": {
+      "base": {
+        "$type": "string",
+        "$value": "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 48%, #cbd5e1 100%)"
+      },
+      "elevated": {
+        "$type": "string",
+        "$value": "linear-gradient(160deg, #ffffff 0%, #e2e8f0 46%, #cbd5e1 100%)"
+      }
+    },
+    "neon": {
+      "primary": {
+        "$type": "string",
+        "$value": "linear-gradient(125deg, #2563eb 0%, #d946ef 56%, #22d3ee 100%)"
+      },
+      "accent": {
+        "$type": "string",
+        "$value": "linear-gradient(140deg, #06b6d4 0%, #8b5cf6 52%, #ec4899 100%)"
+      }
+    }
+  },
+  "effect": {
+    "blur": {
+      "surface": { "$type": "dimension", "$value": "12px" },
+      "overlay": { "$type": "dimension", "$value": "20px" }
+    },
+    "specular": {
+      "strength": { "$type": "number", "$value": "0.16" },
+      "edgeAlpha": { "$type": "number", "$value": "0.28" }
     }
   },
   "space": {
@@ -57,6 +119,9 @@
     "xl": { "$type": "dimension", "$value": "{primitives.radius.xl}" }
   },
   "font": {
+    "family": {
+      "base": { "$type": "fontFamily", "$value": "{primitives.font.family.sans}" }
+    },
     "size": {
       "caption": { "$type": "dimension", "$value": "{primitives.font.size.caption}" },
       "small": { "$type": "dimension", "$value": "{primitives.font.size.small}" },
@@ -93,6 +158,14 @@
     "durationNormal": { "$type": "duration", "$value": "{primitives.motion.normal}" },
     "durationSlow": { "$type": "duration", "$value": "{primitives.motion.slow}" },
     "easing": { "$type": "string", "$value": "cubic-bezier(0.4, 0, 0.2, 1)" }
+  },
+  "effect": {
+    "blur": {
+      "glass": { "$type": "dimension", "$value": "14px" }
+    },
+    "saturation": {
+      "glass": { "$type": "string", "$value": "145%" }
+    }
   },
   "state": {
     "interactive": {

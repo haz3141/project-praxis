@@ -5,7 +5,7 @@ const packageRoot = path.resolve(__dirname, '..');
 const tokensDir = path.join(packageRoot, 'src', 'tokens');
 const distDir = path.join(packageRoot, 'dist');
 
-const themeModes = ['light', 'dark'];
+const themeModes = ['light', 'dark', 'liquid-neon'];
 const densityModes = ['comfortable', 'compact'];
 
 function readJson(filePath) {
@@ -133,6 +133,7 @@ function build() {
     theme: {
       light: readJson(path.join(tokensDir, 'modes', 'theme.light.json')),
       dark: readJson(path.join(tokensDir, 'modes', 'theme.dark.json')),
+      'liquid-neon': readJson(path.join(tokensDir, 'modes', 'theme.liquid-neon.json')),
     },
     density: {
       comfortable: readJson(path.join(tokensDir, 'modes', 'density.comfortable.json')),

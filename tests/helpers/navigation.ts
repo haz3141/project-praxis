@@ -29,7 +29,23 @@ export async function openRoute(page: Page, route: string, labels: string[] = []
     }
   }
 
-  await page.goto(route, { waitUntil: "domcontentloaded" });
+  const maxAttempts = 3;
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+    try {
+      await page.goto(route, { waitUntil: "domcontentloaded" });
+      return;
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      const isTransient =
+        message.includes("ERR_CONNECTION_REFUSED") || message.includes("ERR_EMPTY_RESPONSE");
+
+      if (!isTransient || attempt === maxAttempts) {
+        throw error;
+      }
+
+      await page.waitForTimeout(500);
+    }
+  }
 }
 
 export async function clickFirstVisible(page: Page, selectors: string[], timeoutMs = 5000): Promise<void> {
